@@ -98,7 +98,7 @@
 
     var detail_picture = detail_info.append("img")
 
-    d3.json("http://127.0.0.1:8000/treemap_data", function(error, root) {
+    d3.json("/treemap_data", function(error, root) {
         var release_dates = root['children'].map(function(d){ return d['name']});
 
 
