@@ -3,10 +3,10 @@ from django.contrib import admin
 
 # Create your models here.
 class NewsFeedManager(models.Manager):
-    def create_newsfeed(self, fbid, message, created_time, updated_time, author, author_id, picture_url, link_url, link_name, link_description, link_caption, type, status_type, shares, likes, comments, author_img_url):
+    def create_newsfeed(self, fbid, message, created_time, updated_time, author, author_id, picture_url, link_url, link_name, link_description, link_caption, type, status_type, shares, likes, comments, author_img_url, story):
         newsfeed = self.model(fbid=fbid, message=message, created_time=created_time, updated_time= updated_time, author=author, author_id=author_id,
                                 picture_url=picture_url, link_url=link_url, link_name=link_name, link_description=link_description, link_caption=link_caption, type=type, status_type=status_type,
-                                shares=shares, likes=likes, comments=comments, author_img_url=author_img_url)
+                                shares=shares, likes=likes, comments=comments, author_img_url=author_img_url, story=story)
         newsfeed.save()
         return newsfeed
 
@@ -18,6 +18,8 @@ class NewsFeed(models.Model):
     author = models.CharField(max_length=255)
     author_id = models.CharField(max_length=255)
     author_img_url = models.CharField(max_length=255)
+
+    story = models.CharField(max_length=255)
 
     message = models.TextField()
     picture_url = models.TextField()
@@ -40,7 +42,7 @@ class NewsFeed(models.Model):
 
 
 class NewsFeedAdmin(admin.ModelAdmin):
-    list_display = ('id', 'fbid', 'message', 'created_time', 'updated_time', 'author', 'author_id', 'author_img_url', 'picture_url', 'link_url', 'link_name', 'link_description', 'link_caption', 'type', 'status_type', 'shares', 'likes', 'comments')
+    list_display = ('id', 'fbid', 'message', 'story', 'created_time', 'updated_time', 'author', 'author_id', 'author_img_url', 'picture_url', 'link_url', 'link_name', 'link_description', 'link_caption', 'type', 'status_type', 'shares', 'likes', 'comments')
     '''
     def get_customer(self, obj):
         return obj.customer.nickname

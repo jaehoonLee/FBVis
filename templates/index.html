@@ -1,22 +1,31 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" style="width:100%">
 <head>
     <meta charset="utf-8">
-    <title>D3 Demo: Bar chart with random values</title>
+    <title>FBVis</title>
+    <script src="static/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'semantic.css' %}">
+    <script src="{% static 'semantic.js' %}"></script>
     <script type="text/javascript" src="{% static 'd3/d3.v3.min.js' %}"></script>
+    <script src="{% static 'd3.layout.cloud.js' %}"></script>
+
+
     <style type="text/css">
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            margin: auto;
-            position: relative;
-            width: 1500px;
+            padding:20px;
+            font-size:17px;
         }
 
-        form {
-            position: absolute;
-            right: 10px;
-            top: 10px;
+        .infovis{
+            padding-left : 50px;
+        }
+
+        .detail{
+            padding-left: 20px;
+            padding-right : 50px;
         }
 
         .node {
@@ -45,156 +54,119 @@
             height:auto;
         }
 
+        .bar {
+            fill: steelblue;
+        }
 
+        .bar:hover {
+            fill: brown;
+        }
+
+        .axis {
+            font: 15px sans-serif;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        .x.axis path {
+            display: none;
+        }
+
+        .ui .segment .famous_title{
+            margin-bottom : 1.5em;
+        }
     </style>
 </head>
 <body>
-<h1> NewsFeed Visualization </h1>
-<form>
-    <label><input type="radio" name="mode" value="size" checked> Size</label>
-    <label><input type="radio" name="mode" value="count"> Count</label>
-</form>
+<h1 class="ui huge header"> NewsFeed Visualization </h1>
+<div class="ui grid">
+    <div class="twelve wide column">
+        <div class="ui segment infovis">
+            <!--
+            <form>
+                <label><input type="radio" name="mode" value="date" checked> Date</label>
+                <label><input type="radio" name="mode" value="author"> Person</label>
+                <label><input type="radio" name="mode" value="type"> Post</label>
+            </form>
+
+            -->
+        </div>
+    </div>
+    <div class="four wide column">
+        <div class="row">
+            <div class="ui segment detail">
+                <h3 class="ui header">Post Detail</h3>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ui segment">
+                <div class="ui form">
+                    <div class="grouped fields">
+                        <h3 class="ui header">Color</h3>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="example2" checked="checked" value="nothing">
+                                <label>Gray(Nothing)</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="example2" value="popularity">
+                                <label>Popularity</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="example2" value="author">
+                                <label >Person</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="example2" value="images">
+                                <label>Images</label>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui radio checkbox">
+                                <input type="radio" name="example2" value="close">
+                                <label>Close Friends</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ui segment">
+                <h3 class="ui header famous_title">Famous People</h3>
+                <div class="ui grid famous">
+                    <!--
+                    <div class="two wide column">
+                        <img src="http://cfile3.uf.tistory.com/image/2631593A52C8192E1D6CCE"  style="width:50px; height:50px;">
+                    </div>
+                    -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
 <script type="text/javascript">
-    var margin = {top: 40, right: 10, bottom: 10, left: 10},
-            width = 1500 - margin.left - margin.right,
-            height = 700 - margin.top - margin.bottom;
+    var total_width = $('.infovis').width();
 
-    var color = d3.scale.category20c();
+    var margin = {top: 10, right: 10, bottom: 10, left: 10},
+            width = total_width - margin.left - margin.right,
+            height = 400 - margin.top - margin.bottom;
 
-    var treemap = d3.layout.treemap()
-            .size([width, height])
-            .sticky(true)
-            .value(function(d) { return d.size; });
+    var words = {{ word_lst | safe }};
 
-    var color_code = d3.select("body").append("div")
-                        .style("position", "relative")
-                        .style("left", margin.left + "px");
-
-    var div = d3.select("body").append("div")
-            .style("position", "relative")
-            .style("width", (width + margin.left + margin.right) + "px")
-            .style("height", (height + margin.top + margin.bottom) + "px")
-            .style("left", margin.left + "px")
-            .style("top", margin.top + "px");
-
-
-    var detail_info = d3.select("body").append("div")
-                        .style("position", "relative")
-                        .style("margin-top", "20px")
-                        .style("left", margin.left + "px")
-            .style("width", "1200px");
-
-    var detail_sub_info = detail_info.append("div").style("width", "1200px").style("height", "100px");
-
-    var detail_img = detail_sub_info.append("img").attr("width", 50 + 'px').attr("height", 50 + 'px').style("float", "left");
-    var detail_author = detail_sub_info.append("p").style("float", "left").style("margin-left", "10px").attr("class", "detail_text");
-
-    var detail_message = detail_sub_info.append("pre").style("float", "left")
-            .attr("class", "detail_message")
-            .style("width", "1000px")
-            .style("margin-top", "5px")
-            .style("margin-left", "10px").attr("class", "detail_text");
-
-
-    var detail_picture = detail_info.append("img")
-
-    d3.json("/treemap_data", function(error, root) {
-        var release_dates = root['children'].map(function(d){ return d['name']});
-
-
-        if (error) throw error;
-
-
-        //Color Code
-        var color_code_div = color_code.selectAll("div")
-                .data(release_dates)
-                .enter()
-                .append("div")
-                .style("position", "relative")
-                .style("width", 300 + 'px')
-                .style("height", 10 + 'px')
-                .style("margin-top", 5 + 'px');
-
-
-                color_code_div.append("div")
-                        .style("position", "relative")
-                        .style("top", 0 + 'px')
-                    .style("width", 50 + 'px')
-                .style("height", 10 + 'px')
-
-                .style("background-color", function(d){
-                    return color(d)
-                })
-
-                color_code_div.append("div")
-                        .style("position", "relative")
-                        .style("left", 60 + 'px')
-                        .style("top", -15 + 'px')
-                        .style("width", 100 + 'px')
-                        .style("height", 10 + 'px')
-                .text(function(d) {
-                    return d;
-                });
-
-
-        //Mouse Over
-        var node = div.datum(root).selectAll(".node")
-                .data(treemap.nodes)
-                .enter().append("div")
-                .attr("class", "node")
-                .call(position)
-                .style("background-color", function(d) {
-
-                    if(d.type == 'type')
-                        return color(d.name);
-                    else if(d.type == 'date')
-                        return color(d.name);
-                    else
-                        return null;
-
-                })
-                .on("mouseover", function(d){
-                    //Detail Information
-                    console.log(d.picture_url);
-                    detail_picture.attr("src", d.picture_url);
-                    detail_img.attr("src", d.author_img_url);
-                    detail_author.text(d.author);
-                    detail_message.text(d.message);
-
-                })
-
-                .style("opacity", function(d){
-                    if(d.type == 'type')
-                        return 0.15;
-                    else
-                        return null;
-                })
-                .append("div")
-                .attr("class", "node_text")
-                .text(function(d) {
-
-                    return d.type == 'author'?  d.name : null;
-
-                });
-
-
-
-        d3.selectAll("input").on("change", function change() {
-            var value = this.value === "count"
-                    ? function() { return 1; }
-                    : function(d) { return d.size; };
-
-            node.data(treemap.value(value).nodes)
-                .transition()
-                .duration(1500)
-                .call(position);
-        });
-
-
-
-
-
-    });
 
     function position() {
         this.style("left", function(d) { return d.x + "px"; })
@@ -202,6 +174,57 @@
                 .style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
                 .style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; });
     }
+
+    var randomColor = (function(){
+        var golden_ratio_conjugate = 0.618033988749895;
+        var h = Math.random();
+
+        var hslToRgb = function (h, s, l){
+            var r, g, b;
+
+            if(s == 0){
+                r = g = b = l; // achromatic
+            }else{
+                function hue2rgb(p, q, t){
+                    if(t < 0) t += 1;
+                    if(t > 1) t -= 1;
+                    if(t < 1/6) return p + (q - p) * 6 * t;
+                    if(t < 1/2) return q;
+                    if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                    return p;
+                }
+
+                var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+                var p = 2 * l - q;
+                r = hue2rgb(p, q, h + 1/3);
+                g = hue2rgb(p, q, h);
+                b = hue2rgb(p, q, h - 1/3);
+            }
+
+            return '#'+Math.round(r * 255).toString(16)+Math.round(g * 255).toString(16)+Math.round(b * 255).toString(16);
+        };
+
+        return function(){
+            h += golden_ratio_conjugate;
+            h %= 1;
+            return hslToRgb(h, 0.5, 0.60);
+        };
+    })();
+
+
+
+
+</script>
+<!--<script src="{% static 'newsfeed_wordcloud.js' %}"></script>-->
+<script src="{% static 'newsfeed_treemap.js' %}"></script>
+<script src="{% static 'newsfeed_barchart.js' %}"></script>
+
+<script src="{% static 'newsfeed_famous.js' %}"></script>
+
+<script type="text/javascript">
+    call_treemap('');
+    call_barchart('');
+
 </script>
 </body>
 </html>

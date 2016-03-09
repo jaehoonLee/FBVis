@@ -16,11 +16,21 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 from Main.views import *
+from Data.views import *
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', main),
+    url(r'^test/$', test),
+    url(r'^word_cloud/', word_cloud),
+    url(r'^word_cloud_data/', word_cloud_data),
+
     url(r'^treemap_data/', treemap_data),
+    url(r'^treemap_domain/', treemap_domain),
+
+    url(r'^barchart_data/', barchart_data),
+    url(r'^famous_data/', famous_data),
+
     url(r'^checkDatebase/', checkDatebase),
     url(r'^crawl/', crawl),
     url(r'^update_image_url/', update_image_url)
