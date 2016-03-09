@@ -6,7 +6,7 @@
 var weekday = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat')
 var bar_margin = {top: 20, right: 20, bottom: 30, left: 20},
     bar_width = total_width - margin.left - margin.right,
-    bar_height = 300 - margin.top - margin.bottom;
+    bar_height = height - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, bar_width], .1);

@@ -5,30 +5,40 @@
 
 
 var treemap_margin = {top: 20, right: 10, bottom: 10, left: 10};
-var treemap_width = width;
+var treemap_width = total_width - treemap_margin.left - treemap_margin.right;
+var treemap_height = total_height -treemap_margin.top - treemap_margin.bottom;
+
+var date_div = d3.select(".infovis").append("div")
+    //.style("position", "absolute")
+    .style("width", treemap_width + "px")
+    .style("height", 20 + "px")
+    //.style("margin-left", treemap_margin.left)
+    //.style("left", 0 + "px")
+    //.style("top", 0 + "px")
+
 
 var parent_div = d3.select(".infovis").append("div")
     .attr("class", "parent_div")
     .style("position", "relative")
     .style("width", treemap_width  + "px")
-    .style("height", (height + margin.top + margin.bottom) + "px")
-
-var date_div = parent_div.append("div")
-    .style("position", "absolute")
-    .style("width", treemap_width + "px")
-    .style("height", (height + margin.top + margin.bottom) + "px")
-    .style("left", 0 + "px")
-    .style("top", 0 + "px")
+    .style("height", (treemap_height + margin.top + margin.bottom) + "px")
 
 
 var treemap_weekday = new Array('Thurs', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed');
+var default_between_margin = treemap_width/1000;
+//var default_between_margin = 0;
 
 for(var i = 0; i < 7; i++){
     date_div.append("label")
-        .style("position", "absolute")
+        //.style("position", "absolute")
         .style("display", "inline-block")
-        .style("width", treemap_width * 1/7+ "px")
-        .style("left", treemap_width * i/7 + "px")
+        .style("width", (treemap_width * 1/7 - default_between_margin)+ "px")
+        .style("margin-left", function(d){
+            if(i != 0)
+                return default_between_margin + 'px ';
+            return default_between_margin/2 + 'px';
+        })
+        //.style("left", treemap_width * i/7 + "px")
         .style("text-align", "center")
         .text(treemap_weekday[i]);
 }
@@ -111,7 +121,7 @@ function call_subtreemap(i, text){
 
         //Treemap setting
         var treemap = d3.layout.treemap()
-            .size([treemap_width/7, height])
+            .size([treemap_width/7 - default_between_margin, height])
             .sticky(false)
             .value(function(d) {
 
@@ -121,9 +131,9 @@ function call_subtreemap(i, text){
         //Add div in parent_div
         var div = parent_div.append("div")
             .style("position", "absolute")
-            .style("width", treemap_width * 1/7 + "px")
-            .style("height", (height + margin.top + margin.bottom) + "px")
-            .style("left", treemap_width * i/7 + "px")
+            .style("width", (treemap_width * 1/7 - default_between_margin)+ "px")
+            .style("height", (treemap_height + margin.top + margin.bottom) + "px")
+            .style("left", (treemap_width * i/7 + default_between_margin/2) + "px")
             .style("top", treemap_margin.top + "px");
 
         //make domain for date

@@ -160,10 +160,12 @@
 </div>
 <script type="text/javascript">
     var total_width = $('.infovis').width();
+    var total_height = $('body').height()/3;
+    console.log(total_height);
 
     var margin = {top: 10, right: 10, bottom: 10, left: 10},
             width = total_width - margin.left - margin.right,
-            height = 400 - margin.top - margin.bottom;
+            height = total_height - margin.top - margin.bottom;
 
     var words = {{ word_lst | safe }};
 
