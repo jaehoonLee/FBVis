@@ -6,7 +6,7 @@
 var weekday = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat')
 var bar_margin = {top: 20, right: 20, bottom: 30, left: 20},
     bar_width = total_width - margin.left - margin.right,
-    bar_height = height - margin.top - margin.bottom;
+    bar_height = total_height/3 - margin.top - margin.bottom;
 
 var x = d3.scale.ordinal()
     .rangeRoundBands([0, bar_width], .1);
@@ -26,13 +26,13 @@ var xAxis = d3.svg.axis()
         var date = d.getDate()
 
         /*
-        if(time == 0){
-            //return date + 'th ' + weekday[day];
+         if(time == 0){
+         //return date + 'th ' + weekday[day];
 
-            return weekday[day];
+         return weekday[day];
 
-        }
-        */
+         }
+         */
 
         if(time % 3 == 0)
             return time;
@@ -61,14 +61,18 @@ var svg = d3.select(".infovis").append("svg")
 
 //=================== Bar Chart ====================
 var barchart_x_list;
+var firstrun_barchart = true;
+var barchart_data;
 function call_barchart(key_word){
     d3.selectAll(".bar").remove();
     d3.selectAll(".y").remove();
     d3.selectAll(".x").remove();
 
-
-    d3.json("/barchart_data?key_word=" + key_word, function(error, data) {
+    var draw_barchart_callback = function(error, data) {
         if (error) throw error;
+        //barchart_data = data;
+
+        console.log(data);
 
         barchart_x_list = data.map(function(d) {
             return d.date; });
@@ -114,7 +118,6 @@ function call_barchart(key_word){
 
         }
 
-
         svg.selectAll(".bar")
             .data(data)
             .enter().append("rect")
@@ -127,8 +130,21 @@ function call_barchart(key_word){
             .attr("y", function(d) { return y(d.count); })
             .attr("height", function(d) { return bar_height - y(d.count); });
 
-    });
+    }
+
+    console.log(firstrun);
+    if(firstrun_barchart){
+        d3.json("/barchart_data?key_word=" + key_word, draw_barchart_callback);
+        firstrun_barchart = false;
+    }
+    else{
+        draw_barchart_callback(false, barchart_data);
+    }
+
 }
+
+
+
 
 function type(d) {
     d.count = +d.count;

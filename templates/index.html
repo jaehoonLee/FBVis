@@ -7,6 +7,8 @@
     <script src="static/jquery.min.js"></script>
 
     <link rel="stylesheet" type="text/css" href="{% static 'semantic.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'components/icon.min.css' %}">
+
     <script src="{% static 'semantic.js' %}"></script>
     <script type="text/javascript" src="{% static 'd3/d3.v3.min.js' %}"></script>
     <script src="{% static 'd3.layout.cloud.js' %}"></script>
@@ -15,7 +17,8 @@
     <style type="text/css">
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            padding:20px;
+            padding-left:20px;
+            padding-right:20px;
             font-size:17px;
         }
 
@@ -83,7 +86,28 @@
     </style>
 </head>
 <body>
-<h1 class="ui huge header"> NewsFeed Visualization </h1>
+<div class="ui text menu">
+    <div class="header item">
+        <h1>NewsFeed Visualization</h1>
+
+    </div>
+    <div class="item">
+            <div class="ui icon input">
+                <input type="text" placeholder="Search...">
+                <i class="search icon"></i>
+            </div>
+        </div>
+    <div class="right menu">
+
+        <button class="ui facebook button">
+            <i class="facebook icon"></i>
+            FBLogin
+        </button>
+
+    </div>
+
+</div>
+
 <div class="ui grid">
     <div class="twelve wide column">
         <div class="ui segment infovis">
@@ -160,7 +184,7 @@
 </div>
 <script type="text/javascript">
     var total_width = $('.infovis').width();
-    var total_height = $('body').height()/3;
+    var total_height = $('body').height();
     console.log(total_height);
 
     var margin = {top: 10, right: 10, bottom: 10, left: 10},
@@ -224,8 +248,34 @@
 <script src="{% static 'newsfeed_famous.js' %}"></script>
 
 <script type="text/javascript">
-    call_treemap('');
+
+    var treemap_margin = {top: 20, right: 10, bottom: 10, left: 10};
+    var treemap_width = total_width - treemap_margin.left - treemap_margin.right;
+    var treemap_height = total_height/3 -treemap_margin.top - treemap_margin.bottom;
+
+    call_treemap('', treemap_width, treemap_height);
     call_barchart('');
+
+    $(window).resize(function(){
+        total_width = $('.infovis').width();
+        total_height = $('body').height();
+
+        var treemap_width = total_width - treemap_margin.left - treemap_margin.right;
+        var treemap_height = total_height/3 -treemap_margin.top - treemap_margin.bottom;
+
+        /*
+         for(var index in tree_maps){
+         var tree_map = tree_maps[index];
+         tree_map.size([treemap_width/7 - default_between_margin, treemap_height]);
+
+         console.log(treemap_width/7 - default_between_margin + "," + treemap_height);
+         }
+         */
+
+        parent_div.selectAll("*").remove();
+        call_treemap('', treemap_width, treemap_height);
+        date_div_add(treemap_width/7);
+    });
 
 </script>
 </body>

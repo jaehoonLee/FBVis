@@ -103,11 +103,6 @@ def crawl(request):
 
     '''
 
-
-
-
-
-
     shares = models.IntegerField()
     likes = models.IntegerField()
     comments = models.IntegerField()
