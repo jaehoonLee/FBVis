@@ -4,9 +4,14 @@
 <head>
     <meta charset="utf-8">
     <title>FBVis</title>
-    <script src="static/jquery.min.js"></script>
 
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'jquery/jquery-ui.js' %}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'jquery/jquery-ui.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'semantic.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'components/icon.min.css' %}">
+
     <script src="{% static 'semantic.js' %}"></script>
     <script type="text/javascript" src="{% static 'd3/d3.v3.min.js' %}"></script>
     <script src="{% static 'd3.layout.cloud.js' %}"></script>
@@ -15,12 +20,14 @@
     <style type="text/css">
         body {
             font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-            padding:20px;
+            padding-left:20px;
+            padding-right:20px;
             font-size:17px;
         }
 
         .infovis{
             padding-left : 50px;
+
         }
 
         .detail{
@@ -83,27 +90,60 @@
     </style>
 </head>
 <body>
-<h1 class="ui huge header"> NewsFeed Visualization </h1>
+
+<!-- TopBar -->
+<div class="ui text menu">
+    <div class="header item">
+        <h1>NewsFeed Visualization</h1>
+
+    </div>
+    <div class="item">
+        <div class="ui icon input">
+            <input type="text" placeholder="Search...">
+            <i class="search icon"></i>
+        </div>
+    </div>
+    <div class="right menu">
+
+        <button class="ui facebook button">
+            <i class="facebook icon"></i>
+            FBLogin
+        </button>
+
+    </div>
+
+</div>
+<!-- Visualization View -->
 <div class="ui grid">
     <div class="twelve wide column">
+        <!-- Information Visualization View -->
+
         <div class="ui segment infovis">
+            <div class="ui active dimmer infovis_loader">
+                <div class="ui text loader">Loading</div>
+            </div>
+
             <!--
             <form>
                 <label><input type="radio" name="mode" value="date" checked> Date</label>
                 <label><input type="radio" name="mode" value="author"> Person</label>
                 <label><input type="radio" name="mode" value="type"> Post</label>
             </form>
-
             -->
         </div>
     </div>
     <div class="four wide column">
+        <div class="ui active dimmer detail_loader">
+            <div class="ui text loader">Loading</div>
+        </div>
         <div class="row">
             <div class="ui segment detail">
-                <h3 class="ui header">Post Detail</h3>
+
+
             </div>
         </div>
         <div class="row">
+
             <div class="ui segment">
                 <div class="ui form">
                     <div class="grouped fields">
@@ -115,9 +155,23 @@
                             </div>
                         </div>
                         <div class="field">
-                            <div class="ui radio checkbox">
-                                <input type="radio" name="example2" value="popularity">
-                                <label>Popularity</label>
+                            <div class="ui grid">
+                                <div class="four wide column">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="example2" value="popularity">
+                                        <label>Popularity</label>
+
+                                    </div>
+                                </div>
+                                <div class="twelve wide column">
+                                    <div class="row">
+                                        <label id="amount" class="amount">Comments:</label>
+                                    </div>
+
+                                    <div class="row">
+                                        <div id="slider"></div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                         <div class="field">
@@ -144,6 +198,7 @@
         </div>
         <div class="row">
             <div class="ui segment">
+
                 <h3 class="ui header famous_title">Famous People</h3>
                 <div class="ui grid famous">
                     <!--
@@ -160,8 +215,7 @@
 </div>
 <script type="text/javascript">
     var total_width = $('.infovis').width();
-    var total_height = $('body').height()/3;
-    console.log(total_height);
+    var total_height = $('body').height();
 
     var margin = {top: 10, right: 10, bottom: 10, left: 10},
             width = total_width - margin.left - margin.right,
@@ -214,18 +268,45 @@
     })();
 
 
-
-
 </script>
 <!--<script src="{% static 'newsfeed_wordcloud.js' %}"></script>-->
 <script src="{% static 'newsfeed_treemap.js' %}"></script>
 <script src="{% static 'newsfeed_barchart.js' %}"></script>
-
 <script src="{% static 'newsfeed_famous.js' %}"></script>
 
 <script type="text/javascript">
-    call_treemap('');
-    call_barchart('');
+    var treemap_margin = {top: 20, right: 10, bottom: 10, left: 10};
+    var treemap_width = total_width - treemap_margin.left - treemap_margin.right;
+    var treemap_height = total_height/3 -treemap_margin.top - treemap_margin.bottom;
+
+    var bar_margin = {top: 20, right: 20, bottom: 30, left: 20};
+    var bar_width = total_width - margin.left - margin.right;
+    var bar_height = total_height/3 - margin.top - margin.bottom;
+
+    call_treemap('', treemap_width, treemap_height);
+    call_barchart('', bar_width, bar_height);
+
+    $(window).resize(function(){
+        $('.infovis').html('');
+        $(".detail").html('');
+
+        total_width = $('.infovis').width();
+        total_height = $('body').height();
+
+        treemap_width = total_width - treemap_margin.left - treemap_margin.right;
+        treemap_height = total_height/3 -treemap_margin.top - treemap_margin.bottom;
+
+        bar_width = total_width - margin.left - margin.right;
+        bar_height = total_height/3 - margin.top - margin.bottom;
+
+        //parent_div.selectAll("*").remove();
+        call_treemap('', treemap_width, treemap_height);
+        call_barchart('', bar_width, bar_height);
+        //date_div_add(treemap_width/7);
+
+    });
+
+
 
 </script>
 </body>

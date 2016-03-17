@@ -1,0 +1,150 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'semantic.css' %}">
+    <script src="{% static 'semantic.js' %}"></script>
+    <script type="text/javascript" src="{% static 'd3/d3.v3.min.js' %}"></script>
+
+</head>
+<style type="text/css">
+    body {
+        font-size: 50px;
+        padding:20px;
+    }
+
+    .node {
+        border: solid 1px white;
+        font: 10px sans-serif;
+        line-height: 12px;
+        overflow: hidden;
+        position: absolute;
+        text-indent: 2px;
+    }
+
+    .vis{
+        height:100%;
+    }
+
+
+</style>
+<body>
+<h1>Treemap Monday</h1>
+<div class="ui grid vis">
+    <div class="sixteen wide column">
+        <div class="ui segment treemap">
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script>
+
+
+    var margin = {top: 0, right: $('.treemap').css('padding'), bottom: 0, left: $('.treemap').css('padding')},
+            width = $('.treemap').width(),
+            height = $('.column').height() - 8 * $('.column').css('padding').replace("px", "");
+
+    var color = d3.scale.category20c();
+
+    var treemap = d3.layout.treemap()
+            .size([width, height])
+            .sticky(true)
+            .value(function(d) { return d.size; });
+
+    var div = d3.select(".treemap").append("div")
+            .style("position", "relative")
+            .style("width", (width + margin.left + margin.right) + "px")
+            .style("height", (height + margin.top + margin.bottom) + "px")
+            .style("left", margin.left + "px")
+            .style("top", margin.top + "px");
+
+    d3.json("/treemap_data?days=" + 0 + '&key_word=', function(error, root) {
+
+        if (error) throw error;
+
+        var node = div.datum(root).selectAll(".node")
+                .data(treemap.nodes)
+                .enter().append("div")
+                .attr("class", function(d){
+
+                    return  "node " + d.fbid;
+
+                })
+                .call(position)
+                .style("background", function(d)
+                {
+
+
+                    //return d.children ? color(d.name) : null;
+                    return "#D3D3D3";
+
+                }).on("mouseover", function(d){
+                    //Detail Information
+                    var authors = root["children"][0];
+                    var feeds = authors["children"].filter(function(item){return item.name == d.author})[0]
+                    var feed = feeds["children"].filter(function(item){return item.fbid == d.fbid})[0]
+                    //console.log(feed);
+
+
+
+                });
+        //.text(function(d) { return d.children ? null : d.name; });
+
+        d3.selectAll("input").on("change", function change() {
+            var value = this.value === "count"
+                    ? function() { return 1; }
+                    : function(d) { return d.size; };
+
+            node
+                    .data(treemap.value(value).nodes)
+                    .transition()
+                    .duration(1500)
+                    .call(position);
+        });
+    });
+
+    function position() {
+        this.style("left", function(d) { return d.x + "px"; })
+                .style("top", function(d) { return d.y + "px"; })
+                .style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
+                .style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; });
+    }
+
+
+
+    var prev_fbid = ''
+    function executeQuery(){
+        $.ajax({
+            url: '/treemap_signal/0/',
+            success: function(data){
+                var result = JSON.parse(data);
+                console.log(result.fbid);
+                try{
+                    $('.' + prev_fbid).css("background", "#D3D3D3");
+                    $('.' + result.fbid).css("background", '#000000');
+
+                }
+                catch(err){
+
+                }
+                prev_fbid = result.fbid;
+            }
+        });
+
+        setTimeout(executeQuery, 200);
+    }
+
+    $(document).ready(function(){
+        executeQuery();
+    });
+
+
+
+</script>
+</html>

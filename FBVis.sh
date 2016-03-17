@@ -7,7 +7,7 @@ case "$1" in
     ;;
     stop)
 	echo "=========================================Stoping FBVis Server============================================"
-	FBVISID=$(cat /home/jhun88/FBVis/pheonix.pid)
+	FBVISID=$(cat /home/jhun88/FBVis/FBVis.pid)
 	echo $FBVISID
 	pkill -9 -P $FBVISID
     ;;

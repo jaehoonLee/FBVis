@@ -17,6 +17,7 @@ from django.conf.urls import include, url
 from django.contrib import admin
 from Main.views import *
 from Data.views import *
+from Multi.views import *
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -33,5 +34,10 @@ urlpatterns = [
 
     url(r'^checkDatebase/', checkDatebase),
     url(r'^crawl/', crawl),
-    url(r'^update_image_url/', update_image_url)
+    url(r'^update_image_url/', update_image_url),
+    url(r'^multi_treemap/(?P<day>[0-9])', treemap),
+    url(r'^treemap_signal/(?P<day>[0-9])', treemap_signal),
+    url(r'^treemap_assign/(?P<fbid>\w+)', treemap_assign),
+
+
 ]

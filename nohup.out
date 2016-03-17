@@ -958,3 +958,126 @@ Not Found: /barchart_data
 [09/Mar/2016 16:37:45] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
 [09/Mar/2016 16:37:46] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
 [09/Mar/2016 16:37:46] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+Performing system checks...
+
+
+You have unapplied migrations; your app may not work properly until they are applied.
+Run 'python manage.py migrate' to apply them.
+March 09, 2016 - 15:20:34
+Django version 1.9.4, using settings 'FBVis.settings'
+Starting development server at http://0.0.0.0:7000/
+Quit the server with CONTROL-C.
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+System check identified some issues:
+
+WARNINGS:
+?: (1_8.W001) The standalone TEMPLATE_* settings were deprecated in Django 1.8 and the TEMPLATES dictionary takes precedence. You must put the values of the following settings into your default TEMPLATES dict: TEMPLATE_DIRS.
+
+System check identified 1 issue (0 silenced).
+System check identified some issues:
+
+WARNINGS:
+?: (1_8.W001) The standalone TEMPLATE_* settings were deprecated in Django 1.8 and the TEMPLATES dictionary takes precedence. You must put the values of the following settings into your default TEMPLATES dict: TEMPLATE_DIRS.
+
+System check identified 1 issue (0 silenced).
+Error: That port is already in use.
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-04 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-11 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[17/Mar/2016 12:51:02] "GET / HTTP/1.1" 200 15999
+[17/Mar/2016 12:51:02] "GET /static/jquery/jquery-ui.js HTTP/1.1" 404 1676
+[17/Mar/2016 12:51:02] "GET /static/jquery/jquery.min.js HTTP/1.1" 404 1679
+[17/Mar/2016 12:51:02] "GET /static/jquery/jquery-ui.css HTTP/1.1" 404 1679
+[17/Mar/2016 12:51:02] "GET /static/components/icon.min.css HTTP/1.1" 200 33341
+[17/Mar/2016 12:51:02] "GET /static/d3.layout.cloud.js HTTP/1.1" 200 12937
+[17/Mar/2016 12:51:02] "GET /static/newsfeed_treemap.js HTTP/1.1" 200 12380
+[17/Mar/2016 12:51:02] "GET /static/newsfeed_barchart.js HTTP/1.1" 200 4063
+[17/Mar/2016 12:51:02] "GET /static/newsfeed_famous.js HTTP/1.1" 200 2058
+[17/Mar/2016 12:51:02] "GET /static/d3/d3.v3.min.js HTTP/1.1" 200 151701
+[17/Mar/2016 12:51:04] "GET /static/semantic.js HTTP/1.1" 200 660568
+[17/Mar/2016 12:51:04] "GET /static/semantic.css HTTP/1.1" 200 719040
+[17/Mar/2016 12:51:05] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 200 56780
+Not Found: /favicon.ico
+[17/Mar/2016 12:51:05] "GET /favicon.ico HTTP/1.1" 404 3583
+[17/Mar/2016 12:51:05] "GET /famous_data/ HTTP/1.1" 200 2547
+[17/Mar/2016 12:51:21] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[17/Mar/2016 12:51:21] "GET /static/jquery/jquery-ui.css HTTP/1.1" 404 1679
+[17/Mar/2016 12:52:09] "GET / HTTP/1.1" 200 15999
+[17/Mar/2016 12:52:09] "GET /static/semantic.css HTTP/1.1" 304 0
+[17/Mar/2016 12:52:09] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[17/Mar/2016 12:52:09] "GET /static/jquery/jquery-ui.css HTTP/1.1" 404 1679
+[17/Mar/2016 12:52:09] "GET /static/jquery/jquery.min.js HTTP/1.1" 404 1679
+[17/Mar/2016 12:52:09] "GET /static/jquery/jquery-ui.js HTTP/1.1" 404 1676
+[17/Mar/2016 12:52:09] "GET /static/semantic.js HTTP/1.1" 304 0
+[17/Mar/2016 12:52:10] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[17/Mar/2016 12:52:10] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[17/Mar/2016 12:52:10] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[17/Mar/2016 12:52:10] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[17/Mar/2016 12:52:10] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[17/Mar/2016 12:52:11] "GET / HTTP/1.1" 200 15999
+[17/Mar/2016 12:52:13] "GET /famous_data/ HTTP/1.1" 200 2547
+[17/Mar/2016 12:52:13] "GET / HTTP/1.1" 200 15999
+[17/Mar/2016 12:52:14] "GET /famous_data/ HTTP/1.1" 200 2547

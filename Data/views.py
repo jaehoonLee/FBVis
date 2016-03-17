@@ -15,7 +15,7 @@ def treemap_data(request):
     if 'key_word' in request.GET:
         key_word = request.GET['key_word']
 
-    result = {'name':'date', 'children':[]}
+    result = {'name':'date', 'children':[]} #Date
     startdate = datetime.strptime("2016-02-04", '%Y-%m-%d')
 
     days = int(request.GET['days'])
@@ -36,17 +36,19 @@ def treemap_data(request):
         authors = newsfeeds.values("author").distinct()
         authors = [author_dic['author'] for author_dic in authors]
 
-        for author in authors:
+        for author_idx, author in enumerate(authors):
             author_newsfeeds = newsfeeds.filter(author=author)
             #subval = {'name':author, 'size':len(newsfeeds_author), 'type':'author'}
-            subval = {'name':author, 'children':[], 'type':'author'}
-            for author_newsfeed in author_newsfeeds:
+            subval = {'name':author, 'children':[], 'type':'author'} #Author
+            for feed_idx, author_newsfeed in enumerate(author_newsfeeds):
                 created_time = author_newsfeed.created_time.astimezone(eastern).strftime("%Y-%m-%d %H:%M:%S")
                 picture_exist = False if (author_newsfeed.picture_url == '') else True
 
-
                 author_feed_val = {'name':author_newsfeed.type, 'size':1, 'type':'type', 'message':author_newsfeed.message, 'author':author, "author_img_url":author_newsfeed.author_img_url, "picture_url":author_newsfeed.picture_url, 'created_time':created_time,
-                                   'comments':author_newsfeed.comments, 'likes':author_newsfeed.likes, 'picture_exist': picture_exist}
+                                   'comments':author_newsfeed.comments, 'likes':author_newsfeed.likes, 'picture_exist': picture_exist,
+                                   'fbid':author_newsfeed.fbid
+
+                                   }
                 subval['children'].append(author_feed_val)
 
 
