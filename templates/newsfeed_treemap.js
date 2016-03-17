@@ -264,8 +264,17 @@ function call_treemap(text, width, height){
                             $(class_name).css("fill", "steelblue");
 
                         }
-
                     }
+
+                    //Send Signal
+
+                    $.ajax({
+                        url: 'treemap_assign/' + d.fbid + '/',
+                        success: function(data){
+
+                        }
+                    });
+
                 }).on("mouseenter", function(d){
 
                     //this.css("background-color", "brown");

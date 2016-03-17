@@ -50,8 +50,6 @@
             width = $('.treemap').width(),
             height = $('.column').height() - 8 * $('.column').css('padding').replace("px", "");
 
-    console.log($('.column').height());
-
     var color = d3.scale.category20c();
 
     var treemap = d3.layout.treemap()
@@ -67,12 +65,17 @@
             .style("top", margin.top + "px");
 
     d3.json("/treemap_data?days=" + 0 + '&key_word=', function(error, root) {
+
         if (error) throw error;
 
         var node = div.datum(root).selectAll(".node")
                 .data(treemap.nodes)
                 .enter().append("div")
-                .attr("class", "node")
+                .attr("class", function(d){
+
+                    return  "node " + d.fbid;
+
+                })
                 .call(position)
                 .style("background", function(d)
                 {
@@ -83,45 +86,15 @@
 
                 }).on("mouseover", function(d){
                     //Detail Information
-                    //console.log(d.picture_url);
-
-                    cur_profile_image = d.author_img_url;
-                    cur_author_name = d.author;
-                    cur_date = d.created_time;
-                    cur_message = d.message;
-
-                    detail_picture.attr("src", d.picture_url);
-                    detail_img.attr("src", d.author_img_url);
-                    detail_author.text(d.author + "\n" + d.created_time);
-                    detail_message.text(d.message);
+                    var authors = root["children"][0];
+                    var feeds = authors["children"].filter(function(item){return item.name == d.author})[0]
+                    var feed = feeds["children"].filter(function(item){return item.fbid == d.fbid})[0]
+                    //console.log(feed);
 
 
-                    //Color Date
-                    var date = new Date(d.created_time);
 
-                    for(var index in barchart_x_list){
-                        var val = new Date(barchart_x_list[index]);
-                        //console.log(val);
-                        var day = val.getDate();
-                        var time = val.getHours();
-                        var class_name = '.' + day + '-' + time;
-
-
-                        if(day == date.getDate() && time <= date.getHours() && date.getHours() < (time+1)){
-                            $(class_name).css("fill", "brown");
-                        }
-                        else if(day == date.getDate() && date.getHours() == 24){
-                            class_name = '.' + day + '-' + 23;
-                            $(class_name).css("fill", "brown");
-                        }
-                        else{
-                            $(class_name).css("fill", "steelblue");
-
-                        }
-
-                    }
-                })
-                //.text(function(d) { return d.children ? null : d.name; });
+                });
+        //.text(function(d) { return d.children ? null : d.name; });
 
         d3.selectAll("input").on("change", function change() {
             var value = this.value === "count"
@@ -142,6 +115,36 @@
                 .style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
                 .style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; });
     }
+
+
+
+    var prev_fbid = ''
+    function executeQuery(){
+        $.ajax({
+            url: '/treemap_signal/0/',
+            success: function(data){
+                var result = JSON.parse(data);
+                console.log(result.fbid);
+                try{
+                    $('.' + prev_fbid).css("background", "#D3D3D3");
+                    $('.' + result.fbid).css("background", '#000000');
+
+                }
+                catch(err){
+
+                }
+                prev_fbid = result.fbid;
+            }
+        });
+
+        setTimeout(executeQuery, 200);
+    }
+
+    $(document).ready(function(){
+        executeQuery();
+    });
+
+
 
 </script>
 </html>
