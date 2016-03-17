@@ -9,10 +9,6 @@ d3.json("/famous_data/", function(error, data){
     var x = d3.scale.linear()
         .domain([0, d3.max(data, function(d){ return d.active })]);
 
-
-
-
-
     data.forEach(function(d, i){
 
         //console.log(i);
@@ -72,6 +68,7 @@ d3.json("/famous_data/", function(error, data){
 
 
     });
+
 
 
 });

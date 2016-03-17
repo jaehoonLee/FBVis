@@ -1,0 +1,147 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'semantic.css' %}">
+    <script src="{% static 'semantic.js' %}"></script>
+    <script type="text/javascript" src="{% static 'd3/d3.v3.min.js' %}"></script>
+
+</head>
+<style type="text/css">
+    body {
+        font-size: 50px;
+        padding:20px;
+    }
+
+    .node {
+        border: solid 1px white;
+        font: 10px sans-serif;
+        line-height: 12px;
+        overflow: hidden;
+        position: absolute;
+        text-indent: 2px;
+    }
+
+    .vis{
+        height:100%;
+    }
+
+
+</style>
+<body>
+<h1>Treemap Monday</h1>
+<div class="ui grid vis">
+    <div class="sixteen wide column">
+        <div class="ui segment treemap">
+
+        </div>
+    </div>
+</div>
+
+
+</body>
+<script>
+
+
+    var margin = {top: 0, right: $('.treemap').css('padding'), bottom: 0, left: $('.treemap').css('padding')},
+            width = $('.treemap').width(),
+            height = $('.column').height() - 8 * $('.column').css('padding').replace("px", "");
+
+    console.log($('.column').height());
+
+    var color = d3.scale.category20c();
+
+    var treemap = d3.layout.treemap()
+            .size([width, height])
+            .sticky(true)
+            .value(function(d) { return d.size; });
+
+    var div = d3.select(".treemap").append("div")
+            .style("position", "relative")
+            .style("width", (width + margin.left + margin.right) + "px")
+            .style("height", (height + margin.top + margin.bottom) + "px")
+            .style("left", margin.left + "px")
+            .style("top", margin.top + "px");
+
+    d3.json("/treemap_data?days=" + 0 + '&key_word=', function(error, root) {
+        if (error) throw error;
+
+        var node = div.datum(root).selectAll(".node")
+                .data(treemap.nodes)
+                .enter().append("div")
+                .attr("class", "node")
+                .call(position)
+                .style("background", function(d)
+                {
+
+
+                    //return d.children ? color(d.name) : null;
+                    return "#D3D3D3";
+
+                }).on("mouseover", function(d){
+                    //Detail Information
+                    //console.log(d.picture_url);
+
+                    cur_profile_image = d.author_img_url;
+                    cur_author_name = d.author;
+                    cur_date = d.created_time;
+                    cur_message = d.message;
+
+                    detail_picture.attr("src", d.picture_url);
+                    detail_img.attr("src", d.author_img_url);
+                    detail_author.text(d.author + "\n" + d.created_time);
+                    detail_message.text(d.message);
+
+
+                    //Color Date
+                    var date = new Date(d.created_time);
+
+                    for(var index in barchart_x_list){
+                        var val = new Date(barchart_x_list[index]);
+                        //console.log(val);
+                        var day = val.getDate();
+                        var time = val.getHours();
+                        var class_name = '.' + day + '-' + time;
+
+
+                        if(day == date.getDate() && time <= date.getHours() && date.getHours() < (time+1)){
+                            $(class_name).css("fill", "brown");
+                        }
+                        else if(day == date.getDate() && date.getHours() == 24){
+                            class_name = '.' + day + '-' + 23;
+                            $(class_name).css("fill", "brown");
+                        }
+                        else{
+                            $(class_name).css("fill", "steelblue");
+
+                        }
+
+                    }
+                })
+                //.text(function(d) { return d.children ? null : d.name; });
+
+        d3.selectAll("input").on("change", function change() {
+            var value = this.value === "count"
+                    ? function() { return 1; }
+                    : function(d) { return d.size; };
+
+            node
+                    .data(treemap.value(value).nodes)
+                    .transition()
+                    .duration(1500)
+                    .call(position);
+        });
+    });
+
+    function position() {
+        this.style("left", function(d) { return d.x + "px"; })
+                .style("top", function(d) { return d.y + "px"; })
+                .style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
+                .style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; });
+    }
+
+</script>
+</html>
