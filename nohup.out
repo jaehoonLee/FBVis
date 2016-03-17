@@ -1,0 +1,960 @@
+Traceback (most recent call last):
+  File "manage.py", line 8, in <module>
+    from django.core.management import execute_from_command_line
+ImportError: No module named django.core.management
+Unhandled exception in thread started by <function wrapper at 0x7f0e2b7d25f0>
+Performing system checks...
+
+Traceback (most recent call last):
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/autoreload.py", line 226, in wrapper
+    fn(*args, **kwargs)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/commands/runserver.py", line 116, in inner_run
+    self.check(display_num_errors=True)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/management/base.py", line 426, in check
+    include_deployment_checks=include_deployment_checks,
+  File "/usr/local/lib/python2.7/dist-packages/django/core/checks/registry.py", line 75, in run_checks
+    new_errors = check(app_configs=app_configs)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/checks/urls.py", line 13, in check_url_config
+    return check_resolver(resolver)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/checks/urls.py", line 23, in check_resolver
+    for pattern in resolver.url_patterns:
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 417, in url_patterns
+    patterns = getattr(self.urlconf_module, "urlpatterns", self.urlconf_module)
+  File "/usr/local/lib/python2.7/dist-packages/django/utils/functional.py", line 33, in __get__
+    res = instance.__dict__[self.name] = self.func(instance)
+  File "/usr/local/lib/python2.7/dist-packages/django/core/urlresolvers.py", line 410, in urlconf_module
+    return import_module(self.urlconf_name)
+  File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
+    __import__(name)
+  File "/home/jhun88/FBVis/FBVis/urls.py", line 18, in <module>
+    from Main.views import *
+  File "/home/jhun88/FBVis/Main/views.py", line 8, in <module>
+    from stop_words import get_stop_words
+ImportError: No module named stop_words
+System check identified some issues:
+
+WARNINGS:
+?: (1_8.W001) The standalone TEMPLATE_* settings were deprecated in Django 1.8 and the TEMPLATES dictionary takes precedence. You must put the values of the following settings into your default TEMPLATES dict: TEMPLATE_DIRS.
+
+System check identified 1 issue (0 silenced).
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-04 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-11 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[09/Mar/2016 15:20:36] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:20:36] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:20:36] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:20:36] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:20:36] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:20:36] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:20:36] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:20:36] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:20:36] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:20:39] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 15:20:39] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:20:39] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:20:39] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:20:39] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:20:39] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:20:39] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:20:39] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:20:39] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 15:20:39] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-05 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-06 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-07 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-08 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-09 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-10 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[09/Mar/2016 15:20:39] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:20:41] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:20:46] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:20:46] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:20:47] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:20:47] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:20:48] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:20:48] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:20:49] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:20:50] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:24:23] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:24:24] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:24:24] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:24:24] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:24:24] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:24:24] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:24:24] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:24:24] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:24:24] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:24:26] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 15:24:27] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:24:27] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:24:27] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:24:27] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:24:27] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:24:27] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:24:27] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /barchart_data
+[09/Mar/2016 15:24:27] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:24:27] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:24:27] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:24:29] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:24:33] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:24:33] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:24:34] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:24:34] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:24:34] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:24:34] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:24:35] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:24:37] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:24:50] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:24:50] "GET /static/d3.layout.cloud.js HTTP/1.1" 200 12937
+[09/Mar/2016 15:24:50] "GET /static/newsfeed_treemap.js HTTP/1.1" 200 8610
+[09/Mar/2016 15:24:50] "GET /static/newsfeed_barchart.js HTTP/1.1" 200 3837
+[09/Mar/2016 15:24:50] "GET /static/d3/d3.v3.min.js HTTP/1.1" 200 151701
+[09/Mar/2016 15:24:50] "GET /static/jquery.min.js HTTP/1.1" 200 84345
+[09/Mar/2016 15:24:50] "GET /static/newsfeed_famous.js HTTP/1.1" 200 2061
+[09/Mar/2016 15:24:51] "GET /static/semantic.js HTTP/1.1" 200 660568
+[09/Mar/2016 15:24:51] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+Not Found: /treemap_data
+[09/Mar/2016 15:24:52] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:24:52] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:24:52] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:24:52] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:24:52] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /favicon.ico
+[09/Mar/2016 15:24:52] "GET /favicon.ico HTTP/1.1" 404 3177
+Not Found: /treemap_data
+[09/Mar/2016 15:24:52] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:24:52] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:24:52] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 15:24:52] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:24:52] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:24:55] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:24:58] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:24:59] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:24:59] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:24:59] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:25:00] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:25:00] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:25:00] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:25:00] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:25:55] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:25:55] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:25:55] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:25:55] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:25:55] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:25:55] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:25:55] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:25:55] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:25:55] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:25:56] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:25:58] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:25:59] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+- Broken pipe from ('143.215.49.106', 57319)
+[09/Mar/2016 15:25:59] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+- Broken pipe from ('143.215.49.106', 57317)
+[09/Mar/2016 15:25:59] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+- Broken pipe from ('143.215.49.106', 57322)
+[09/Mar/2016 15:26:00] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+- Broken pipe from ('143.215.49.106', 57321)
+[09/Mar/2016 15:26:00] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+- Broken pipe from ('143.215.49.106', 57320)
+[09/Mar/2016 15:31:34] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:31:34] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:31:34] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:31:34] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:31:34] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:31:34] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:31:34] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+Not Found: /treemap_domain
+[09/Mar/2016 15:31:34] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:31:34] "GET /treemap_domain HTTP/1.1" 301 0
+[09/Mar/2016 15:31:35] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:31:35] "GET /treemap_domain/ HTTP/1.1" 200 20022
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:31:35] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:31:35] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:31:35] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /favicon.ico
+[09/Mar/2016 15:31:35] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:31:35] "GET /favicon.ico HTTP/1.1" 404 3177
+Not Found: /treemap_data
+[09/Mar/2016 15:31:35] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:31:35] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /barchart_data
+[09/Mar/2016 15:31:35] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:31:35] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:31:37] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:31:41] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:31:41] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:31:41] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:31:41] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:31:42] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:31:42] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:31:42] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:31:42] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:38:32] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:38:32] "GET /static/d3.layout.cloud.js HTTP/1.1" 200 12937
+[09/Mar/2016 15:38:32] "GET /static/newsfeed_treemap.js HTTP/1.1" 200 8610
+[09/Mar/2016 15:38:32] "GET /static/newsfeed_barchart.js HTTP/1.1" 200 3837
+[09/Mar/2016 15:38:32] "GET /static/newsfeed_famous.js HTTP/1.1" 200 2061
+[09/Mar/2016 15:38:32] "GET /static/d3/d3.v3.min.js HTTP/1.1" 200 151701
+[09/Mar/2016 15:38:32] "GET /static/jquery.min.js HTTP/1.1" 200 84345
+[09/Mar/2016 15:38:32] "GET /static/semantic.js HTTP/1.1" 200 660568
+[09/Mar/2016 15:38:32] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 15:38:33] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:38:33] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:38:33] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:38:33] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:38:33] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:38:33] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:38:33] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /barchart_data
+[09/Mar/2016 15:38:33] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:38:33] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+Not Found: /favicon.ico
+[09/Mar/2016 15:38:33] "GET /favicon.ico HTTP/1.1" 404 3177
+[09/Mar/2016 15:38:33] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:38:35] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:38:38] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:38:38] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:38:38] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:38:38] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:38:39] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:38:40] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:38:40] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:38:41] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:40:34] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:40:35] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:35] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:35] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:40:35] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:35] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:35] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:35] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:35] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:36] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 15:40:36] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:40:36] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:40:36] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:40:36] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:40:36] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:40:36] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:40:36] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /barchart_data
+[09/Mar/2016 15:40:36] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:40:36] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:40:36] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:40:38] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:40:41] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:40:41] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:40:41] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:40:42] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:40:42] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:40:43] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:40:43] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:40:43] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:40:43] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:43] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:43] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:43] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:43] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:43] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:40:43] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+Not Found: /treemap_domain
+[09/Mar/2016 15:40:43] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:40:43] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:40:43] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:40:43] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:40:43] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:40:43] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:40:43] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:40:43] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 15:40:43] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:40:43] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:40:44] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+- Broken pipe from ('143.215.206.75', 65086)
+[09/Mar/2016 15:40:44] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:40:46] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:40:48] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:40:48] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:40:48] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:40:48] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:40:49] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:40:50] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:40:50] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:40:51] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:47:30] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:47:30] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:47:30] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:30] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:30] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:30] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:30] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:30] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:30] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:30] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:47:33] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:47:34] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:47:35] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:47:35] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+Not Found: /favicon.ico
+[09/Mar/2016 15:47:35] "GET /favicon.ico HTTP/1.1" 404 3177
+[09/Mar/2016 15:47:35] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:47:36] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:47:36] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:47:37] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:47:37] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:47:46] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:47:46] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:47:46] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:46] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:46] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:46] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:46] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:46] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:47:46] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_domain
+[09/Mar/2016 15:47:46] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:47:46] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:47:46] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:47:46] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:47:46] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:47:46] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:47:46] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:47:46] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 15:47:46] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:47:46] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:47:48] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:47:51] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:47:51] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:47:51] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:47:52] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:47:52] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:47:52] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:47:53] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:47:53] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:48:19] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:48:19] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:19] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:48:19] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:19] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:19] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:19] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:19] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:19] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_domain
+[09/Mar/2016 15:48:19] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:48:19] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:48:19] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:48:19] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:48:19] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:48:19] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:48:19] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:48:19] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 15:48:19] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:48:19] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:48:21] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:48:24] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:48:24] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:48:24] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:48:25] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:48:25] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:48:25] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:48:26] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:48:26] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:48:54] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:48:54] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:54] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:48:54] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:54] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:54] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:54] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:54] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:54] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:48:55] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 15:48:55] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:48:55] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:48:55] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:48:55] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:48:55] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:48:55] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:48:55] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:48:55] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 15:48:55] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:48:55] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:48:57] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:49:00] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:49:00] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:49:00] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:49:00] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:49:01] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:49:01] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:49:02] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:49:02] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:49:57] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:49:57] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:49:57] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:49:57] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:49:57] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:49:57] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:49:57] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:49:57] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:49:57] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:49:58] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 15:49:58] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:49:58] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:49:58] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:49:58] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:49:58] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:49:58] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:49:58] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:49:58] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 15:49:58] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:49:59] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:50:00] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:50:03] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:50:03] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:50:03] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:50:04] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:50:05] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:50:05] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:50:05] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:50:06] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:50:27] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:50:27] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:50:27] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:50:27] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:50:27] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:50:27] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:50:27] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:50:27] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:50:27] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:50:28] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 15:50:28] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:50:28] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:50:28] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:50:28] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:50:28] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:50:28] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:50:28] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:50:28] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 15:50:28] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:50:28] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:50:30] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:50:32] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:50:32] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+- Broken pipe from ('143.215.206.75', 65405)
+[09/Mar/2016 15:50:32] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+- Broken pipe from ('143.215.206.75', 65404)
+[09/Mar/2016 15:50:32] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+- Broken pipe from ('143.215.206.75', 65406)
+[09/Mar/2016 15:50:32] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+- Broken pipe from ('143.215.206.75', 65403)
+[09/Mar/2016 15:50:33] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+- Broken pipe from ('143.215.206.75', 65402)
+[09/Mar/2016 15:51:00] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:51:00] "GET /static/d3.layout.cloud.js HTTP/1.1" 200 12937
+[09/Mar/2016 15:51:00] "GET /static/newsfeed_treemap.js HTTP/1.1" 200 8610
+[09/Mar/2016 15:51:00] "GET /static/jquery.min.js HTTP/1.1" 200 84345
+[09/Mar/2016 15:51:00] "GET /static/newsfeed_barchart.js HTTP/1.1" 200 3837
+[09/Mar/2016 15:51:00] "GET /static/newsfeed_famous.js HTTP/1.1" 200 2061
+[09/Mar/2016 15:51:00] "GET /static/d3/d3.v3.min.js HTTP/1.1" 200 151701
+[09/Mar/2016 15:51:01] "GET /static/semantic.js HTTP/1.1" 200 660568
+[09/Mar/2016 15:51:01] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 15:51:01] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:51:01] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:51:01] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:51:01] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:51:01] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:51:01] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:51:01] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /barchart_data
+[09/Mar/2016 15:51:01] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:51:01] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:51:01] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:51:03] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:51:06] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:51:06] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:51:06] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:51:06] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:51:07] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:51:07] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:51:08] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:51:08] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:52:52] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:52:52] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:52] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:52:52] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:52] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:52] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:52] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:52] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:53] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:53] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 15:52:53] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:52:54] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:52:54] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:52:54] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:52:54] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:52:54] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:52:54] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:52:54] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 15:52:54] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:52:54] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:52:56] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:52:58] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:52:58] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+- Broken pipe from ('143.215.206.75', 65466)
+[09/Mar/2016 15:52:58] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+- Broken pipe from ('143.215.206.75', 65465)
+[09/Mar/2016 15:52:58] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+- Broken pipe from ('143.215.206.75', 65467)
+[09/Mar/2016 15:52:58] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:58] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:58] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:52:58] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:58] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:58] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:58] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:52:58] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_domain
+[09/Mar/2016 15:52:58] "GET /treemap_domain HTTP/1.1" 301 0
+[09/Mar/2016 15:52:58] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+- Broken pipe from ('143.215.206.75', 65464)
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:52:58] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:52:58] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:52:58] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:52:58] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:52:58] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:52:58] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:52:58] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 15:52:58] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:52:58] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:52:59] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+- Broken pipe from ('143.215.206.75', 65463)
+[09/Mar/2016 15:53:01] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:53:03] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:53:03] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:53:03] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:53:04] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:53:04] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:53:05] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:53:05] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:53:05] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:53:16] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:53:16] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:16] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:16] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:16] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:16] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:53:16] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:16] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:16] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:17] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 15:53:17] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:53:17] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:53:17] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:53:17] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:53:17] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:53:18] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:53:18] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /barchart_data
+[09/Mar/2016 15:53:18] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:53:18] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:53:18] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:53:19] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:53:22] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:53:22] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:53:22] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:53:23] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:53:23] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:53:24] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:53:24] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:53:25] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:53:52] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:53:52] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:52] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:53:52] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:52] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:52] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:52] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:52] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:52] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:53:53] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 15:53:53] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:53:53] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:53:53] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 15:53:53] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:53:53] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:53:53] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:53:53] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 15:53:53] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 15:53:53] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 15:53:53] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:53:55] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:53:58] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:53:58] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:53:58] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:53:59] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:53:59] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:53:59] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:54:00] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:54:00] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:54:34] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:54:35] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:54:37] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:54:39] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:54:39] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:54:40] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:54:40] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+Not Found: /favicon.ico
+[09/Mar/2016 15:54:40] "GET /favicon.ico HTTP/1.1" 404 3177
+[09/Mar/2016 15:54:41] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:54:41] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:54:41] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:54:42] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:58:16] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:58:16] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:58:16] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 15:58:16] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 15:58:16] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 15:58:16] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 15:58:16] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 15:58:16] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 15:58:16] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 15:58:16] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:58:19] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:58:21] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:58:21] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:58:21] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:58:22] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:58:22] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:58:22] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:58:23] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:58:23] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:58:25] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:58:25] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:58:25] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:58:27] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:58:29] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:58:29] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:58:29] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:58:29] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:58:30] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:58:30] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:58:30] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:58:48] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:58:48] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:58:51] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:58:53] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:58:53] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:58:53] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:58:53] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:58:54] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:58:55] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:58:55] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:58:55] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:58:59] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:58:59] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:59:01] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:59:03] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:59:03] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:59:04] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:59:04] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:59:04] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:59:05] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:59:05] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:59:06] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 15:59:49] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 15:59:49] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 15:59:51] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 15:59:53] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 15:59:53] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 15:59:53] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 15:59:54] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 15:59:54] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 15:59:55] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 15:59:55] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 15:59:56] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 16:00:07] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 16:00:08] "GET / HTTP/1.1" 200 13127
+[09/Mar/2016 16:00:08] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 16:00:11] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 16:00:12] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 16:00:13] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 16:00:13] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 16:00:13] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 16:00:14] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 16:00:14] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 16:00:15] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 16:00:15] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 16:35:17] "GET / HTTP/1.1" 200 13212
+[09/Mar/2016 16:35:17] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 16:35:17] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 16:35:17] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 16:35:17] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 16:35:17] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 16:35:18] "GET /static/newsfeed_treemap.js HTTP/1.1" 200 9166
+Not Found: /treemap_domain
+[09/Mar/2016 16:35:18] "GET /static/newsfeed_barchart.js HTTP/1.1" 200 3840
+[09/Mar/2016 16:35:18] "GET /treemap_domain HTTP/1.1" 301 0
+[09/Mar/2016 16:35:18] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 16:35:18] "GET /treemap_domain/ HTTP/1.1" 200 20022
+Not Found: /treemap_data
+[09/Mar/2016 16:35:18] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:35:18] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:35:18] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:35:18] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:35:18] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:35:18] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /barchart_data
+[09/Mar/2016 16:35:18] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 16:35:18] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 16:35:20] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 16:35:24] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 16:35:24] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 16:35:24] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 16:35:25] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 16:35:25] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 16:35:25] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 16:35:25] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 16:35:25] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 16:37:23] "GET / HTTP/1.1" 200 13212
+[09/Mar/2016 16:37:23] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 16:37:23] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 16:37:23] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 16:37:23] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 16:37:23] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 16:37:23] "GET /static/newsfeed_treemap.js HTTP/1.1" 200 9166
+[09/Mar/2016 16:37:23] "GET /static/newsfeed_barchart.js HTTP/1.1" 200 3840
+[09/Mar/2016 16:37:23] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[09/Mar/2016 16:37:24] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_domain
+[09/Mar/2016 16:37:24] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:37:24] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 16:37:24] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 16:37:24] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:37:24] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 16:37:24] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 16:37:24] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 16:37:24] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 16:37:24] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 16:37:25] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 16:37:26] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 16:37:29] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 16:37:29] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 16:37:30] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 16:37:30] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 16:37:31] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 16:37:31] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 16:37:31] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 16:37:32] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
+[09/Mar/2016 16:37:39] "GET / HTTP/1.1" 200 13212
+[09/Mar/2016 16:37:39] "GET /static/jquery.min.js HTTP/1.1" 304 0
+[09/Mar/2016 16:37:39] "GET /static/semantic.css HTTP/1.1" 304 0
+[09/Mar/2016 16:37:39] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[09/Mar/2016 16:37:39] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[09/Mar/2016 16:37:39] "GET /static/semantic.js HTTP/1.1" 304 0
+[09/Mar/2016 16:37:39] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[09/Mar/2016 16:37:39] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[09/Mar/2016 16:37:39] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_domain
+[09/Mar/2016 16:37:39] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:37:39] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[09/Mar/2016 16:37:39] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[09/Mar/2016 16:37:39] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:37:39] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:37:39] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:37:39] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[09/Mar/2016 16:37:39] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[09/Mar/2016 16:37:39] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[09/Mar/2016 16:37:40] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[09/Mar/2016 16:37:41] "GET /famous_data/ HTTP/1.1" 200 2547
+[09/Mar/2016 16:37:44] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 499916
+[09/Mar/2016 16:37:44] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 502439
+[09/Mar/2016 16:37:44] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 574672
+[09/Mar/2016 16:37:44] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 594422
+[09/Mar/2016 16:37:45] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 666415
+[09/Mar/2016 16:37:45] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 750677
+[09/Mar/2016 16:37:46] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[09/Mar/2016 16:37:46] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 631878
