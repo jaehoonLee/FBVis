@@ -4,6 +4,8 @@
 
 
 // This is called with the results from from FB.getLoginStatus().
+var login = false;
+
 function statusChangeCallback(response) {
     console.log('statusChangeCallback');
     console.log(response);
@@ -14,13 +16,19 @@ function statusChangeCallback(response) {
     if (response.status === 'connected') {
         // Logged into your app and Facebook.
         testAPI();
+	login = true;
+	$('.fbbutton').html('<i class="facebook icon"></i> FBLogout');
     } else if (response.status === 'not_authorized') {
         // The person is logged into Facebook, but not your app.
         //document.getElementById('status').innerHTML = 'Please log ' + 'into this app.';
+	login = false;
+	$('.fbbutton').html('<i class="facebook icon"></i> FBLogin');
     } else {
         // The person is not logged into Facebook, so we're not sure if
         // they are logged into this app or not.
         //document.getElementById('status').innerHTML = 'Please log ' + 'into Facebook.';
+	login = false;
+	$('.fbbutton').html('<i class="facebook icon"></i> FBLogin');
     }
 }
 
@@ -45,6 +53,7 @@ window.fbAsyncInit = function() {
         statusChangeCallback(response);
     });
 
+    FB.Canvas.setSize({ width: 640, height: 100 });
 };
 
 (function(d, s, id){
@@ -65,3 +74,5 @@ function testAPI() {
         //document.getElementById('status').innerHTML = 'Thanks for logging in, ' + response.name + '!';
     });
 }
+
+

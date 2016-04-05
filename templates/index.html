@@ -1,5 +1,5 @@
 {% load staticfiles %}
-<!DOCTYPE html>
+<!DOCTYPE html><meta charset="utf-8">
 
 <head>
     <meta charset="utf-8">
@@ -110,15 +110,10 @@
 
     </div>
     <div class="right menu">
-
-        <button class="ui facebook button">
+        <button class="ui facebook button fbbutton">
             <i class="facebook icon"></i>
             FBLogin
         </button>
-
-        </fb:login-button>
-
-
     </div>
 
 </div>
@@ -349,15 +344,37 @@
         content.push({title: words[i].text});
     }
 
-
     $('.ui.search')
             .search({
                 source: content,
                 onSelect:function(result, response){
-                    console.log(result);
                     wordcloud_treemap_call(result.title, '#000000');
                 }
-            });
+    });
+
+
+    
+    $('.fbbutton').click(function(){
+    console.log(login);
+    
+    if(login){
+    FB.logout(function(response){
+    console.log(response);
+    statusChangeCallback(response);
+    });
+    
+
+    }
+    else{
+    FB.login(function(response) {
+		// handle the response
+    console.log(response)
+    statusChangeCallback(response);
+    }, {scope: 'public_profile,email'});
+    }
+
+    });
+
 
 
 </script>

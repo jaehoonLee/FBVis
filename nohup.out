@@ -38947,3 +38947,2903 @@ Not Found: /barchart_data
 [05/Apr/2016 14:56:15] "GET /treemap_assign/20446254070_10153368243304071/ HTTP/1.1" 200 0
 [05/Apr/2016 14:56:15] "GET /treemap_assign/20446254070_10153368264794071/ HTTP/1.1" 200 0
 [05/Apr/2016 14:56:16] "GET /treemap_assign/20446254070_10153368243304071/ HTTP/1.1" 200 0
+Performing system checks...
+
+
+You have unapplied migrations; your app may not work properly until they are applied.
+Run 'python manage.py migrate' to apply them.
+April 05, 2016 - 01:34:43
+Django version 1.9.4, using settings 'FBVis.settings'
+Starting development server at http://0.0.0.0:7000/
+Quit the server with CONTROL-C.
+set(['a', 'c', 'b'])
+770
+20446254070_10153361512109071
+10203766344661548_10208762902492371
+299975083418457_965362920213000
+10202818466496275_1122317567780870
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+10103695438498433_10154622044663009
+set(['a', 'c', 'b'])
+770
+325882087594287_522893814559779
+495060454002836_577548459087368
+20446254070_10153365629869071
+128562817166981_1046839775339276
+1548393862154444_1552785091715321
+182698125088068_1119881198036418
+set(['a', 'c', 'b'])
+770
+20446254070_10153365183839071
+364422757097773_455697761303605
+832182990149527_10153420254473511
+278666695673829_444151029125394
+20446254070_10153366981224071
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+159673400728102_1279615698733861
+1413475698959824_1513921805581879
+10153097837247444_10153402020822444
+set(['a', 'c', 'b'])
+770
+10154912572785327_10156573830255327
+115823601826087_1001927013215737
+558828827565807_1359726277386953
+278666695673829_444150749125422
+278666695673829_444146879125809
+364422757097773_456712507868797
+20446254070_10153368800439071
+10152146017236848_10153517576221848
+635446986533049_1012783232132754
+10204010711406457_1251381208247905
+647193602013469_1680111692206809
+10203766344661548_10208791696852212
+18807449704_10153891207839705
+20446254070_10153368348874071
+20446254070_10153369715184071
+7419689078_10153639432209079
+247107255487756_486759198189226
+20446254070_10153364945854071
+20446254070_10153366783314071
+20446254070_10153366992999071
+1413475698959824_1514147662225960
+17043549797_10153901348484798
+495060454002836_577157759126438
+1228219861_10208498436518268
+29092950651_10156503190455652
+18807449704_10153882800724705
+10203766344661548_10208125321032860
+8062627951_10153971522687952
+818596874852799_1674065842879511
+4937327807980_10201438156912822
+10154074299940403_10156438497875403
+497899983625735_965037773578618
+253093728043216_1133901333295780
+10203705237129507_10153872122738745
+10152800403685830_10154488928885830
+641819185930552_797055500406919
+1494731297498009_1519024705068668
+17043549797_10153895006224798
+269462913232277_509485512563348
+495060454002836_576414772534070
+495060454002836_576416522533895
+689522981085826_1019462868091834
+18807449704_10153883220744705
+132853273433650_1073296616055973
+20446254070_10153359321224071
+20446254070_10153362890134071
+20446254070_10153362887044071
+132853273433650_1073882225997412
+20446254070_10153365555229071
+20446254070_10153359546719071
+132853273433650_1073499716035663
+132853273433650_1073488589370109
+20446254070_10153365192679071
+1413475698959824_1513881222252604
+10203142770986891_10207801755538593
+253093728043216_1133892423296671
+255167387863705_958791890834581
+279681918864172_546184508880577
+1540370916252268_1688147784807913
+642058258_10153940950188259
+10203142770986891_10207803766748872
+10152434190357125_10154019620447125
+29092950651_10156513011940652
+175755689129519_1043944565643956
+1413475698959824_1514479692192757
+20446254070_10153368962694071
+20446254070_10153369490164071
+20446254070_10153368681659071
+20446254070_10153368868574071
+20446254070_10153368285769071
+20446254070_10153368285769071
+20446254070_10153368243304071
+20446254070_10153368264794071
+20446254070_10153368243304071
+System check identified some issues:
+
+WARNINGS:
+?: (1_8.W001) The standalone TEMPLATE_* settings were deprecated in Django 1.8 and the TEMPLATES dictionary takes precedence. You must put the values of the following settings into your default TEMPLATES dict: TEMPLATE_DIRS.
+
+System check identified 1 issue (0 silenced).
+[05/Apr/2016 15:00:26] "GET /treemap_assign/10152783547824148_943079159103599/ HTTP/1.1" 200 0
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-04 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-11 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/template/loader.py:97: RemovedInDjango110Warning: render() must be called with a dict, not a RequestContext.
+  return template.render(context, request)
+
+[05/Apr/2016 15:00:28] "GET / HTTP/1.1" 200 18121
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-05 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-06 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-07 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-08 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-09 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[05/Apr/2016 15:00:30] "GET /famous_data/ HTTP/1.1" 200 2547
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-10 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[05/Apr/2016 15:00:36] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 15:00:36] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 15:00:36] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:00:36] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 15:00:36] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 15:00:37] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 15:00:37] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 15:00:38] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 15:00:40] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 15:00:44] "GET /treemap_assign/97838403510_10153420254473511/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:04] "GET /treemap_assign/685946721468332_1041255505937450/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:11] "GET /treemap_assign/20446254070_10153367311669071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:11] "GET /treemap_assign/20446254070_10153366214259071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:11] "GET /treemap_assign/20446254070_10153367246269071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:11] "GET /treemap_assign/1548393862154444_1553472844979879/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:11] "GET /treemap_assign/1548393862154444_1553475191646311/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:11] "GET /treemap_assign/1548393862154444_1553381541655676/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/689522981085826_1021602321211222/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/20446254070_10153366992999071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/689522981085826_1021485724556215/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/245046025615886_896507130469769/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/247107255487756_956676987703276/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/247107255487756_486759198189226/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/17043549797_10153907268479798/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/296869857127346_649235485224113/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/247107255487756_486769794854833/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/17043549797_10153907268479798/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/132853273433650_1074874772564824/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/175755689129519_1043928015645611/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/255232486973_10153931880711974/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/29092950651_10156513011940652/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/255232486973_10153931880711974/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:12] "GET /treemap_assign/255232486973_10153931880056974/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:13] "GET /treemap_assign/131527746883613_988269391209440/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:13] "GET /treemap_assign/10152809337000236_10154329808265329/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:13] "GET /treemap_assign/10152409547261743_1109525895758939/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:13] "GET /treemap_assign/1264809690202825_1278455455504915/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:13] "GET /treemap_assign/10103017613470271_10103958179997411/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:13] "GET /treemap_assign/10152409547261743_1109525895758939/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:13] "GET /treemap_assign/640659392737598_738296146307255/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:13] "GET /treemap_assign/131527746883613_988294604540252/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:13] "GET /treemap_assign/7419689078_10153639488834079/ HTTP/1.1" 200 0
+[05/Apr/2016 15:01:13] "GET /treemap_assign/8062627951_10153980916437952/ HTTP/1.1" 200 0
+[05/Apr/2016 15:02:09] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:02:10] "GET /treemap_assign/10152783547824148_10154557931509148/ HTTP/1.1" 200 0
+[05/Apr/2016 15:02:12] "GET /treemap_assign/642058258_10153940950188259/ HTTP/1.1" 200 0
+[05/Apr/2016 15:02:26] "GET /treemap_assign/1971093453115263_1974069639484311/ HTTP/1.1" 200 0
+[05/Apr/2016 15:03:00] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:03:01] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:03:11] "GET /treemap_assign/689522981085826_1018450201526434/ HTTP/1.1" 200 0
+[05/Apr/2016 15:03:11] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:03:12] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:03:12] "GET /treemap_assign/159673400728102_1278386528856778/ HTTP/1.1" 200 0
+[05/Apr/2016 15:03:13] "GET /treemap_assign/689522981085826_1018533671518087/ HTTP/1.1" 200 0
+[05/Apr/2016 15:03:13] "GET /treemap_assign/690495787702978_946918768727344/ HTTP/1.1" 200 0
+[05/Apr/2016 15:05:31] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:05:31] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:05:32] "GET /treemap_assign/967164259967422_1240811282602717/ HTTP/1.1" 200 0
+[05/Apr/2016 15:10:55] "GET /treemap_assign/20446254070_10153365426664071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:10:55] "GET /treemap_assign/206166426072817_1047362155286569/ HTTP/1.1" 200 0
+[05/Apr/2016 15:10:55] "GET /treemap_assign/10203705237129507_1109068275793528/ HTTP/1.1" 200 0
+[05/Apr/2016 15:10:57] "GET /treemap_assign/8062627951_10153974152687952/ HTTP/1.1" 200 0
+[05/Apr/2016 15:11:00] "GET /treemap_assign/689522981085826_1019383994766388/ HTTP/1.1" 200 0
+[05/Apr/2016 15:11:01] "GET /treemap_assign/18807449704_10153883202064705/ HTTP/1.1" 200 0
+[05/Apr/2016 15:11:01] "GET /treemap_assign/18807449704_10153882806544705/ HTTP/1.1" 200 0
+[05/Apr/2016 15:11:15] "GET /treemap_assign/20446254070_10153368959254071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:11:15] "GET /treemap_assign/20446254070_10153368800439071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:11:16] "GET /treemap_assign/20446254070_10153368472954071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:11:16] "GET /treemap_assign/20446254070_10153368962694071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:16:33] "GET / HTTP/1.1" 200 18193
+[05/Apr/2016 15:16:33] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 15:16:33] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:16:33] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 15:16:33] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 15:16:33] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:16:33] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:16:33] "GET /static/fb_account.js HTTP/1.1" 304 0
+[05/Apr/2016 15:16:33] "GET /static/components/icon.min.css HTTP/1.1" 200 33341
+[05/Apr/2016 15:16:33] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 15:16:33] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 15:16:33] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:16:33] "GET /static/jquery/jquery-ui.css HTTP/1.1" 200 34459
+[05/Apr/2016 15:16:33] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 15:16:33] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 15:16:36] "GET /static/semantic.css HTTP/1.1" 200 719040
+[05/Apr/2016 15:16:37] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 304 0
+Not Found: /treemap_data
+[05/Apr/2016 15:16:37] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:16:37] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:16:37] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:16:37] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:16:37] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:16:37] "GET /famous_data/ HTTP/1.1" 200 2547
+Not Found: /treemap_data
+[05/Apr/2016 15:16:37] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_domain
+[05/Apr/2016 15:17:22] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:17:22] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 15:17:22] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:17:24] "GET / HTTP/1.1" 200 18193
+[05/Apr/2016 15:17:24] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 15:17:24] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 15:17:24] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 15:17:26] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+- Broken pipe from ('143.215.59.30', 54161)
+[05/Apr/2016 15:17:26] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+- Broken pipe from ('143.215.59.30', 54160)
+[05/Apr/2016 15:17:26] "GET / HTTP/1.1" 200 18193
+[05/Apr/2016 15:17:27] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+- Broken pipe from ('143.215.59.30', 54165)
+[05/Apr/2016 15:17:27] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+- Broken pipe from ('143.215.59.30', 54163)
+[05/Apr/2016 15:17:27] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+- Broken pipe from ('143.215.59.30', 54164)
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 15:17:27] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:17:27] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 15:17:27] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:17:27] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:17:27] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:17:27] "GET /famous_data/ HTTP/1.1" 200 2547
+Not Found: /treemap_data
+[05/Apr/2016 15:17:28] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+Not Found: /barchart_data
+[05/Apr/2016 15:17:35] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 15:17:35] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:17:35] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:17:36] "GET / HTTP/1.1" 200 18123
+Not Found: /treemap_data
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 15:17:37] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:17:37] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:17:37] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:17:37] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:17:37] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 15:17:37] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:17:37] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 15:17:37] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 15:17:37] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 15:17:39] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+- Broken pipe from ('143.215.59.30', 54187)
+[05/Apr/2016 15:17:40] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+- Broken pipe from ('143.215.59.30', 54188)
+[05/Apr/2016 15:17:40] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+- Broken pipe from ('143.215.59.30', 54189)
+[05/Apr/2016 15:17:41] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+- Broken pipe from ('143.215.59.30', 54186)
+[05/Apr/2016 15:17:41] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 15:17:43] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+- Broken pipe from ('143.215.59.30', 54190)
+[05/Apr/2016 15:17:46] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 15:17:46] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 15:17:47] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 15:17:47] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 15:17:47] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:17:47] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 15:17:47] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 15:17:47] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 15:17:47] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 15:17:48] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 15:17:52] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 15:17:54] "GET /treemap_assign/20446254070_10153366703154071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:17:54] "GET /treemap_assign/20446254070_10153366931104071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:17:56] "GET /treemap_assign/132853273433650_1073768326008802/ HTTP/1.1" 200 0
+[05/Apr/2016 15:18:11] "GET /treemap_assign/20446254070_10153363766124071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:18:12] "GET /treemap_assign/20446254070_10153363794199071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:18:12] "GET /treemap_assign/10152783547824148_10154564110954148/ HTTP/1.1" 200 0
+[05/Apr/2016 15:18:13] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 15:18:13] "GET /treemap_assign/18807449704_10153884698224705/ HTTP/1.1" 200 0
+[05/Apr/2016 15:18:13] "GET /treemap_assign/575262255856926_954958027887345/ HTTP/1.1" 200 0
+[05/Apr/2016 15:18:13] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 15:18:13] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 15:18:13] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 15:18:13] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:13] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:13] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:14] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:14] "GET /static/fb_account.js HTTP/1.1" 200 2192
+[05/Apr/2016 15:18:14] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:14] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:14] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:14] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:14] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:14] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:14] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:14] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:14] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:14] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:14] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:14] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:14] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+Not Found: /treemap_domain
+[05/Apr/2016 15:18:14] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:18:14] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 15:18:15] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 15:18:19] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 15:18:19] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 15:18:21] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 15:18:22] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 15:18:22] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 15:18:22] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 15:18:22] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:22] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:22] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 15:18:22] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:22] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:22] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:22] "GET /static/fb_account.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:22] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:22] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:22] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:23] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:23] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:23] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 15:18:23] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:18:23] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 15:18:23] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:18:23] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:23] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:23] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 15:18:23] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 15:18:23] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 15:18:24] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 15:18:27] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 15:18:27] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 15:18:33] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 15:18:33] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:18:35] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 15:18:35] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 15:18:35] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:35] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:35] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 15:18:35] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 15:18:36] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:36] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:36] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:36] "GET /static/fb_account.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:36] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:36] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:36] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:36] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 15:18:36] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 15:18:36] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:18:36] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:36] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:36] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:36] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:18:36] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:18:38] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+- Broken pipe from ('143.215.59.30', 54288)
+[05/Apr/2016 15:18:38] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+- Broken pipe from ('143.215.59.30', 54287)
+[05/Apr/2016 15:18:38] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 15:18:38] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+- Broken pipe from ('143.215.59.30', 54292)
+[05/Apr/2016 15:18:38] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+Not Found: /treemap_data
+[05/Apr/2016 15:18:39] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:18:39] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+- Broken pipe from ('143.215.59.30', 54286)
+Not Found: /treemap_domain
+[05/Apr/2016 15:20:30] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 15:20:30] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:20:32] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 15:20:32] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 15:20:32] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 15:20:32] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 15:20:32] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:20:32] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 15:20:32] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 15:20:32] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:20:32] "GET /static/fb_account.js HTTP/1.1" 200 2472
+[05/Apr/2016 15:20:32] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:20:32] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:20:32] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 15:20:32] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 15:20:32] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 15:20:33] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 15:20:33] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:20:33] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:20:33] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:20:33] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:20:33] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:20:33] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:20:33] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+Not Found: /barchart_data
+[05/Apr/2016 15:20:33] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 15:20:33] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:20:35] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+- Broken pipe from ('143.215.59.30', 54483)
+[05/Apr/2016 15:20:35] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+- Broken pipe from ('143.215.59.30', 54485)
+[05/Apr/2016 15:20:36] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+- Broken pipe from ('143.215.59.30', 54486)
+[05/Apr/2016 15:20:36] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+- Broken pipe from ('143.215.59.30', 54484)
+[05/Apr/2016 15:20:37] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 15:20:38] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+- Broken pipe from ('143.215.59.30', 54482)
+[05/Apr/2016 15:20:42] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 15:20:42] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 15:20:42] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:20:43] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 15:20:43] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 15:20:43] "GET /static/images/profile.png HTTP/1.1" 200 4258
+[05/Apr/2016 15:20:43] "GET /static/images/content.png HTTP/1.1" 200 1229
+[05/Apr/2016 15:20:44] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 15:20:44] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 15:20:46] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 15:20:47] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 15:20:49] "GET /treemap_assign/8062627951_10153978609972952/ HTTP/1.1" 200 0
+[05/Apr/2016 15:20:49] "GET /treemap_assign/951466404864883_1152735401404648/ HTTP/1.1" 200 0
+[05/Apr/2016 15:20:49] "GET /treemap_assign/10152146017236848_10153517576221848/ HTTP/1.1" 200 0
+[05/Apr/2016 15:20:49] "GET /treemap_assign/447775968580065_1240799452611042/ HTTP/1.1" 200 0
+[05/Apr/2016 15:20:49] "GET /treemap_assign/10203426964415998_10208191043474997/ HTTP/1.1" 200 0
+[05/Apr/2016 15:22:20] "GET /treemap_assign/497899983625735_965029373579458/ HTTP/1.1" 200 0
+[05/Apr/2016 15:22:21] "GET /treemap_assign/159673400728102_1279518678743563/ HTTP/1.1" 200 0
+[05/Apr/2016 15:22:21] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 15:22:21] "GET /treemap_assign/247107255487756_485821281616351/ HTTP/1.1" 200 0
+[05/Apr/2016 15:22:21] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:21] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:21] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:21] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:21] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:21] "GET /static/fb_account.js HTTP/1.1" 200 2173
+[05/Apr/2016 15:22:21] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:21] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:21] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:21] "GET /static/components/icon.min.css HTTP/1.1" 200 33341
+[05/Apr/2016 15:22:21] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:21] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:21] "GET /static/jquery/jquery-ui.css HTTP/1.1" 200 34459
+[05/Apr/2016 15:22:25] "GET /static/semantic.css HTTP/1.1" 200 719040
+[05/Apr/2016 15:22:26] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 304 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:26] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:26] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:26] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:26] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:26] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:26] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:26] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 15:22:26] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 15:22:26] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:22:27] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 15:22:32] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 15:22:32] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 15:22:33] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:22:33] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 15:22:33] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 15:22:34] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 15:22:34] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 15:22:34] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 15:22:36] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 15:22:36] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 15:22:38] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 15:22:46] "GET /treemap_assign/10152783547824148_10154564107499148/ HTTP/1.1" 200 0
+[05/Apr/2016 15:22:46] "GET /treemap_assign/10152783547824148_10154563056724148/ HTTP/1.1" 200 0
+[05/Apr/2016 15:22:46] "GET /treemap_assign/18807449704_10153882839059705/ HTTP/1.1" 200 0
+[05/Apr/2016 15:22:46] "GET /treemap_assign/20446254070_10153362696179071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:22:46] "GET /treemap_assign/685946721468332_901776346606507/ HTTP/1.1" 200 0
+[05/Apr/2016 15:22:47] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 15:22:47] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:47] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:47] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:47] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:47] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:47] "GET /static/fb_account.js HTTP/1.1" 200 2173
+[05/Apr/2016 15:22:47] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:47] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:47] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:47] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:47] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 15:22:47] "GET /static/components/icon.min.css HTTP/1.1" 200 33341
+[05/Apr/2016 15:22:47] "GET /static/jquery/jquery-ui.css HTTP/1.1" 200 34459
+[05/Apr/2016 15:22:50] "GET /static/semantic.css HTTP/1.1" 200 719040
+[05/Apr/2016 15:22:50] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 304 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:50] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:50] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:50] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:50] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:50] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:50] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 15:22:50] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:22:50] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 15:22:50] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 15:22:52] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 15:22:57] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 15:22:58] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 15:22:58] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 15:22:58] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:22:58] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 15:22:58] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 15:22:59] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 15:22:59] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 15:22:59] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 15:22:59] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 15:23:03] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 15:23:26] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:25:03] "GET /treemap_assign/10205086523906259_10205672056139956/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:03] "GET /treemap_assign/736368816430858_1035907236477013/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:03] "GET /treemap_assign/10154663861370207_10156446079640207/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:03] "GET /treemap_assign/132429636769246_1125764424102424/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:03] "GET /treemap_assign/143728505658816_1106745589357098/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:27] "GET /treemap_assign/20446254070_10153361935574071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:42] "GET /treemap_assign/18807449704_10153881484439705/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:42] "GET /treemap_assign/159673400728102_1279715698723861/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:42] "GET /treemap_assign/342453532500499_963082657104247/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:42] "GET /treemap_assign/101401456710000_480146232168852/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:43] "GET /treemap_assign/204346402970691_1038139656258024/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:43] "GET /treemap_assign/603826392964727_1277082988972394/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:43] "GET /treemap_assign/206166426072817_1046562262033225/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:43] "GET /treemap_assign/204346402970691_1038139656258024/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:43] "GET /treemap_assign/167079259973336_1236590449688873/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:43] "GET /treemap_assign/10101360652388503_10102111592453593/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:43] "GET /treemap_assign/776884052373325_562107760621085/ HTTP/1.1" 200 0
+[05/Apr/2016 15:25:43] "GET /treemap_assign/29092950651_10156495818830652/ HTTP/1.1" 200 0
+[05/Apr/2016 15:26:06] "GET /treemap_assign/132853273433650_1073488622703439/ HTTP/1.1" 200 0
+[05/Apr/2016 15:26:06] "GET /treemap_assign/139188202817559_1031369230266114/ HTTP/1.1" 200 0
+[05/Apr/2016 15:26:06] "GET /treemap_assign/253093728043216_1133890589963521/ HTTP/1.1" 200 0
+[05/Apr/2016 15:27:07] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:27:20] "GET /treemap_assign/1413475698959824_1514054392235287/ HTTP/1.1" 200 0
+[05/Apr/2016 15:27:41] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:27:42] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:27:42] "GET /treemap_assign/476398715797956_813054188799072/ HTTP/1.1" 200 0
+[05/Apr/2016 15:27:56] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 15:27:57] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/fb_account.js HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 15:27:57] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 304 0
+Not Found: /treemap_data
+[05/Apr/2016 15:27:57] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 15:27:57] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:27:57] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:27:57] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:27:57] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:27:57] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:27:57] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 15:27:57] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 15:27:57] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:27:58] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 15:28:04] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 15:28:05] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 15:28:05] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:28:05] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 15:28:06] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 15:28:06] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 15:28:06] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 15:28:06] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 15:28:06] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 15:28:06] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 15:28:08] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 15:28:22] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:30:04] "GET /treemap_assign/497899983625735_964019273680468/ HTTP/1.1" 200 0
+[05/Apr/2016 15:30:04] "GET /treemap_assign/275059612676013_497312947117344/ HTTP/1.1" 200 0
+[05/Apr/2016 15:30:04] "GET /treemap_assign/100000072617677_647079388773056/ HTTP/1.1" 200 0
+[05/Apr/2016 15:30:04] "GET /treemap_assign/100000072617677_646996862114642/ HTTP/1.1" 200 0
+Performing system checks...
+
+
+You have unapplied migrations; your app may not work properly until they are applied.
+Run 'python manage.py migrate' to apply them.
+April 05, 2016 - 14:59:03
+Django version 1.9.4, using settings 'FBVis.settings'
+Starting development server at http://0.0.0.0:7000/
+Quit the server with CONTROL-C.
+10152783547824148_943079159103599
+set(['a', 'c', 'b'])
+770
+97838403510_10153420254473511
+685946721468332_1041255505937450
+20446254070_10153367311669071
+20446254070_10153366214259071
+20446254070_10153367246269071
+1548393862154444_1553472844979879
+1548393862154444_1553475191646311
+1548393862154444_1553381541655676
+689522981085826_1021602321211222
+20446254070_10153366992999071
+689522981085826_1021485724556215
+245046025615886_896507130469769
+247107255487756_956676987703276
+247107255487756_486759198189226
+17043549797_10153907268479798
+296869857127346_649235485224113
+247107255487756_486769794854833
+17043549797_10153907268479798
+132853273433650_1074874772564824
+175755689129519_1043928015645611
+255232486973_10153931880711974
+29092950651_10156513011940652
+255232486973_10153931880711974
+255232486973_10153931880056974
+131527746883613_988269391209440
+10152809337000236_10154329808265329
+10152409547261743_1109525895758939
+1264809690202825_1278455455504915
+10103017613470271_10103958179997411
+10152409547261743_1109525895758939
+640659392737598_738296146307255
+131527746883613_988294604540252
+7419689078_10153639488834079
+8062627951_10153980916437952
+set(['a', 'c', 'b'])
+770
+10152783547824148_10154557931509148
+642058258_10153940950188259
+1971093453115263_1974069639484311
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+689522981085826_1018450201526434
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+159673400728102_1278386528856778
+689522981085826_1018533671518087
+690495787702978_946918768727344
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+967164259967422_1240811282602717
+20446254070_10153365426664071
+206166426072817_1047362155286569
+10203705237129507_1109068275793528
+8062627951_10153974152687952
+689522981085826_1019383994766388
+18807449704_10153883202064705
+18807449704_10153882806544705
+20446254070_10153368959254071
+20446254070_10153368800439071
+20446254070_10153368472954071
+20446254070_10153368962694071
+set(['a', 'c', 'b'])
+770
+20446254070_10153366703154071
+20446254070_10153366931104071
+132853273433650_1073768326008802
+20446254070_10153363766124071
+20446254070_10153363794199071
+10152783547824148_10154564110954148
+18807449704_10153884698224705
+575262255856926_954958027887345
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+8062627951_10153978609972952
+951466404864883_1152735401404648
+10152146017236848_10153517576221848
+447775968580065_1240799452611042
+10203426964415998_10208191043474997
+497899983625735_965029373579458
+159673400728102_1279518678743563
+247107255487756_485821281616351
+set(['a', 'c', 'b'])
+770
+10152783547824148_10154564107499148
+10152783547824148_10154563056724148
+18807449704_10153882839059705
+20446254070_10153362696179071
+685946721468332_901776346606507
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+10205086523906259_10205672056139956
+736368816430858_1035907236477013
+10154663861370207_10156446079640207
+132429636769246_1125764424102424
+143728505658816_1106745589357098
+20446254070_10153361935574071
+18807449704_10153881484439705
+159673400728102_1279715698723861
+342453532500499_963082657104247
+101401456710000_480146232168852
+204346402970691_1038139656258024
+603826392964727_1277082988972394
+206166426072817_1046562262033225
+204346402970691_1038139656258024
+167079259973336_1236590449688873
+10101360652388503_10102111592453593
+776884052373325_562107760621085
+29092950651_10156495818830652
+132853273433650_1073488622703439
+139188202817559_1031369230266114
+253093728043216_1133890589963521
+set(['a', 'c', 'b'])
+770
+1413475698959824_1514054392235287
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+476398715797956_813054188799072
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+497899983625735_964019273680468
+275059612676013_497312947117344
+100000072617677_647079388773056
+100000072617677_646996862114642
+693992[05/Apr/2016 15:30:04] "GET /treemap_assign/693992527331447_1029205620476801/ HTTP/1.1" 200 0
+[05/Apr/2016 15:30:04] "GET /treemap_assign/872803669450444_1044598318937644/ HTTP/1.1" 200 0
+Not Found: /favicon.ico
+[05/Apr/2016 15:31:06] "GET /favicon.ico HTTP/1.1" 404 3693
+[05/Apr/2016 15:31:22] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:32:16] "GET /treemap_assign/10100420913971828_10100781555303708/ HTTP/1.1" 200 0
+[05/Apr/2016 15:32:16] "GET /treemap_assign/171112259610923_1167423956646410/ HTTP/1.1" 200 0
+[05/Apr/2016 15:34:27] "GET /treemap_assign/159673400728102_1277642918931139/ HTTP/1.1" 200 0
+[05/Apr/2016 15:34:33] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 15:34:33] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 15:34:33] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 15:34:33] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 15:34:33] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 54252)
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 15:34:33] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 54253)
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 15:34:33] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 54254)
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 15:34:33] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 54255)
+[05/Apr/2016 15:37:13] "GET /treemap_assign/20446254070_10153366992999071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:37:14] "GET /treemap_assign/497899983625735_967911263291269/ HTTP/1.1" 200 0
+[05/Apr/2016 15:37:14] "GET /treemap_assign/171112259610923_1168254233230049/ HTTP/1.1" 200 0
+[05/Apr/2016 15:37:14] "GET /treemap_assign/719738081445477_953282908090992/ HTTP/1.1" 200 0
+[05/Apr/2016 15:37:14] "GET /treemap_assign/621217794622003_935688153174964/ HTTP/1.1" 200 0
+[05/Apr/2016 15:37:14] "GET /treemap_assign/858172967537348_1075004469187529/ HTTP/1.1" 200 0
+[05/Apr/2016 15:37:14] "GET /treemap_assign/10103017613470271_10103958179997411/ HTTP/1.1" 200 0
+[05/Apr/2016 15:37:14] "GET /treemap_assign/10203612821138066_685256301617562/ HTTP/1.1" 200 0
+[05/Apr/2016 15:37:14] "GET /treemap_assign/10152546278056806_10153332408486806/ HTTP/1.1" 200 0
+[05/Apr/2016 15:37:16] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 15:37:16] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/fb_account.js HTTP/1.1" 200 2249
+[05/Apr/2016 15:37:16] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 15:37:16] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 15:37:17] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 304 0
+Not Found: /treemap_data
+[05/Apr/2016 15:37:17] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:37:17] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:37:17] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:37:17] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 15:37:17] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 15:37:17] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:37:17] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 15:37:17] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 15:37:17] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 15:37:18] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 15:37:23] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 15:37:24] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 15:37:24] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:37:24] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 15:37:25] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 15:37:25] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 15:37:25] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 15:37:26] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 15:37:26] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 15:37:27] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 15:37:28] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 15:37:57] "GET /treemap_assign/10203356817616713_10207751649724769/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/10200849704644322_10204107927937868/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/966571116705538_1218739491488698/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/163146180683823_253095635022210/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/1479429122374616_1556856784631849/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/68680511262_10153643260471263/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/203075010047325_205670559787770/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/516821321748618_874119862685427/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/654368894637051_491305724388692/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/722871991125312_1042534145825760/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/10154597559990114_1030265097104070/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/10152352223628773_10153573981603773/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/10202479520841723_10206851204851091/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/520572198052699_822363737873542/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/1489298968021733_1695185094099785/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/613263244_10153933149846171/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/10203547314752399_10205462591033109/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:08] "GET /treemap_assign/10154597559990114_1029451047185475/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:09] "GET /treemap_assign/7419689078_10153631941789079/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:09] "GET /treemap_assign/7419689078_10153632691314079/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:09] "GET /treemap_assign/575262255856926_954956981220783/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:09] "GET /treemap_assign/575262255856926_954957591220722/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:09] "GET /treemap_assign/23519525029_10153870783175030/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:09] "GET /treemap_assign/23519525029_10153870781825030/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:09] "GET /treemap_assign/775271569184338_1099936213384537/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:09] "GET /treemap_assign/175755689129519_1041451139226632/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:10] "GET /treemap_assign/175755689129519_1042153342489745/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:10] "GET /treemap_assign/1413475698959824_1513221915651868/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:10] "GET /treemap_assign/139188202817559_1030533530349684/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:10] "GET /treemap_assign/575262255856926_954392794610535/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:10] "GET /treemap_assign/1413475698959824_1513401375633922/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:10] "GET /treemap_assign/139188202817559_1030382183698152/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:10] "GET /treemap_assign/245046025615886_893818857405263/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:10] "GET /treemap_assign/10152783547824148_10154560133244148/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:10] "GET /treemap_assign/8062627951_10153974209787952/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:10] "GET /treemap_assign/10152783547824148_10154562474839148/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:10] "GET /treemap_assign/100000049093228_1112987125379580/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:13] "GET /treemap_assign/625750794195857_1316405288380479/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:13] "GET /treemap_assign/20446254070_10153367503989071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:13] "GET /treemap_assign/20446254070_10153367619134071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:13] "GET /treemap_assign/139188202817559_1031779476891756/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:13] "GET /treemap_assign/139188202817559_1022664871136550/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:13] "GET /treemap_assign/10204633780511713_10153490809117746/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:51] "GET /treemap_assign/1548752898673706_1714102505509058/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:51] "GET /treemap_assign/10103728021701433_10153995174192526/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:52] "GET /treemap_assign/10103728021701433_10153996372507526/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:52] "GET /treemap_assign/102099916530784_1180730045334427/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:54] "GET /treemap_assign/10103728021701433_10153995174192526/ HTTP/1.1" 200 0
+[05/Apr/2016 15:39:54] "GET /treemap_assign/1548752898673706_1714102505509058/ HTTP/1.1" 200 0
+[05/Apr/2016 15:40:19] "GET /treemap_assign/10204633780511713_10153490809117746/ HTTP/1.1" 200 0
+[05/Apr/2016 15:40:19] "GET /treemap_assign/139188202817559_1031779476891756/ HTTP/1.1" 200 0
+[05/Apr/2016 15:40:19] "GET /treemap_assign/625750794195857_1316405288380479/ HTTP/1.1" 200 0
+[05/Apr/2016 15:40:19] "GET /treemap_assign/10152809337000236_1184772921596806/ HTTP/1.1" 200 0
+[05/Apr/2016 15:40:22] "GET /treemap_assign/20446254070_10153367559389071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:40:47] "GET /treemap_assign/8062627951_10153981937222952/ HTTP/1.1" 200 0
+[05/Apr/2016 15:40:47] "GET /treemap_assign/20446254070_10153368681659071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:05] "GET /treemap_assign/10203583173437814_10208345966624667/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:05] "GET /treemap_assign/10153528818116323_10153929067691323/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:05] "GET /treemap_assign/373906806106361_469036009968750/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:05] "GET /treemap_assign/176061282421055_1294104033950102/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:05] "GET /treemap_assign/522897817802554_935811506511181/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:05] "GET /treemap_assign/160712400714277_896592190459624/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:05] "GET /treemap_assign/828725207169242_1065796796795414/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:05] "GET /treemap_assign/763742990324782_1065796796795414/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:05] "GET /treemap_assign/10203612821138066_10153397754148603/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:06] "GET /treemap_assign/10103728021701433_10153790492671006/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:06] "GET /treemap_assign/159566247420242_1014740891902769/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:06] "GET /treemap_assign/422154574653804_449328758603052/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/730043553728838_986040341462490/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/10204990308509260_10207761958118768/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/10154663861370207_10156446079640207/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/193742123995472_1032620633440946/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/695717830490880_1247797708606255/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/23519525029_10153866641195030/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/113685238657736_1355246967834884/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/1548752898673706_1714102505509058/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/193997483953074_1125079207511559/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/10203583173437814_10208303607045704/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/8394258414_10153930153078415/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/8394258414_10153929059993415/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/967164259967422_899671446816997/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/802157753159432_1041768499198355/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/802157753159432_1041773335864538/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:09] "GET /treemap_assign/58079349432_10153949682024433/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:20] "GET /treemap_assign/193441624024392_965674586801088/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:20] "GET /treemap_assign/161086703983_10154071914418984/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:20] "GET /treemap_assign/102099916530784_1180730045334427/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:20] "GET /treemap_assign/127410764050616_503809499744072/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:20] "GET /treemap_assign/102099916530784_1180730045334427/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:20] "GET /treemap_assign/108376242882659_108024396251177/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:20] "GET /treemap_assign/10203709226834486_10208651121418762/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:20] "GET /treemap_assign/10203583173437814_10208303607045704/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:20] "GET /treemap_assign/278666695673829_443833222490508/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:21] "GET /treemap_assign/278666695673829_443833322490498/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:42] "GET /treemap_assign/688782604519342_813821878763730/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:42] "GET /treemap_assign/7312612866_10154069010292867/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:42] "GET /treemap_assign/10154074299940403_10156438497875403/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:43] "GET /treemap_assign/131527746883613_985800181456361/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:43] "GET /treemap_assign/104374712683_10153458233992684/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:43] "GET /treemap_assign/642058258_10153930912233259/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:43] "GET /treemap_assign/17043549797_10153896137424798/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:43] "GET /treemap_assign/17043549797_10153893777149798/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:43] "GET /treemap_assign/10152434190357125_10154008380097125/ HTTP/1.1" 200 0
+[05/Apr/2016 15:41:43] "GET /treemap_assign/10152434190357125_10154008446147125/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/10152434190357125_10154008380097125/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/689522981085826_1018618961509558/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/17043549797_10153893777149798/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/642058258_10153930094998259/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/245046025615886_893325710787911/ HTTP/1.1" 200 0
+527331447_1029205620476801
+872803669450444_1044598318937644
+set(['a', 'c', 'b'])
+770
+10100420913971828_10100781555303708
+171112259610923_1167423956646410
+159673400728102_1277642918931139
+20446254070_10153366992999071
+497899983625735_967911263291269
+171112259610923_1168254233230049
+719738081445477_953282908090992
+621217794622003_935688153174964
+858172967537348_1075004469187529
+10103017613470271_10103958179997411
+10203612821138066_685256301617562
+10152546278056806_10153332408486806
+set(['a', 'c', 'b'])
+770
+10203356817616713_10207751649724769
+10200849704644322_10204107927937868
+966571116705538_1218739491488698
+163146180683823_253095635022210
+1479429122374616_1556856784631849
+68680511262_10153643260471263
+203075010047325_205670559787770
+516821321748618_874119862685427
+654368894637051_491305724388692
+722871991125312_1042534145825760
+10154597559990114_1030265097104070
+10152352223628773_10153573981603773
+10202479520841723_10206851204851091
+520572198052699_822363737873542
+1489298968021733_1695185094099785
+613263244_10153933149846171
+10203547314752399_10205462591033109
+10154597559990114_1029451047185475
+7419689078_10153631941789079
+7419689078_10153632691314079
+575262255856926_954956981220783
+575262255856926_954957591220722
+23519525029_10153870783175030
+23519525029_10153870781825030
+775271569184338_1099936213384537
+175755689129519_1041451139226632
+175755689129519_1042153342489745
+1413475698959824_1513221915651868
+139188202817559_1030533530349684
+575262255856926_954392794610535
+1413475698959824_1513401375633922
+139188202817559_1030382183698152
+245046025615886_893818857405263
+10152783547824148_10154560133244148
+8062627951_10153974209787952
+10152783547824148_10154562474839148
+100000049093228_1112987125379580
+625750794195857_1316405288380479
+20446254070_10153367503989071
+20446254070_10153367619134071
+139188202817559_1031779476891756
+139188202817559_1022664871136550
+10204633780511713_10153490809117746
+1548752898673706_1714102505509058
+10103728021701433_10153995174192526
+10103728021701433_10153996372507526
+102099916530784_1180730045334427
+10103728021701433_10153995174192526
+1548752898673706_1714102505509058
+10204633780511713_10153490809117746
+139188202817559_1031779476891756
+625750794195857_1316405288380479
+10152809337000236_1184772921596806
+20446254070_10153367559389071
+8062627951_10153981937222952
+20446254070_10153368681659071
+10203583173437814_10208345966624667
+10153528818116323_10153929067691323
+373906806106361_469036009968750
+176061282421055_1294104033950102
+522897817802554_935811506511181
+160712400714277_896592190459624
+828725207169242_1065796796795414
+763742990324782_1065796796795414
+10203612821138066_10153397754148603
+10103728021701433_10153790492671006
+159566247420242_1014740891902769
+422154574653804_449328758603052
+730043553728838_986040341462490
+10204990308509260_10207761958118768
+10154663861370207_10156446079640207
+193742123995472_1032620633440946
+695717830490880_1247797708606255
+23519525029_10153866641195030
+113685238657736_1355246967834884
+1548752898673706_1714102505509058
+193997483953074_1125079207511559
+10203583173437814_10208303607045704
+8394258414_10153930153078415
+8394258414_10153929059993415
+967164259967422_899671446816997
+802157753159432_1041768499198355
+802157753159432_1041773335864538
+58079349432_10153949682024433
+193441624024392_965674586801088
+161086703983_10154071914418984
+102099916530784_1180730045334427
+127410764050616_503809499744072
+102099916530784_1180730045334427
+108376242882659_108024396251177
+10203709226834486_10208651121418762
+10203583173437814_10208303607045704
+278666695673829_443833222490508
+278666695673829_443833322490498
+688782604519342_813821878763730
+7312612866_10154069010292867
+10154074299940403_10156438497875403
+131527746883613_985800181456361
+104374712683_10153458233992684
+642058258_10153930912233259
+17043549797_10153896137424798
+17043549797_10153893777149798
+10152434190357125_10154008380097125
+10152434190357125_10154008446147125
+10152434190357125_10154008380097125
+689522981085826_1018618961509558
+17043549797_10153893777149798
+642058258_10153930094998259
+245046025615886_893325710787911
+1015407[05/Apr/2016 15:42:33] "GET /treemap_assign/10154074299940403_10156438497875403/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/7312612866_10154068791002867/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/516821321748618_872189579545122/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/1548752898673706_1714102505509058/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/1548752898673706_1106735959377330/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/722871991125312_1040901682655673/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/1434980133493669_1563903547267993/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/167079259973336_1235540643127187/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:33] "GET /treemap_assign/10152314539355306_10153773044580306/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/167079259973336_1235540643127187/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/803321359725600_1024763624248038/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/618832381517402_977148972352406/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/10202198811111911_1563903547267993/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/218324041529786_1198801933481987/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/218324041529786_1198911983470982/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/722871991125312_1040901682655673/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/722871991125312_1040882215990953/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/815967848443191_1168748103165162/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/23519525029_10153866641195030/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/58079349432_10153952142109433/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:34] "GET /treemap_assign/100003349111821_136609656487228/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:38] "GET /treemap_assign/10204990308509260_10207761958118768/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:38] "GET /treemap_assign/730043553728838_986040341462490/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:38] "GET /treemap_assign/100001584854144_1082474828482002/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:38] "GET /treemap_assign/159673400728102_1279625698732861/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:38] "GET /treemap_assign/18807449704_10153888403769705/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:38] "GET /treemap_assign/20446254070_10153367168374071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/18807449704_10153889480659705/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/1413475698959824_1514171712223555/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/20446254070_10153358590749071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/20446254070_10153358657449071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/20446254070_10153358839669071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/159673400728102_1278850075477090/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/1413475698959824_1512949662345760/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/147938242061676_430918380430326/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/147938242061676_430945880427576/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/20446254070_10153357161679071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/20446254070_10153357543989071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:41] "GET /treemap_assign/20446254070_10153357956994071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:42] "GET /treemap_assign/20446254070_10153356658649071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:42] "GET /treemap_assign/20446254070_10153356992304071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:42] "GET /treemap_assign/20446254070_10153357776449071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:42] "GET /treemap_assign/20446254070_10153357012694071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:42] "GET /treemap_assign/20446254070_10153356244094071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:42] "GET /treemap_assign/20446254070_10153357151544071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:42] "GET /treemap_assign/20446254070_10153357019409071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:42] "GET /treemap_assign/20446254070_10153357310234071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:43] "GET /treemap_assign/20446254070_10153358002899071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:43] "GET /treemap_assign/20446254070_10153357257294071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:43] "GET /treemap_assign/20446254070_10153357758674071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:43] "GET /treemap_assign/20446254070_10153357275469071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:43] "GET /treemap_assign/20446254070_10153357161679071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:43] "GET /treemap_assign/20446254070_10153357117889071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:43] "GET /treemap_assign/20446254070_10153356637444071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:43] "GET /treemap_assign/20446254070_10153357079019071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:43] "GET /treemap_assign/20446254070_10153356658649071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:42:43] "GET /treemap_assign/20446254070_10153356992304071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:07] "GET /treemap_assign/20446254070_10153356895959071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:08] "GET /treemap_assign/20446254070_10153358002899071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:08] "GET /treemap_assign/20446254070_10153355514034071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:08] "GET /treemap_assign/8062627951_10153974209787952/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:08] "GET /treemap_assign/8062627951_10153973076457952/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:08] "GET /treemap_assign/18807449704_10153878455759705/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:08] "GET /treemap_assign/18807449704_10153879226969705/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:08] "GET /treemap_assign/147938242061676_431203450401819/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:08] "GET /treemap_assign/132853273433650_1072476966137938/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:08] "GET /treemap_assign/115195635195628_953734948008355/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:26] "GET /treemap_assign/10152434669156174_1375700445778392/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:26] "GET /treemap_assign/131288836996389_494201720705097/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:26] "GET /treemap_assign/33138223345_10153809651193346/ HTTP/1.1" 200 0
+[05/Apr/2016 15:43:26] "GET /treemap_assign/707040829351937_1029439197112097/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:03] "GET /treemap_assign/815967848443191_1168748103165162/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:03] "GET /treemap_assign/815967848443191_1168742256499080/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:03] "GET /treemap_assign/647193602013469_982424138490412/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:03] "GET /treemap_assign/4937327807980_10201419192918734/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:03] "GET /treemap_assign/20446254070_10153358669744071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:16] "GET /treemap_assign/18807449704_10153878665204705/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:16] "GET /treemap_assign/18807449704_10153878466134705/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:16] "GET /treemap_assign/8062627951_10153968519482952/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:16] "GET /treemap_assign/1413475698959824_1512752095698850/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:16] "GET /treemap_assign/1413475698959824_1512834645690595/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:17] "GET /treemap_assign/10203766344661548_10208745373854166/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:17] "GET /treemap_assign/776884052373325_944623995631182/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:17] "GET /treemap_assign/20446254070_10153357403894071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:17] "GET /treemap_assign/20446254070_10153368673614071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:17] "GET /treemap_assign/20446254070_10153368681659071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:17] "GET /treemap_assign/20446254070_10153368905294071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:17] "GET /treemap_assign/20446254070_10153368959254071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:18] "GET /treemap_assign/20446254070_10153368207594071/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:18] "GET /treemap_assign/1413475698959824_1514352048872188/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:18] "GET /treemap_assign/10203142770986891_1015530135161278/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:18] "GET /treemap_assign/10200849704644322_10153467578623269/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:18] "GET /treemap_assign/139188202817559_1032349546834749/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:18] "GET /treemap_assign/792680250791839_1021642661228929/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:19] "GET /treemap_assign/815500361820940_956676987703276/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:19] "GET /treemap_assign/10203279548283926_10206952455224304/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:24] "GET /treemap_assign/815967848443191_1169367779769861/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:44] "GET /treemap_assign/10152434190357125_10154014861932125/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:44] "GET /treemap_assign/10203705237129507_10208679105041172/ HTTP/1.1" 200 0
+[05/Apr/2016 15:48:46] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 15:48:46] "GET /static/fb_account.js HTTP/1.1" 304 0
+[05/Apr/2016 15:48:47] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 15:48:53] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 15:48:53] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 15:48:54] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 15:48:54] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 15:48:54] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 15:48:55] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 15:48:56] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 15:48:57] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 15:48:59] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:08:41] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 16:08:41] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/fb_account.js HTTP/1.1" 200 2249
+[05/Apr/2016 16:08:41] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/components/icon.min.css HTTP/1.1" 200 33341
+[05/Apr/2016 16:08:41] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:41] "GET /static/jquery/jquery-ui.css HTTP/1.1" 200 34459
+[05/Apr/2016 16:08:44] "GET /static/semantic.css HTTP/1.1" 200 719040
+[05/Apr/2016 16:08:44] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 304 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:08:44] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:08:44] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:08:44] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:08:44] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:08:44] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:08:44] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:08:44] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+Not Found: /treemap_domain
+[05/Apr/2016 16:08:44] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:08:44] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 16:08:46] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:08:52] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:08:52] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:08:52] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:08:52] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:08:52] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 16:08:52] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:08:52] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:08:52] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:08:53] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:08:55] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:08:57] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:08:58] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 16:08:59] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+- Broken pipe from ('143.215.59.30', 56062)
+[05/Apr/2016 16:08:59] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+- Broken pipe from ('143.215.59.30', 56059)
+[05/Apr/2016 16:08:59] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/fb_account.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:08:59] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:08:59] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:08:59] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:08:59] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:08:59] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:08:59] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:08:59] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:08:59] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 16:08:59] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 16:08:59] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 16:09:00] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:09:06] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:09:06] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:09:07] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:09:07] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:09:07] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:09:07] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 16:09:08] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:09:08] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:09:09] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:09:09] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:09:10] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:09:27] "GET /treemap_assign/10152419268544709_1554716801486832/ HTTP/1.1" 200 0
+[05/Apr/2016 16:09:28] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 16:09:28] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:09:28] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:09:28] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:09:28] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:09:28] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:09:28] "GET /static/fb_account.js HTTP/1.1" 200 2237
+[05/Apr/2016 16:09:28] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:09:28] "GET /static/components/icon.min.css HTTP/1.1" 200 33341
+[05/Apr/2016 16:09:28] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:09:29] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:09:29] "GET /static/jquery/jquery-ui.css HTTP/1.1" 200 34459
+[05/Apr/2016 16:09:29] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:09:29] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 16:09:32] "GET /static/semantic.css HTTP/1.1" 200 719040
+Not Found: /treemap_data
+[05/Apr/2016 16:09:33] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:09:33] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 304 0
+Not Found: /treemap_data
+[05/Apr/2016 16:09:33] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:09:33] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:09:33] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:09:33] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:09:33] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:09:33] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+Not Found: /barchart_data
+[05/Apr/2016 16:09:33] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 16:09:33] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:09:34] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:09:40] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:09:40] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:09:40] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:09:41] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:09:41] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 16:09:41] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:09:41] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:09:42] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:09:42] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:09:43] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:09:44] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:09:51] "GET /treemap_assign/10152419268544709_1554716801486832/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:25] "GET /treemap_assign/10152419268544709_1554716801486832/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/245046025615886_893274544126361/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/143728505658816_1106614056036918/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/29092950651_10156495595095652/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/10203037055461549_10207348914975342/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/642058258_10153932131278259/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/719738081445477_589736911179054/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/719738081445477_951195978299685/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/495060454002836_576416522533895/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/132853273433650_1073119649407003/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/689522981085826_1020307998007321/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/18807449704_10153885953214705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/18807449704_10153886899819705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/18807449704_10153885953214705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/689522981085826_1020112948026826/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/18807449704_10153886254424705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/20446254070_10153365077509071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/245046025615886_896516160468866/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:42] "GET /treemap_assign/20446254070_10153367503989071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:43] "GET /treemap_assign/20446254070_10153367246269071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:43] "GET /treemap_assign/20446254070_10153366476289071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:43] "GET /treemap_assign/20446254070_10153366989079071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:10:43] "GET /treemap_assign/20446254070_10153367029474071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:11:50] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:11:53] "GET / HTTP/1.1" 200 18123
+[05/Apr/2016 16:11:53] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/fb_account.js HTTP/1.1" 200 2272
+[05/Apr/2016 16:11:53] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:11:53] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:11:53] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:11:53] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:11:53] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:11:53] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:11:53] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:11:54] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 16:11:54] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:11:54] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 16:11:54] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:11:55] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:11:59] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:12:00] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:12:00] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:12:01] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:12:01] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:12:01] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 16:12:01] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:12:01] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:12:01] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:12:02] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:12:04] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+4299940403_10156438497875403
+7312612866_10154068791002867
+516821321748618_872189579545122
+1548752898673706_1714102505509058
+1548752898673706_1106735959377330
+722871991125312_1040901682655673
+1434980133493669_1563903547267993
+167079259973336_1235540643127187
+10152314539355306_10153773044580306
+167079259973336_1235540643127187
+803321359725600_1024763624248038
+618832381517402_977148972352406
+10202198811111911_1563903547267993
+218324041529786_1198801933481987
+218324041529786_1198911983470982
+722871991125312_1040901682655673
+722871991125312_1040882215990953
+815967848443191_1168748103165162
+23519525029_10153866641195030
+58079349432_10153952142109433
+100003349111821_136609656487228
+10204990308509260_10207761958118768
+730043553728838_986040341462490
+100001584854144_1082474828482002
+159673400728102_1279625698732861
+18807449704_10153888403769705
+20446254070_10153367168374071
+18807449704_10153889480659705
+1413475698959824_1514171712223555
+20446254070_10153358590749071
+20446254070_10153358657449071
+20446254070_10153358839669071
+159673400728102_1278850075477090
+1413475698959824_1512949662345760
+147938242061676_430918380430326
+147938242061676_430945880427576
+20446254070_10153357161679071
+20446254070_10153357543989071
+20446254070_10153357956994071
+20446254070_10153356658649071
+20446254070_10153356992304071
+20446254070_10153357776449071
+20446254070_10153357012694071
+20446254070_10153356244094071
+20446254070_10153357151544071
+20446254070_10153357019409071
+20446254070_10153357310234071
+20446254070_10153358002899071
+20446254070_10153357257294071
+20446254070_10153357758674071
+20446254070_10153357275469071
+20446254070_10153357161679071
+20446254070_10153357117889071
+20446254070_10153356637444071
+20446254070_10153357079019071
+20446254070_10153356658649071
+20446254070_10153356992304071
+20446254070_10153356895959071
+20446254070_10153358002899071
+20446254070_10153355514034071
+8062627951_10153974209787952
+8062627951_10153973076457952
+18807449704_10153878455759705
+18807449704_10153879226969705
+147938242061676_431203450401819
+132853273433650_1072476966137938
+115195635195628_953734948008355
+10152434669156174_1375700445778392
+131288836996389_494201720705097
+33138223345_10153809651193346
+707040829351937_1029439197112097
+815967848443191_1168748103165162
+815967848443191_1168742256499080
+647193602013469_982424138490412
+4937327807980_10201419192918734
+20446254070_10153358669744071
+18807449704_10153878665204705
+18807449704_10153878466134705
+8062627951_10153968519482952
+1413475698959824_1512752095698850
+1413475698959824_1512834645690595
+10203766344661548_10208745373854166
+776884052373325_944623995631182
+20446254070_10153357403894071
+20446254070_10153368673614071
+20446254070_10153368681659071
+20446254070_10153368905294071
+20446254070_10153368959254071
+20446254070_10153368207594071
+1413475698959824_1514352048872188
+10203142770986891_1015530135161278
+10200849704644322_10153467578623269
+139188202817559_1032349546834749
+792680250791839_1021642661228929
+815500361820940_956676987703276
+10203279548283926_10206952455224304
+815967848443191_1169367779769861
+10152434190357125_10154014861932125
+10203705237129507_10208679105041172
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+10152419268544709_1554716801486832
+set(['a', 'c', 'b'])
+770
+10152419268544709_1554716801486832
+10152419268544709_1554716801486832
+245046025615886_893274544126361
+143728505658816_1106614056036918
+29092950651_10156495595095652
+10203037055461549_10207348914975342
+642058258_10153932131278259
+719738081445477_589736911179054
+719738081445477_951195978299685
+495060454002836_576416522533895
+132853273433650_1073119649407003
+689522981085826_1020307998007321
+18807449704_10153885953214705
+18807449704_10153886899819705
+18807449704_10153885953214705
+689522981085826_1020112948026826
+18807449704_10153886254424705
+20446254070_10153365077509071
+245046025615886_896516160468866
+20446254070_10153367503989071
+20446254070_10153367246269071
+20446254070_10153366476289071
+20446254070_10153366989079071
+20446254070_10153367029474071
+set(['a', 'c', 'b'])
+770
+set(['a', 'c', 'b'])
+770
+20446254070_101533[05/Apr/2016 16:12:06] "GET /treemap_assign/20446254070_10153368243304071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/20446254070_10153368800439071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/20446254070_10153368472954071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/20446254070_10153368348874071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/20446254070_10153368472954071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/20446254070_10153369269809071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/20446254070_10153369907044071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/7419689078_10153639690609079/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/247107255487756_956676987703276/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/1548393862154444_1553409251652905/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/777789452342707_870611046393880/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/10153496104393040_10153510283433040/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:06] "GET /treemap_assign/10153496104393040_1059204304143419/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/913867058652202_1014887455216828/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/777789452342707_872730409515277/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/20446254070_10153367313769071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/7419689078_10153637109094079/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/171112259610923_1167445093310963/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/139188202817559_1031779476891756/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/139188202817559_1032116630191374/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/10152146017236848_868169403281098/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/10153496104393040_10154484250429325/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/179654852180162_854524838026490/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/627159980732497_1016593771731062/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/721826134527280_1058772437506456/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/10152219852191655_10207748142935784/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/1653084344911310_1735565696663174/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/558828827565807_989437854477116/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/296869857127346_648427931971535/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/10153528818116323_10153929067691323/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:07] "GET /treemap_assign/10203103776107206_10207871266091476/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:08] "GET /treemap_assign/794422807249075_10209102138740401/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:08] "GET /treemap_assign/967164259967422_1242476169102895/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:08] "GET /treemap_assign/97838403510_10153420254473511/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:08] "GET /treemap_assign/1039675682714205_1378823088799461/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:08] "GET /treemap_assign/10154028481655177_10156456578790177/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:08] "GET /treemap_assign/676142135776370_10153186333067364/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:08] "GET /treemap_assign/10154028481655177_10156456578790177/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:08] "GET /treemap_assign/1039675682714205_1378823088799461/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:08] "GET /treemap_assign/967164259967422_1242476169102895/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:08] "GET /treemap_assign/97838403510_10153420254473511/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:09] "GET /treemap_assign/794422807249075_10209102138740401/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:09] "GET /treemap_assign/10202965155881449_1031614990233172/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:09] "GET /treemap_assign/685946721468332_901776346606507/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:09] "GET /treemap_assign/685946721468332_10153816976402088/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:09] "GET /treemap_assign/269462913232277_510221209156445/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:09] "GET /treemap_assign/10203766344661548_10208778435000674/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:09] "GET /treemap_assign/10203766344661548_10206591602243335/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:09] "GET /treemap_assign/719738081445477_952810304804919/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:09] "GET /treemap_assign/1413475698959824_1514209255553134/ HTTP/1.1" 200 0
+[05/Apr/2016 16:12:09] "GET /treemap_assign/1413475698959824_1514032028904190/ HTTP/1.1" 200 0
+[05/Apr/2016 16:14:14] "GET /treemap_assign/625750794195857_10208676624256786/ HTTP/1.1" 200 0
+[05/Apr/2016 16:14:14] "GET /treemap_assign/18807449704_10153887132264705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:14:14] "GET /treemap_assign/20446254070_10153364557814071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:14:15] "GET /treemap_assign/20446254070_10153359657194071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:14:15] "GET /treemap_assign/8062627951_10153979733047952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:14:15] "GET /treemap_assign/20446254070_10153366989079071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:14:15] "GET /treemap_assign/8062627951_10153981937222952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:14:15] "GET /treemap_assign/8062627951_10153982252962952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:14:50] "GET /treemap_assign/18807449704_10153882656499705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:14:56] "GET /treemap_assign/689522981085826_1018533671518087/ HTTP/1.1" 200 0
+[05/Apr/2016 16:14:56] "GET /treemap_assign/10203705237129507_10208488224421200/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:46] "GET /treemap_assign/100003349111821_136609656487228/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/10154597559990114_571629776333814/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/10203426964415998_10208157477675873/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/1228219861_10208482601522403/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/1548752898673706_1747747342105893/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/147938242061676_431323503723147/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/175755689129519_1041451139226632/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/175755689129519_1042153342489745/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/255232486973_10153924835336974/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/269462913232277_509740405871192/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/18807449704_10153880826579705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/18807449704_10153880002944705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/18807449704_10153879857019705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/18807449704_10153880431409705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/18807449704_10153880349899705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/18807449704_10153880903944705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/8062627951_10153971798482952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/1548393862154444_1550446918615805/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/1228219861_10208482601522403/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/967164259967422_1240811282602717/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/100001583076539_1048789971850429/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:48] "GET /treemap_assign/193742123995472_1032620633440946/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/102901549777694_991677104233463/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/1646764625608660_1685230048428784/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/10203705237129507_10207518988880360/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/777789452342707_870607513060900/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/10152328362263468_10208663572610503/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/10152328362263468_10153866559373468/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/8062627951_10153971000742952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/58079349432_10153954153854433/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/689522981085826_1019530648085056/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/689522981085826_1019383994766388/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/18807449704_10153883220744705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/10152783547824148_10154563056724148/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/18807449704_10153886807379705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:49] "GET /treemap_assign/18807449704_10153885614099705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/18807449704_10153886542299705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/8062627951_10153980586912952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/8062627951_10153979853922952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/18807449704_10153888403769705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/18807449704_10153888267694705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/20446254070_10153367453659071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/20446254070_10153367975364071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/10203766344661548_10208785565138923/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/950568418343686_1003605306373330/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/1267363638_1759783857589460/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/738484166207768_1044715565584625/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/1572512476316600_1759783857589460/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/738484166207768_1044715565584625/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/911304005557791_1063294140358776/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/575262255856926_956468401069641/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/828725207169242_1068258519882575/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/10202593169109208_10203938966273296/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/10202479520841723_1068258519882575/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:50] "GET /treemap_assign/295896430479403_937845056284534/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/804547156241854_1168377863192113/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/921903014557507_949734205107721/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/647193602013469_985154284884064/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/692272494214071_928837930557525/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/890614054329035_1016575045066268/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/890614054329035_1016593771731062/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/722871991125312_1043526929059815/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/786490038081760_1012519308812164/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/786490038081760_1012532105477551/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/10152434669156174_1168377863192113/ HTTP/1.1" 200 0
+68243304071
+20446254070_10153368800439071
+20446254070_10153368472954071
+20446254070_10153368348874071
+20446254070_10153368472954071
+20446254070_10153369269809071
+20446254070_10153369907044071
+7419689078_10153639690609079
+247107255487756_956676987703276
+1548393862154444_1553409251652905
+777789452342707_870611046393880
+10153496104393040_10153510283433040
+10153496104393040_1059204304143419
+913867058652202_1014887455216828
+777789452342707_872730409515277
+20446254070_10153367313769071
+7419689078_10153637109094079
+171112259610923_1167445093310963
+139188202817559_1031779476891756
+139188202817559_1032116630191374
+10152146017236848_868169403281098
+10153496104393040_10154484250429325
+179654852180162_854524838026490
+627159980732497_1016593771731062
+721826134527280_1058772437506456
+10152219852191655_10207748142935784
+1653084344911310_1735565696663174
+558828827565807_989437854477116
+296869857127346_648427931971535
+10153528818116323_10153929067691323
+10203103776107206_10207871266091476
+794422807249075_10209102138740401
+967164259967422_1242476169102895
+97838403510_10153420254473511
+1039675682714205_1378823088799461
+10154028481655177_10156456578790177
+676142135776370_10153186333067364
+10154028481655177_10156456578790177
+1039675682714205_1378823088799461
+967164259967422_1242476169102895
+97838403510_10153420254473511
+794422807249075_10209102138740401
+10202965155881449_1031614990233172
+685946721468332_901776346606507
+685946721468332_10153816976402088
+269462913232277_510221209156445
+10203766344661548_10208778435000674
+10203766344661548_10206591602243335
+719738081445477_952810304804919
+1413475698959824_1514209255553134
+1413475698959824_1514032028904190
+625750794195857_10208676624256786
+18807449704_10153887132264705
+20446254070_10153364557814071
+20446254070_10153359657194071
+8062627951_10153979733047952
+20446254070_10153366989079071
+8062627951_10153981937222952
+8062627951_10153982252962952
+18807449704_10153882656499705
+689522981085826_1018533671518087
+10203705237129507_10208488224421200
+100003349111821_136609656487228
+10154597559990114_571629776333814
+10203426964415998_10208157477675873
+1228219861_10208482601522403
+1548752898673706_1747747342105893
+147938242061676_431323503723147
+175755689129519_1041451139226632
+175755689129519_1042153342489745
+255232486973_10153924835336974
+269462913232277_509740405871192
+18807449704_10153880826579705
+18807449704_10153880002944705
+18807449704_10153879857019705
+18807449704_10153880431409705
+18807449704_10153880349899705
+18807449704_10153880903944705
+8062627951_10153971798482952
+1548393862154444_1550446918615805
+1228219861_10208482601522403
+967164259967422_1240811282602717
+100001583076539_1048789971850429
+193742123995472_1032620633440946
+102901549777694_991677104233463
+1646764625608660_1685230048428784
+10203705237129507_10207518988880360
+777789452342707_870607513060900
+10152328362263468_10208663572610503
+10152328362263468_10153866559373468
+8062627951_10153971000742952
+58079349432_10153954153854433
+689522981085826_1019530648085056
+689522981085826_1019383994766388
+18807449704_10153883220744705
+10152783547824148_10154563056724148
+18807449704_10153886807379705
+18807449704_10153885614099705
+18807449704_10153886542299705
+8062627951_10153980586912952
+8062627951_10153979853922952
+18807449704_10153888403769705
+18807449704_10153888267694705
+20446254070_10153367453659071
+20446254070_10153367975364071
+10203766344661548_10208785565138923
+950568418343686_1003605306373330
+1267363638_1759783857589460
+738484166207768_1044715565584625
+1572512476316600_1759783857589460
+738484166207768_1044715565584625
+911304005557791_1063294140358776
+575262255856926_956468401069641
+828725207169242_1068258519882575
+10202593169109208_10203938966273296
+10202479520841723_1068258519882575
+295896430479403_937845056284534
+804547156241854_1168377863192113
+921903014557507_949734205107721
+647193602013469_985154284884064
+692272494214071_928837930557525
+890614054329035_1016575045066268
+890614054329035_1016593771731062
+722871991125312_1043526929059815
+786490038081760_1012519308812164
+786490038081760_1012532105477551
+10152434669156174_1168377863192113
+1015243[05/Apr/2016 16:15:51] "GET /treemap_assign/10152434669156174_10153599185182928/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/132853273433650_1074041372648164/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/132853273433650_1073945772657724/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/132853273433650_1074310702621231/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/7419689078_10153637684659079/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/7419689078_10153636690384079/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/7419689078_10153637765674079/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/159673400728102_1277643292264435/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/159673400728102_1279640058731425/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/159673400728102_1279625698732861/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:51] "GET /treemap_assign/8062627951_10153980169512952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/8062627951_10153980204732952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/8062627951_10153980133842952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/8062627951_10153980078497952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/18807449704_10153888983194705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/18807449704_10153889559859705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/18807449704_10153889324754705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/18807449704_10153889341724705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/18807449704_10153889232049705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/10205283332190971_10208688100348047/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/10205283332190971_10208684250571805/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/10205283332190971_10208683054261898/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/689522981085826_1021121434592644/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/100002158966247_758371224296998/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/100002158966247_979642188769751/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/100002158966247_1359112807448300/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/100002158966247_1359479817411599/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/790734527710610_862915797159149/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/790734527710610_862924037158325/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/100003349111821_888114617976834/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:52] "GET /treemap_assign/373906806106361_469036009968750/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/790734527710610_863342963783099/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/1023530457666521_1288309474521950/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/713973531994446_1021456981246098/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/603826392964727_1280717928608900/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/75885482706_10153816938287707/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/241221155928226_1079501935433473/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/688782604519342_1030284540369145/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/100000049093228_1113495345328758/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/832182990149527_1108073022560521/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/10202755482511324_10206013568601440/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/10152434190357125_10154021232762125/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/10152434190357125_10154019620447125/ HTTP/1.1" 200 0
+[05/Apr/2016 16:15:53] "GET /treemap_assign/29092950651_10156513011940652/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:26] "GET /treemap_assign/255232486973_10153931902431974/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:26] "GET /treemap_assign/777789452342707_873242629464055/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:26] "GET /treemap_assign/171112259610923_1167443609977778/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:26] "GET /treemap_assign/719738081445477_1067970709911356/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:26] "GET /treemap_assign/245046025615886_893368467450302/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:26] "GET /treemap_assign/10202962689059739_993076197425515/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:26] "GET /treemap_assign/10202962689059739_10207036995982395/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:27] "GET /treemap_assign/29092950651_10156499959875652/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:27] "GET /treemap_assign/111506295533776_1141220639228998/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:27] "GET /treemap_assign/900070220051952_1024189367640036/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:27] "GET /treemap_assign/509566152532329_554226598066284/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:27] "GET /treemap_assign/147938242061676_431323503723147/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:27] "GET /treemap_assign/100001114216964_2926392276309/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:27] "GET /treemap_assign/635446986533049_1009774919100252/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:27] "GET /treemap_assign/900070220051952_1024189367640036/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/509566152532329_554226598066284/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/10101360652388503_10102111592453593/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/100003349111821_885732808215015/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/10203766344661548_10208745373854166/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/1413475698959824_1512752095698850/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/1413475698959824_1512693279038065/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/1413475698959824_1512781709029222/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/1413475698959824_1512864299020963/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/1413475698959824_1512856462355080/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/8062627951_10153967973077952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/8062627951_10153969372302952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/8062627951_10153969825287952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/159566247420242_1014233968620128/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:28] "GET /treemap_assign/159566247420242_1014602345249957/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/10152809337000236_10154138645361756/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/10152809337000236_10153400089115998/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/10152809337000236_1180730045334427/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/495060454002836_575930625915818/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/495060454002836_575931292582418/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/802157753159432_1041768499198355/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/802157753159432_1041773335864538/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/58079349432_10153949716534433/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/58079349432_10153949688829433/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/58079349432_10153949682024433/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/1228219861_10208474695044746/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/163146180683823_250704125261361/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/10203103776107206_10207838372189149/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:29] "GET /treemap_assign/193997483953074_1125079954178151/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:30] "GET /treemap_assign/193997483953074_1125079207511559/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:30] "GET /treemap_assign/10203103776107206_10207839574299201/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:30] "GET /treemap_assign/795621597152013_927800950600743/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/795621597152013_927823947265110/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/558828827565807_490098734509391/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/539853959379623_1058982737466740/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/539853959379623_1058982170800130/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/539853959379623_1065926330105714/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/159566247420242_1014602731916585/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/159566247420242_1014602345249957/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/159566247420242_1014653991911459/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/8062627951_10153966912032952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/8062627951_10153968519482952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/8062627951_10153969412767952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/8062627951_10153967973077952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/8062627951_10153969167197952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/18807449704_10153878436349705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/18807449704_10153878790614705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/18807449704_10153878436349705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/8062627951_10153969167197952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/8062627951_10153967995637952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/8062627951_10153969007252952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/8062627951_10153970084107952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/159566247420242_1014233968620128/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/159566247420242_1014602731916585/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/17043549797_10153893728074798/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/17043549797_10153891591559798/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:31] "GET /treemap_assign/179654852180162_855028064642834/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/1439054569730454_1523403691295541/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/900070220051952_1023456361046670/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/7312612866_10154062449967867/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/296869857127346_646263925521269/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/357229834309288_1092931367405794/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/10152314539355306_10153773044580306/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/10152142212206309_10153426066931309/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/763742990324782_1107043492661395/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/1392710314284796_1583728858516273/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/1559961074215868_1678577049020936/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/100003240953211_903866923064664/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/193742123995472_1032620633440946/ HTTP/1.1" 200 0
+4669156174_10153599185182928
+132853273433650_1074041372648164
+132853273433650_1073945772657724
+132853273433650_1074310702621231
+7419689078_10153637684659079
+7419689078_10153636690384079
+7419689078_10153637765674079
+159673400728102_1277643292264435
+159673400728102_1279640058731425
+159673400728102_1279625698732861
+8062627951_10153980169512952
+8062627951_10153980204732952
+8062627951_10153980133842952
+8062627951_10153980078497952
+18807449704_10153888983194705
+18807449704_10153889559859705
+18807449704_10153889324754705
+18807449704_10153889341724705
+18807449704_10153889232049705
+10205283332190971_10208688100348047
+10205283332190971_10208684250571805
+10205283332190971_10208683054261898
+689522981085826_1021121434592644
+100002158966247_758371224296998
+100002158966247_979642188769751
+100002158966247_1359112807448300
+100002158966247_1359479817411599
+790734527710610_862915797159149
+790734527710610_862924037158325
+100003349111821_888114617976834
+373906806106361_469036009968750
+790734527710610_863342963783099
+1023530457666521_1288309474521950
+713973531994446_1021456981246098
+603826392964727_1280717928608900
+75885482706_10153816938287707
+241221155928226_1079501935433473
+688782604519342_1030284540369145
+100000049093228_1113495345328758
+832182990149527_1108073022560521
+10202755482511324_10206013568601440
+10152434190357125_10154021232762125
+10152434190357125_10154019620447125
+29092950651_10156513011940652
+255232486973_10153931902431974
+777789452342707_873242629464055
+171112259610923_1167443609977778
+719738081445477_1067970709911356
+245046025615886_893368467450302
+10202962689059739_993076197425515
+10202962689059739_10207036995982395
+29092950651_10156499959875652
+111506295533776_1141220639228998
+900070220051952_1024189367640036
+509566152532329_554226598066284
+147938242061676_431323503723147
+100001114216964_2926392276309
+635446986533049_1009774919100252
+900070220051952_1024189367640036
+509566152532329_554226598066284
+10101360652388503_10102111592453593
+100003349111821_885732808215015
+10203766344661548_10208745373854166
+1413475698959824_1512752095698850
+1413475698959824_1512693279038065
+1413475698959824_1512781709029222
+1413475698959824_1512864299020963
+1413475698959824_1512856462355080
+8062627951_10153967973077952
+8062627951_10153969372302952
+8062627951_10153969825287952
+159566247420242_1014233968620128
+159566247420242_1014602345249957
+10152809337000236_10154138645361756
+10152809337000236_10153400089115998
+10152809337000236_1180730045334427
+495060454002836_575930625915818
+495060454002836_575931292582418
+802157753159432_1041768499198355
+802157753159432_1041773335864538
+58079349432_10153949716534433
+58079349432_10153949688829433
+58079349432_10153949682024433
+1228219861_10208474695044746
+163146180683823_250704125261361
+10203103776107206_10207838372189149
+193997483953074_1125079954178151
+193997483953074_1125079207511559
+10203103776107206_10207839574299201
+795621597152013_927800950600743
+795621597152013_927823947265110
+558828827565807_490098734509391
+539853959379623_1058982737466740
+539853959379623_1058982170800130
+539853959379623_1065926330105714
+159566247420242_1014602731916585
+159566247420242_1014602345249957
+159566247420242_1014653991911459
+8062627951_10153966912032952
+8062627951_10153968519482952
+8062627951_10153969412767952
+8062627951_10153967973077952
+8062627951_10153969167197952
+18807449704_10153878436349705
+18807449704_10153878790614705
+18807449704_10153878436349705
+8062627951_10153969167197952
+8062627951_10153967995637952
+8062627951_10153969007252952
+8062627951_10153970084107952
+159566247420242_1014233968620128
+159566247420242_1014602731916585
+17043549797_10153893728074798
+17043549797_10153891591559798
+179654852180162_855028064642834
+1439054569730454_1523403691295541
+900070220051952_1023456361046670
+7312612866_10154062449967867
+296869857127346_646263925521269
+357229834309288_1092931367405794
+10152314539355306_10153773044580306
+10152142212206309_10153426066931309
+763742990324782_1107043492661395
+1392710314284796_1583728858516273
+1559961074215868_1678577049020936
+100003240953211_903866923064664
+193742123995472_1032620633440946
+10000158307[05/Apr/2016 16:16:32] "GET /treemap_assign/100001583076539_1048789971850429/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/10203279548283926_10206952455224304/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/27228877081_10153964986187082/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:32] "GET /treemap_assign/10152800403685830_10154488928885830/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:33] "GET /treemap_assign/777789452342707_870607513060900/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:33] "GET /treemap_assign/10152328362263468_10153866559373468/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:33] "GET /treemap_assign/10152434190357125_10154009533637125/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:33] "GET /treemap_assign/10152434190357125_10154009335067125/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:33] "GET /treemap_assign/10152434190357125_10154009372232125/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:33] "GET /treemap_assign/10152434190357125_10154008380097125/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:33] "GET /treemap_assign/10203766344661548_10208754127553003/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:33] "GET /treemap_assign/10203766344661548_10208749876766736/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:33] "GET /treemap_assign/10203766344661548_10208754127553003/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:33] "GET /treemap_assign/10203766344661548_10208749460396327/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:34] "GET /treemap_assign/10152434190357125_10154009372232125/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:34] "GET /treemap_assign/10152434190357125_10154009547562125/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:34] "GET /treemap_assign/816947375000498_1190715237623708/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:34] "GET /treemap_assign/677135949027791_988538561220860/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:34] "GET /treemap_assign/100002479240033_981239805301985/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:34] "GET /treemap_assign/413760455338098_966005736780231/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:34] "GET /treemap_assign/10204990308509260_10207761958118768/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:34] "GET /treemap_assign/344201322342315_911527472276361/ HTTP/1.1" 200 0
+[05/Apr/2016 16:16:34] "GET /treemap_assign/96191425588_10153701996495589/ HTTP/1.1" 200 0
+[05/Apr/2016 16:21:14] "GET /treemap_assign/658779994171937_944870232229577/ HTTP/1.1" 200 0
+[05/Apr/2016 16:21:14] "GET /treemap_assign/10203291826274228_10207772531409056/ HTTP/1.1" 200 0
+[05/Apr/2016 16:21:14] "GET /treemap_assign/10152146017236848_10153510228581848/ HTTP/1.1" 200 0
+[05/Apr/2016 16:21:14] "GET /treemap_assign/10152146017236848_10153510244021848/ HTTP/1.1" 200 0
+[05/Apr/2016 16:21:30] "GET /treemap_assign/20446254070_10153360785789071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:21:31] "GET /treemap_assign/18807449704_10153883202064705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:21:31] "GET /treemap_assign/10201975210917784_10205873537733518/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:23] "GET /treemap_assign/198933856805679_1085033668195689/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:23] "GET /treemap_assign/182219941923657_787840884694890/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:23] "GET /treemap_assign/7312612866_10154077773782867/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:23] "GET /treemap_assign/414034908665004_1156301051105049/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:23] "GET /treemap_assign/10203709226834486_10208684752139509/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:24] "GET /treemap_assign/414034908665004_1158467360888418/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:24] "GET /treemap_assign/806777926022606_1119531461413916/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:24] "GET /treemap_assign/10152376372566920_10153643260471263/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:24] "GET /treemap_assign/1494731297498009_1520033628301109/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:24] "GET /treemap_assign/121901167904899_945294955565512/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:24] "GET / HTTP/1.1" 200 17923
+[05/Apr/2016 16:23:24] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:23:24] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:23:24] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:23:24] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:23:24] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:23:24] "GET /static/fb_account.js HTTP/1.1" 200 2550
+[05/Apr/2016 16:23:25] "GET /static/components/icon.min.css HTTP/1.1" 200 33341
+[05/Apr/2016 16:23:25] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:23:25] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:23:25] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:23:25] "GET /static/jquery/jquery-ui.css HTTP/1.1" 200 34459
+[05/Apr/2016 16:23:25] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:23:25] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 16:23:28] "GET /static/semantic.css HTTP/1.1" 200 719040
+[05/Apr/2016 16:23:29] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 304 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:23:29] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:23:29] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:23:29] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:23:29] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:23:29] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:23:29] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:23:29] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 16:23:29] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 16:23:29] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 16:23:30] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:23:39] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:23:40] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:23:41] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:23:41] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:23:41] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:23:41] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:23:41] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 16:23:41] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:23:41] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:23:41] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:23:44] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:23:46] "GET /treemap_assign/20446254070_10153368264794071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:46] "GET /treemap_assign/20446254070_10153368243304071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:23:46] "GET /treemap_assign/20446254070_10153368868574071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:25:07] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:25:16] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 16:25:16] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 56060)
+[05/Apr/2016 16:25:26] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 16:25:26] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 56061)
+[05/Apr/2016 16:25:50] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:25:50] "GET / HTTP/1.1" 200 17923
+[05/Apr/2016 16:25:51] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /static/fb_account.js HTTP/1.1" 200 2611
+[05/Apr/2016 16:25:51] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 16:25:51] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 56058)
+[05/Apr/2016 16:25:51] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:25:51] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:25:51] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:25:51] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:25:51] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:25:51] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:25:51] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:25:51] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 16:25:51] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 16:25:51] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:25:51] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:25:52] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:25:58] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:25:59] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:25:59] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:25:59] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:25:59] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:26:00] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:26:00] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:26:00] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 16:26:00] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:26:01] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:26:03] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:26:56] "GET / HTTP/1.1" 200 18236
+[05/Apr/2016 16:26:56] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:26:56] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:26:56] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:26:56] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:26:56] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:26:56] "GET /static/fb_account.js HTTP/1.1" 200 2304
+[05/Apr/2016 16:26:56] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:26:56] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:26:56] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:26:56] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:26:56] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 16:26:56] "GET /static/components/icon.min.css HTTP/1.1" 200 33341
+[05/Apr/2016 16:26:57] "GET /static/jquery/jquery-ui.css HTTP/1.1" 200 34459
+[05/Apr/2016 16:26:59] "GET /static/semantic.css HTTP/1.1" 200 719040
+[05/Apr/2016 16:27:00] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 304 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:27:00] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:27:00] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:27:00] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:27:00] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:27:00] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:27:00] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:27:00] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 16:27:00] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 16:27:00] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:27:01] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:27:07] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:27:07] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:27:07] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:27:07] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:27:08] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 16:27:08] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:27:08] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:27:08] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:27:08] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:27:09] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:27:11] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:27:24] "GET / HTTP/1.1" 200 18236
+[05/Apr/2016 16:27:24] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/fb_account.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:24] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:27:25] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:27:25] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:27:25] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:27:25] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:27:25] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:27:25] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /barchart_data
+[05/Apr/2016 16:27:25] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:27:25] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 16:27:25] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 16:27:26] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:27:31] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:27:31] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:27:32] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:27:32] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:27:32] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:27:32] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 16:27:32] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:27:33] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:27:34] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:27:34] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:27:35] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:27:51] "GET / HTTP/1.1" 200 18236
+[05/Apr/2016 16:27:51] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:51] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:51] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:51] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:51] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:51] "GET /static/fb_account.js HTTP/1.1" 200 2430
+[05/Apr/2016 16:27:52] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:52] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:52] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:52] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:52] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 16:27:52] "GET /static/components/icon.min.css HTTP/1.1" 200 33341
+[05/Apr/2016 16:27:52] "GET /static/jquery/jquery-ui.css HTTP/1.1" 200 34459
+[05/Apr/2016 16:27:55] "GET /static/semantic.css HTTP/1.1" 200 719040
+[05/Apr/2016 16:27:56] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 304 0
+Not Found: /treemap_data
+[05/Apr/2016 16:27:56] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:27:56] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:27:56] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:27:56] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:27:56] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:27:56] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:27:56] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 16:27:56] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 16:27:56] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:27:57] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:28:02] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:28:03] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:28:03] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:28:04] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:28:04] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:28:04] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 16:28:04] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:28:04] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:28:04] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:28:05] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:28:06] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:28:35] "GET /treemap_assign/495060454002836_577303949111819/ HTTP/1.1" 200 0
+[05/Apr/2016 16:28:36] "GET /treemap_assign/495060454002836_577127965796084/ HTTP/1.1" 200 0
+[05/Apr/2016 16:28:36] "GET /treemap_assign/495060454002836_577319669110247/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:25] "GET /treemap_assign/20446254070_10153368189149071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:32] "GET /treemap_assign/20446254070_10153366942564071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:32] "GET /treemap_assign/20446254070_10153367372119071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:32] "GET /treemap_assign/20446254070_10153366789989071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:34] "GET /treemap_assign/20446254070_10153366789989071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:38] "GET /treemap_assign/20446254070_10153366789989071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:38] "GET /treemap_assign/20446254070_10153366651149071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:38] "GET /treemap_assign/18807449704_10153888267694705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:38] "GET /treemap_assign/689522981085826_1020769574627830/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:38] "GET /treemap_assign/776884052373325_1279265085420851/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:38] "GET /treemap_assign/776884052373325_522893814559779/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:38] "GET /treemap_assign/1548393862154444_1552785091715321/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:38] "GET /treemap_assign/1228219861_10208511886654513/ HTTP/1.1" 200 0
+[05/Apr/2016 16:29:40] "GET / HTTP/1.1" 200 18309
+[05/Apr/2016 16:29:40] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:29:40] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:29:40] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:29:40] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:29:40] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:29:40] "GET /static/fb_account.js HTTP/1.1" 304 0
+[05/Apr/2016 16:29:40] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:29:40] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:29:40] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:29:40] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 16:29:40] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:29:40] "GET /static/components/icon.min.css HTTP/1.1" 200 33341
+[05/Apr/2016 16:29:40] "GET /static/jquery/jquery-ui.css HTTP/1.1" 200 34459
+[05/Apr/2016 16:29:43] "GET /static/semantic.css HTTP/1.1" 200 719040
+[05/Apr/2016 16:29:43] "GET /static/themes/default/assets/fonts/icons.woff2 HTTP/1.1" 304 0
+Not Found: /treemap_data
+[05/Apr/2016 16:29:43] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:29:43] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:29:43] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:29:43] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:29:43] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_domain
+[05/Apr/2016 16:29:43] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:29:43] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:29:43] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 16:29:43] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:29:44] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:29:51] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:29:51] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:29:51] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:29:51] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:29:51] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 16:29:52] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:29:52] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:29:52] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:29:52] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:29:53] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:29:55] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:30:07] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:30:08] "GET / HTTP/1.1" 200 18309
+[05/Apr/2016 16:30:08] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/fb_account.js HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:30:08] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:30:09] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:30:09] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:30:09] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:30:09] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:30:09] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:30:09] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:30:09] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 16:30:09] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 16:30:09] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:30:10] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:30:18] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:30:18] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:30:18] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:30:18] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:30:19] "GET /static/images/profile.png HTTP/1.1" 304 0
+[05/Apr/2016 16:30:19] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:30:19] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:30:19] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:30:19] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:30:20] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:30:22] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:30:38] "GET /treemap_assign/775271569184338_1102197719825053/ HTTP/1.1" 200 0
+[05/Apr/2016 16:30:47] "GET / HTTP/1.1" 200 18309
+[05/Apr/2016 16:30:47] "GET /static/components/icon.min.css HTTP/1.1" 200 33341
+[05/Apr/2016 16:30:47] "GET /static/jquery/jquery-ui.css HTTP/1.1" 200 34459
+[05/Apr/2016 16:30:47] "GET /static/fb_account.js HTTP/1.1" 200 2430
+[05/Apr/2016 16:30:47] "GET /static/newsfeed_treemap.js HTTP/1.1" 200 13586
+[05/Apr/2016 16:30:47] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 200 2571
+[05/Apr/2016 16:30:47] "GET /static/newsfeed_barchart.js HTTP/1.1" 200 4052
+[05/Apr/2016 16:30:47] "GET /static/d3.layout.cloud.js HTTP/1.1" 200 12937
+[05/Apr/2016 16:30:48] "GET /static/newsfeed_famous.js HTTP/1.1" 200 2029
+[05/Apr/2016 16:30:48] "GET /static/newsfeed_slider.js HTTP/1.1" 200 2846
+[05/Apr/2016 16:30:48] "GET /static/jquery/jquery.min.js HTTP/1.1" 200 84345
+[05/Apr/2016 16:30:50] "GET /static/d3/d3.v3.min.js HTTP/1.1" 200 151701
+[05/Apr/2016 16:30:53] "GET /static/jquery/jquery-ui.js HTTP/1.1" 200 470591
+[05/Apr/2016 16:30:54] "GET /static/semantic.js HTTP/1.1" 200 660568
+[05/Apr/2016 16:30:55] "GET /static/semantic.css HTTP/1.1" 200 719040
+[05/Apr/2016 16:30:55] "GET /static/images/profile.png HTTP/1.1" 200 4258
+[05/Apr/2016 16:30:55] "GET /static/images/content.png HTTP/1.1" 200 1229
+Not Found: /treemap_data
+[05/Apr/2016 16:30:55] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:30:55] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:30:55] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:30:55] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:30:56] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:30:56] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+Not Found: /treemap_data
+[05/Apr/2016 16:30:56] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 16:30:56] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /barchart_data
+[05/Apr/2016 16:30:56] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:30:56] "GET /famous_data/ HTTP/1.1" 200 2547
+[05/Apr/2016 16:30:57] "GET /treemap_domain/ HTTP/1.1" 200 20022
+Not Found: /Downloads/Semantic-UI-CSS-master 2/dist/themes/default/assets/fonts/icons.woff
+[05/Apr/2016 16:30:57] "GET /Downloads/Semantic-UI-CSS-master%202/dist/themes/default/assets/fonts/icons.woff HTTP/1.1" 404 3896
+[05/Apr/2016 16:31:00] "GET /static/themes/default/assets/fonts/icons.woff HTTP/1.1" 200 71508
+Not Found: /Downloads/Semantic-UI-CSS-master 2/dist/themes/default/assets/fonts/icons.ttf
+[05/Apr/2016 16:31:00] "GET /Downloads/Semantic-UI-CSS-master%202/dist/themes/default/assets/fonts/icons.ttf HTTP/1.1" 404 3893
+Not Found: /favicon.ico
+Not Found: /Downloads/Semantic-UI-CSS-master 2/dist/themes/default/assets/fonts/icons.svg
+[05/Apr/2016 16:31:01] "GET /favicon.ico HTTP/1.1" 404 3693
+[05/Apr/2016 16:31:01] "GET /Downloads/Semantic-UI-CSS-master%202/dist/themes/default/assets/fonts/icons.svg HTTP/1.1" 404 3893
+Not Found: /treemap_domain
+[05/Apr/2016 16:31:01] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 16:31:01] "GET /treemap_domain/ HTTP/1.1" 200 20022
+Not Found: /treemap_domain
+[05/Apr/2016 16:31:02] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 16:31:02] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:31:02] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:31:02] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:31:03] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:31:04] "GET / HTTP/1.1" 200 18309
+[05/Apr/2016 16:31:04] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/fb_account.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:04] "GET /static/themes/default/assets/fonts/icons.woff HTTP/1.1" 304 0
+Not Found: /Downloads/Semantic-UI-CSS-master 2/dist/themes/default/assets/fonts/icons.woff
+[05/Apr/2016 16:31:04] "GET /Downloads/Semantic-UI-CSS-master%202/dist/themes/default/assets/fonts/icons.woff HTTP/1.1" 404 3896
+[05/Apr/2016 16:31:05] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:31:05] "GET /static/images/profile.png HTTP/1.1" 304 0
+Not Found: /treemap_data
+Not Found: /treemap_data
+[05/Apr/2016 16:31:05] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:31:05] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:31:05] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:31:05] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_domain
+[05/Apr/2016 16:31:05] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:31:05] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:31:05] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /Downloads/Semantic-UI-CSS-master 2/dist/themes/default/assets/fonts/icons.ttf
+[05/Apr/2016 16:31:05] "GET /Downloads/Semantic-UI-CSS-master%202/dist/themes/default/assets/fonts/icons.ttf HTTP/1.1" 404 3893
+Not Found: /treemap_data
+[05/Apr/2016 16:31:05] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:31:05] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:31:06] "GET /famous_data/ HTTP/1.1" 200 2547
+Not Found: /Downloads/Semantic-UI-CSS-master 2/dist/themes/default/assets/fonts/icons.svg
+[05/Apr/2016 16:31:06] "GET /Downloads/Semantic-UI-CSS-master%202/dist/themes/default/assets/fonts/icons.svg HTTP/1.1" 404 3893
+Not Found: /barchart_data
+[05/Apr/2016 16:31:09] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:31:11] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+Not Found: /treemap_domain
+[05/Apr/2016 16:31:11] "GET /treemap_domain HTTP/1.1" 301 0
+[05/Apr/2016 16:31:11] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:31:12] "GET /treemap_domain/ HTTP/1.1" 200 20022
+Not Found: /treemap_data
+[05/Apr/2016 16:31:12] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:31:13] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:31:13] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:31:13] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:31:13] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:31:14] "GET / HTTP/1.1" 200 18309
+[05/Apr/2016 16:31:15] "GET /static/jquery/jquery.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/semantic.css HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/semantic.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/jquery/jquery-ui.css HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/components/icon.min.css HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/jquery/jquery-ui.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/newsfeed_barchart.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/newsfeed_treemap.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/d3.layout.cloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/newsfeed_wordcloud.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/fb_account.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/d3/d3.v3.min.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/newsfeed_famous.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/newsfeed_slider.js HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/themes/default/assets/fonts/icons.woff HTTP/1.1" 304 0
+Not Found: /Downloads/Semantic-UI-CSS-master 2/dist/themes/default/assets/fonts/icons.woff
+[05/Apr/2016 16:31:15] "GET /Downloads/Semantic-UI-CSS-master%202/dist/themes/default/assets/fonts/icons.woff HTTP/1.1" 404 3896
+[05/Apr/2016 16:31:15] "GET /static/images/content.png HTTP/1.1" 304 0
+[05/Apr/2016 16:31:15] "GET /static/images/profile.png HTTP/1.1" 304 0
+Not Found: /treemap_data
+[05/Apr/2016 16:31:15] "GET /treemap_data?days=0&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:31:15] "GET /treemap_data?days=1&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:31:15] "GET /treemap_data?days=3&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+Not Found: /treemap_domain
+[05/Apr/2016 16:31:15] "GET /treemap_data?days=5&key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:31:15] "GET /treemap_domain HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:31:15] "GET /treemap_data?days=4&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:31:15] "GET /treemap_data?days=2&key_word= HTTP/1.1" 301 0
+Not Found: /treemap_data
+[05/Apr/2016 16:31:15] "GET /treemap_data?days=6&key_word= HTTP/1.1" 301 0
+Not Found: /Downloads/Semantic-UI-CSS-master 2/dist/themes/default/assets/fonts/icons.ttf
+[05/Apr/2016 16:31:15] "GET /Downloads/Semantic-UI-CSS-master%202/dist/themes/default/assets/fonts/icons.ttf HTTP/1.1" 404 3893
+[05/Apr/2016 16:31:16] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[05/Apr/2016 16:31:17] "GET /famous_data/ HTTP/1.1" 200 2547
+Not Found: /Downloads/Semantic-UI-CSS-master 2/dist/themes/default/assets/fonts/icons.svg
+[05/Apr/2016 16:31:19] "GET /Downloads/Semantic-UI-CSS-master%202/dist/themes/default/assets/fonts/icons.svg HTTP/1.1" 404 3893
+Not Found: /barchart_data
+[05/Apr/2016 16:31:19] "GET /barchart_data?key_word= HTTP/1.1" 301 0
+[05/Apr/2016 16:31:21] "GET /barchart_data/?key_word= HTTP/1.1" 200 12424
+[05/Apr/2016 16:31:22] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+[05/Apr/2016 16:31:24] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+[05/Apr/2016 16:31:24] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:31:24] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:31:25] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:31:25] "GET /treemap_data/?days=2&key_word= HTTP/1.1" 200 529407
+[05/Apr/2016 16:31:25] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+[05/Apr/2016 16:32:14] "GET /treemap_assign/8062627951_10153981974957952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:55] "GET /treemap_assign/1413475698959824_1514054392235287/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:56] "GET /treemap_assign/20446254070_10153367491619071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:56] "GET /treemap_assign/20446254070_10153368131354071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:56] "GET /treemap_assign/171112259610923_1168254233230049/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:56] "GET /treemap_assign/1439054569730454_1525062814462962/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:56] "GET /treemap_assign/1439054569730454_1525289817773595/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:56] "GET /treemap_assign/10152434190357125_10154018635807125/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:56] "GET /treemap_assign/255232486973_10153930836281974/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:56] "GET /treemap_assign/18807449704_10153889324754705/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:56] "GET /treemap_assign/8062627951_10153980704492952/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:56] "GET /treemap_assign/364422757097773_456297034577011/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:56] "GET /treemap_assign/100000049093228_10208569940515209/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:59] "GET /treemap_assign/20446254070_10153369103994071/ HTTP/1.1" 200 0
+[05/Apr/2016 16:34:59] "GET /treemap_assign/100001114216964_944812928899172/ HTTP/1.1" 200 0
+[05/Apr/2016 16:47:21] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 200 705638
+[05/Apr/2016 16:47:21] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+[05/Apr/2016 16:47:21] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 200 667529
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 16:47:21] "GET /treemap_data/?days=5&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 57120)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 16:47:21] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 57117)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 16:47:21] "GET /treemap_data/?days=6&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 57133)
+[05/Apr/2016 16:47:23] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 200 628735
+[05/Apr/2016 16:47:23] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 16:47:23] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 57127)
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 16:47:23] "GET /treemap_data/?days=1&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 57116)
+[05/Apr/2016 16:47:29] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 200 797200
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 16:47:29] "GET /treemap_data/?days=0&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 57169)
+[05/Apr/2016 16:47:31] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 200 609673
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 16:47:31] "GET /treemap_data/?days=4&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 57179)
+[05/Apr/2016 16:47:33] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 200 532253
+Traceback (most recent call last):
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 86, in run
+    self.finish_response()
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 128, in finish_response
+    self.write(data)
+  File "/usr/lib/python2.7/wsgiref/handlers.py", line 217, in write
+    self._write(data)
+  File "/usr/lib/python2.7/socket.py", line 324, in write
+    self.flush()
+  File "/usr/lib/python2.7/socket.py", line 303, in flush
+    self._sock.sendall(view[write_offset:write_offset+buffer_size])
+error: [Errno 110] Connection timed out
+[05/Apr/2016 16:47:33] "GET /treemap_data/?days=3&key_word= HTTP/1.1" 500 59
+- Broken pipe from ('143.215.59.30', 57185)

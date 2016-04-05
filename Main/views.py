@@ -15,6 +15,9 @@ token = 'CAACEdEose0cBACUaOP9dH85WOJxhXpxEV89chFuGqGVTEsvJ2jCr8cTrFrRSD7R2KK82Gi
 crawl_start = '2016-02-12'
 crawl_end = '2016-02-13'
 
+
+#TODO:Resoluation for website
+
 def test(request):
     return render_to_response('tiptest.html', RequestContext(request))
 
