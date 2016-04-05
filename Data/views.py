@@ -1,8 +1,12 @@
+#-*- coding: utf-8 -*-
 from django.shortcuts import render, render_to_response
 from datetime import datetime, timedelta
 from Main.models import *
 from django.http import HttpResponse
 from django.utils import timezone
+
+from operator import itemgetter
+from stop_words import get_stop_words
 
 import pytz
 import json
@@ -128,6 +132,56 @@ def barchart_data(request):
 
 
     return HttpResponse(json.dumps(result, indent=4, sort_keys=True))
+
+
+def word_cloud_data(request):
+    word_dic = {}
+    word_lst = []
+
+    startdate = datetime.strptime("2016-02-04", '%Y-%m-%d')
+    enddate = startdate + timedelta(days=7)
+
+    newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate])
+    stop_words = get_stop_words('en')
+
+    for newsfeed in newsfeeds:
+        for word in newsfeed.message.split(" "):
+            word = word.lower() #Not Case Sensitive
+            if word == '':
+                continue
+
+            if word in word_dic:
+                word_dic[word] += 1
+            else:
+                word_dic[word] = 1
+
+
+
+    word_sorted = sorted(word_dic.items(), key=itemgetter(1), reverse=True)
+
+    for value in word_sorted:
+        if not value[0].lower() in stop_words:
+            word_lst.append({'text':value[0], 'size':value[1]})
+        if len(word_lst) >= 100:
+            break
+
+#    for word in word_lst:
+#        print word["text"], word["size"]
+
+
+    return json.dumps(word_lst, indent=4, sort_keys=True)
+
+
+    '''
+    if 'key' in result :
+        result['key'] = 1;
+    else:
+        result['key'] += 1;
+    '''
+
+    #return HttpResponse(json.dumps(word_lst, indent=4, sort_keys=True))
+
+
 
 def famous_data(request):
 

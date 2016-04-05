@@ -4,18 +4,13 @@
 // ================== Bar chart definition =====================
 var weekday = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat')
 
-
-
-
 //=================== Bar Chart ====================
 var barchart_x_list;
 var firstrun_barchart = true;
 var barchart_data;
 var svg = null;
 function call_barchart(key_word, bar_width, bar_height){
-    console.log(bar_width + "," + bar_height);
-
-    d3.select(".infovis svg").remove();
+    d3.select(".barchart_svg").remove();
 
     d3.selectAll(".bar").remove();
     d3.selectAll(".y").remove();
@@ -54,6 +49,7 @@ function call_barchart(key_word, bar_width, bar_height){
         .ticks(0)
 
     var svg = d3.select(".infovis").append("svg")
+        .attr("class", "barchart_svg")
         .attr("width", bar_width + bar_margin.left + bar_margin.right)
         .attr("height", bar_height + bar_margin.top + bar_margin.bottom)
         .append("g")

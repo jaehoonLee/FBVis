@@ -1,8 +1,9 @@
 {% load staticfiles %}
 <!DOCTYPE html>
-<html lang="en" style="width:100%">
+
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>FBVis</title>
 
     <script src="{% static 'jquery/jquery.min.js' %}"></script>
@@ -15,7 +16,7 @@
     <script src="{% static 'semantic.js' %}"></script>
     <script type="text/javascript" src="{% static 'd3/d3.v3.min.js' %}"></script>
     <script src="{% static 'd3.layout.cloud.js' %}"></script>
-
+    <script src="{% static 'fb_account.js' %}"></script>
 
     <style type="text/css">
         body {
@@ -98,10 +99,15 @@
 
     </div>
     <div class="item">
-        <div class="ui icon input">
-            <input type="text" placeholder="Search...">
-            <i class="search icon"></i>
+
+        <div class="ui search">
+            <div class="ui icon input">
+                <input class="prompt" type="text" placeholder="Search...">
+                <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
         </div>
+
     </div>
     <div class="right menu">
 
@@ -109,6 +115,9 @@
             <i class="facebook icon"></i>
             FBLogin
         </button>
+
+        </fb:login-button>
+
 
     </div>
 
@@ -159,17 +168,37 @@
                                 <div class="four wide column">
                                     <div class="ui radio checkbox">
                                         <input type="radio" name="example2" value="popularity">
-                                        <label>Popularity</label>
+                                        <label>Popularity (Gradient)</label>
 
                                     </div>
                                 </div>
                                 <div class="twelve wide column">
                                     <div class="row">
-                                        <label id="amount" class="amount">Comments:</label>
+                                        <label id="amount" class="amount">Likes:</label>
                                     </div>
 
                                     <div class="row">
                                         <div id="slider"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="field">
+                            <div class="ui grid">
+                                <div class="four wide column">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="example2" value="popularity_size">
+                                        <label>Popularity (Size)</label>
+
+                                    </div>
+                                </div>
+                                <div class="twelve wide column">
+                                    <div class="row">
+                                        <label id="amount_size" class="amount_size">Likes Parameter : </label>
+                                    </div>
+
+                                    <div class="row">
+                                        <div id="slider_size"></div>
                                     </div>
                                 </div>
                             </div>
@@ -269,22 +298,27 @@
 
 
 </script>
-<!--<script src="{% static 'newsfeed_wordcloud.js' %}"></script>-->
+<!--<script src="{% static 'backup/newsfeed_wordcloud.js' %}"></script>-->
+<script src="{% static 'newsfeed_slider.js' %}"></script>
 <script src="{% static 'newsfeed_treemap.js' %}"></script>
+<script src="{% static 'newsfeed_wordcloud.js' %}"></script>
 <script src="{% static 'newsfeed_barchart.js' %}"></script>
 <script src="{% static 'newsfeed_famous.js' %}"></script>
+
 
 <script type="text/javascript">
     var treemap_margin = {top: 20, right: 10, bottom: 10, left: 10};
     var treemap_width = total_width - treemap_margin.left - treemap_margin.right;
-    var treemap_height = total_height/3 -treemap_margin.top - treemap_margin.bottom;
+    var treemap_height = total_height*4/10.2 -treemap_margin.top - treemap_margin.bottom;
 
     var bar_margin = {top: 20, right: 20, bottom: 30, left: 20};
     var bar_width = total_width - margin.left - margin.right;
-    var bar_height = total_height/3 - margin.top - margin.bottom;
+    var bar_height = total_height/10 - margin.top - margin.bottom;
 
     call_treemap('', treemap_width, treemap_height);
+    call_world_cloud(treemap_width, treemap_height, words);
     call_barchart('', bar_width, bar_height);
+
 
     $(window).resize(function(){
         $('.infovis').html('');
@@ -294,20 +328,39 @@
         total_height = $('body').height();
 
         treemap_width = total_width - treemap_margin.left - treemap_margin.right;
-        treemap_height = total_height/3 -treemap_margin.top - treemap_margin.bottom;
+        treemap_height = total_height*4/10.2 -treemap_margin.top - treemap_margin.bottom;
 
         bar_width = total_width - margin.left - margin.right;
-        bar_height = total_height/3 - margin.top - margin.bottom;
+        bar_height = total_height/10 - margin.top - margin.bottom;
 
         //parent_div.selectAll("*").remove();
         call_treemap('', treemap_width, treemap_height);
+        call_world_cloud(treemap_width, treemap_height,words);
         call_barchart('', bar_width, bar_height);
+
         //date_div_add(treemap_width/7);
 
     });
 
 
+    //Search
+    var content = [];
+    for(var i in words){
+        content.push({title: words[i].text});
+    }
+
+
+    $('.ui.search')
+            .search({
+                source: content,
+                onSelect:function(result, response){
+                    console.log(result);
+                    wordcloud_treemap_call(result.title, '#000000');
+                }
+            });
+
 
 </script>
+
 </body>
 </html>

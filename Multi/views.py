@@ -20,4 +20,7 @@ def treemap_assign(request, fbid):
     fbid_sel = fbid
     return HttpResponse()
 
+def pallette(request):
+    return render_to_response('pallette.html', RequestContext(request))
+
 

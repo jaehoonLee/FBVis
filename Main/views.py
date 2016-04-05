@@ -1,11 +1,11 @@
+#-*- coding: utf-8 -*-
 from django.shortcuts import render, render_to_response
 from models import *
 from datetime import datetime, timedelta
 from django.utils import timezone
 from django.http import HttpResponse
 from django.template import RequestContext
-from operator import itemgetter
-from stop_words import get_stop_words
+from Data.views import word_cloud_data
 
 import facebook
 import json
@@ -15,61 +15,15 @@ token = 'CAACEdEose0cBACUaOP9dH85WOJxhXpxEV89chFuGqGVTEsvJ2jCr8cTrFrRSD7R2KK82Gi
 crawl_start = '2016-02-12'
 crawl_end = '2016-02-13'
 
-
 def test(request):
-    return render_to_response('test.html', RequestContext(request))
-
+    return render_to_response('tiptest.html', RequestContext(request))
 
 def main(request):
     word_lst = word_cloud_data(request)
-    #print word_lst
     return render_to_response('index.html', RequestContext(request, {'word_lst': word_lst}))
-    #return render_to_response('word_cloud.html')
 
 def word_cloud(request):
-    return render_to_response('word_cloud.html')
-
-def word_cloud_data(request):
-    word_dic = {}
-    word_lst = []
-    startdate = datetime.strptime("2016-02-04", '%Y-%m-%d')
-    enddate = startdate + timedelta(days=7)
-    newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate])
-    stop_words = get_stop_words('en')
-
-    for newsfeed in newsfeeds:
-        #print newsfeed.message
-
-        for word in newsfeed.message.split(" "):
-            if word == '':
-                continue
-
-            if word in word_dic:
-                word_dic[word] += 1
-            else:
-                word_dic[word] = 1
-
-    word_sorted = sorted(word_dic.items(), key=itemgetter(1), reverse=True)
-
-    for value in word_sorted:
-        if not value[0] in stop_words:
-            word_lst.append({'text':value[0], 'size':value[1]})
-        if len(word_lst) >= 100:
-            break
-
-
-
-    return json.dumps(word_lst, indent=4, sort_keys=True)
-
-
-    '''
-    if 'key' in result :
-        result['key'] = 1;
-    else:
-        result['key'] += 1;
-    '''
-
-    return HttpResponse(json.dumps(word_lst, indent=4, sort_keys=True))
+    return render_to_response('word_cloud2.html')
 
 
 # TODO : have to update some newsfeed with different likes and comments.(count will be reupdated)

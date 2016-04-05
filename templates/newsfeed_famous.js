@@ -33,12 +33,10 @@ d3.json("/famous_data/", function(error, data){
             //.style("margin-top", "5px");
 
         var width = $('.famous_sub_sub').width();
-        console.log(width);
 
         if(i == 0){
             x.range([0, width]);
         }
-
 
         var famous_img = famous_image_div.append("img")
             .attr("width", 50 + 'px')
