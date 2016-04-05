@@ -8,9 +8,21 @@ var cur_profile_image = '/static/images/profile.png';
 var cur_author_name = 'Name';
 var cur_date = 'YYYY-MM-DD';
 var cur_message = 'Text Message';
+var cur_popularity = 'popularity'
+
 var max_comments = 0;
 var cur_max_comments = 500;
+var max_likes = 0;
+var cur_max_likes = 500;
+
 var cur_treenode_type = "nothing";
+var nodes;
+var callback;
+var cur_size_parameter = 1.0;
+
+var treemap_parent_div;
+var rest_treemap;
+
 
 function call_treemap(text, width, height){
     /* reset treemap */
@@ -23,8 +35,8 @@ function call_treemap(text, width, height){
         .style("width", treemap_width + "px")
         .style("height", 20 + "px")
 
-    var parent_div = d3.select(".infovis").append("div")
-        .attr("class", "parent_div")
+    treemap_parent_div = d3.select(".infovis").append("div")
+        .attr("class", "treemap_parent_div")
         .style("position", "relative")
         .style("width", treemap_width  + "px")
         .style("height", (treemap_height + margin.top + margin.bottom) + "px")
@@ -91,28 +103,28 @@ function call_treemap(text, width, height){
         .attr("class", "ui small image")
         .attr("src", "/static/images/content.png");
 
+    var detail_popularity = detail_info.append("pre")
+        .attr("class", "detail_popularity")
+        .style("width",  detail_width + "px")
+        .attr("class", "detail_text");
+
     var date_domain = [];
 
     var domain = {};
-    var nodes = [];
+    nodes = [];
 
 
     var max_likes = 0;
 
-    /* For resize */
-    for(var i = 0 ; i < 7; i++){
-        call_subtreemap(i, text, width, height);
-    }
-
 
     /* Call Function For Subtree */
-    function call_subtreemap(i, text, width, height){
+    rest_treemap = function call_subtreemap(i, text, width, height){
         var treemap_width = width;
         var treemap_height = height;
         var default_between_margin = treemap_width/1000;
 
-        var callback = function(error, root) {
-            console.log(firstrun + ":" + root);
+        callback = function(error, root) {
+
             if (error) throw error;
 
             if(firstrun) {
@@ -124,42 +136,10 @@ function call_treemap(text, width, height){
                     $('.detail_loader').remove();
 
                     //For slider in popularity
-                    console.log("max comments:" + max_comments + "," + cur_max_comments);
                     max_comments = 1000;
-                    $(function() {
-                        $( "#slider" ).slider({
-                            min : 0,
-                            max : max_comments,
-                            value : cur_max_comments,
-                            create : function(event, ui) {
-                                $( "#amount" ).html("Comments : " + cur_max_comments);
-                            },
-                            slide: function( event, ui ) {
-                                $( "#amount" ).html("Comments : " + ui.value);
-                                cur_max_comments = ui.value;
-                            },
-                            stop: function(event, ui){
-                                console.log(ui.value);
-                                if('popularity' == cur_treenode_type){
-                                    var popular_color = d3.scale.linear().range(['#D3D3D3','#000000']).domain([0, ui.value]);
-                                    for(var i in nodes){
-                                        nodes[i].transition()
-                                            .duration(500).style("background-color", function(d) {
-                                                if(d.type == 'type'){
-                                                    //console.log(popular_color(d.comments));
-                                                    return popular_color(d.comments);
-                                                }
-                                            });
-                                    }
-                                }
-
-                            }
-                        });
-                    });
+                    max_likes = 1000;
+                    set_slider(max_comments, cur_max_comments, max_likes, cur_max_likes, nodes);
                 }
-
-
-
             }
 
             //Treemap setting
@@ -173,8 +153,8 @@ function call_treemap(text, width, height){
 
 
 
-            //Add div in parent_div
-            var div = parent_div.append("div")
+            //Add div in treemap_parent_div
+            var div = treemap_parent_div.append("div")
                 .style("position", "absolute")
                 .style("width", (treemap_width * 1/7 - default_between_margin)+ "px")
                 .style("height", (treemap_height + margin.top + margin.bottom) + "px")
@@ -205,12 +185,6 @@ function call_treemap(text, width, height){
             domain = Object.keys(domain);
             var range = domain.map(function(){  return randomColor(); })
 
-            /*
-             var color = d3.scale.ordinal()
-             .domain(domain)
-             .range(range);
-             */
-
             var node = div.datum(root).selectAll(".node")
                 .data(treemap.nodes)
                 .enter().append("div")
@@ -225,7 +199,11 @@ function call_treemap(text, width, height){
                      else
                      return null;
                      */
-                    return "#D3D3D3"
+
+                    if(d.type == 'type')
+                        return "#D3D3D3";
+                    else
+                        return null;
                 })
                 .on("mouseover", function(d){
                     //Detail Information
@@ -235,12 +213,14 @@ function call_treemap(text, width, height){
                     cur_author_name = d.author;
                     cur_date = d.created_time;
                     cur_message = d.message;
+                    cur_popularity = 'likes: ' + d.likes + '\ncomments: ' + d.comments;
+
 
                     detail_picture.attr("src", d.picture_url);
                     detail_img.attr("src", d.author_img_url);
                     detail_author.text(d.author + "\n" + d.created_time);
-                    detail_message.text(d.message);
-
+                    detail_message.text(cur_message);
+                    detail_popularity.text(cur_popularity)
 
                     //Color Date
                     var date = new Date(d.created_time);
@@ -296,6 +276,11 @@ function call_treemap(text, width, height){
 
     }
 
+     /* For resize */
+    for(var i = 0 ; i < 7; i++){
+        rest_treemap(i, text, width, height);
+    }
+
     var color;
     d3.json("/treemap_domain", function(error, domain){
         var range = domain.map(function(){  return randomColor(); })
@@ -306,21 +291,77 @@ function call_treemap(text, width, height){
 
 
     d3.selectAll("input").on("change", function change() {
-        var popular_color = d3.scale.linear().range(['#D3D3D3','#000000']).domain([0, cur_max_comments]);
+        var popular_color = d3.scale.linear().range(['#D3D3D3','#000000']).domain([0, cur_max_likes]);
+
+        //if previous was popularity size
+        if('popularity_size' == cur_treenode_type && 'popularity_size' != this.value){
+
+            console.log("Test");
+            treemap_parent_div.html('');
+
+            for(var i in treemap_datas) {
+                var root = treemap_datas[i];
+                var authors = root["children"][0]["children"];
+                for (var j in authors) {
+                    var posts = authors[j]["children"];
+                    for (var k in posts) {
+                        posts[k].size = 1;
+
+                    }
+                }
+            }
+
+            for(var i = 0 ; i < 7; i++){
+                rest_treemap(i, text, width, height);
+            }
+        }
+
+
         cur_treenode_type = this.value;
+
+        if('popularity_size' == cur_treenode_type){
+
+            treemap_parent_div.html('');
+
+            for(var i in treemap_datas) {
+                var root = treemap_datas[i];
+                var authors = root["children"][0]["children"];
+                for (var j in authors) {
+                    var posts = authors[j]["children"];
+                    for (var k in posts) {
+                        posts[k].size = posts[k].likes * cur_size_parameter;
+                    }
+                }
+            }
+
+            for(var i = 0 ; i < 7; i++){
+                rest_treemap(i, text, width, height);
+            }
+            return;
+        }
+
+
+
         //check
         for(var i in nodes){
-            nodes[i].transition()
-                .duration(500).style("background-color", function(d) {
-                    if(d.type == cur_treenode_type) {
-                        return color(d.name);
+
+            nodes[i]
+                .transition()
+                .duration(500)
+                .style("background-color", function(d) {
+
+                    if(d.type != 'type')
+                        return null;
+
+                    if('author' == cur_treenode_type) {
+                        return color(d.author);
                     }
                     else if('nothing' == cur_treenode_type){
                         return "#D3D3D3";
                     }
                     else if('popularity' == cur_treenode_type){
                         if(d.type == 'type'){
-                            return popular_color(d.comments);
+                            return popular_color(d.likes);
                         }
                         return "#D3D3D3";
                     }
@@ -337,12 +378,50 @@ function call_treemap(text, width, height){
                     }
                     else
                         return null;
-                }).text(function(d) {
-                    return d.type == cur_treenode_type?  d.name : null;
-                });
+                })
+            ;
+
+            /*
+             .text(function(d) {
+             return d.type == cur_treenode_type?  d.name : null;
+             });
+             */
         }
 
     });
+}
+
+function wordcloud_treemap_call(word, cur_color){
+    for(var i in nodes){
+        nodes[i]
+            .style("background-color", function(d) {
+
+                if(d.type == 'type'){
+
+                    if(typeof d.message == 'undefined')
+                        return "#D3D3D3";
+
+                    var word_lst = d.message.toLowerCase().split(" ");
+                    var word_exist = (word_lst.indexOf(word.toLowerCase()) > -1);
+
+
+
+                    if(word_exist)
+                        return cur_color;
+                    else
+                        return "#D3D3D3"
+
+                }
+
+                else
+                    return null;
+            });
+        /*
+         .text(function(d) {
+         return d.type == cur_treenode_type?  d.name : null;
+         });
+         */
+    }
 }
 
 
