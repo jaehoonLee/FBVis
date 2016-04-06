@@ -110,9 +110,13 @@
 
     </div>
     <div class="right menu">
-        <button class="ui facebook button fbbutton">
+        <button class="ui facebook button fbbutton" onclick="location.href='{% url 'social:begin' 'facebook' %}?next={{ request.path }}'">
             <i class="facebook icon"></i>
-            FBLogin
+            {% if user.is_authenticated %}
+                FBLogout
+            {% else %}
+                FBLogin
+            {% endif %}
         </button>
     </div>
 
@@ -353,7 +357,7 @@
     });
 
 
-    
+    /*
     $('.fbbutton').click(function(){
     console.log(login);
     
@@ -374,7 +378,7 @@
     }
 
     });
-
+    */
 
 
 </script>

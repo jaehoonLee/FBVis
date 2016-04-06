@@ -23,7 +23,7 @@ def test(request):
 
 def main(request):
     word_lst = word_cloud_data(request)
-    return render_to_response('index.html', RequestContext(request, {'word_lst': word_lst}))
+    return render_to_response('index.html', RequestContext(request, {'word_lst': word_lst, 'request':request, 'user': request.user}))
 
 def word_cloud(request):
     return render_to_response('word_cloud2.html')

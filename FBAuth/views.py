@@ -4,6 +4,8 @@ from social_auth.models import *
 
 
 def home(request):
-    request.user.social_auth
-    context = RequestContext(request, {'request':request, 'user': request.user})
-    return render_to_response('social/home.html', context_instance=context)
+   #if not request.user.is_anonymous():
+   #   print request.user.social_auth.get(provider='facebook').extra_data['access_token']
+
+   context = RequestContext(request, {'request':request, 'user': request.user})
+   return render_to_response('social/home.html', context_instance=context)

@@ -42,6 +42,7 @@ urlpatterns = [
     url(r'^treemap_signal/(?P<day>[0-9])', treemap_signal),
     url(r'^treemap_assign/(?P<fbid>\w+)', treemap_assign),
 
+    url('', include('django.contrib.auth.urls', namespace='auth')),
     url(r'^social/', include('social.apps.django_app.urls', namespace='social')),
     url(r'^home/', home, name='home'),
 
