@@ -110,14 +110,19 @@
 
     </div>
     <div class="right menu">
-        <button class="ui facebook button fbbutton" onclick="location.href='{% url 'social:begin' 'facebook' %}?next={{ request.path }}'">
-            <i class="facebook icon"></i>
+
             {% if user.is_authenticated %}
-                FBLogout
+                <button class="ui facebook button fbbutton" onclick="location.href='{% url 'auth:logout' %}?next={{ request.path }}'">
+                    <i class="facebook icon"></i>
+                    FBLogout
+                </button>
             {% else %}
-                FBLogin
+                <button class="ui facebook button fbbutton" onclick="location.href='{% url 'social:begin' 'facebook' %}?next={{ request.path }}'">
+                    <i class="facebook icon"></i>
+                    FBLogin
+                </button>
             {% endif %}
-        </button>
+
     </div>
 
 </div>
