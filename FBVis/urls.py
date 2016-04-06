@@ -18,6 +18,7 @@ from django.contrib import admin
 from Main.views import *
 from Data.views import *
 from Multi.views import *
+from FBAuth.views import *
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -41,5 +42,7 @@ urlpatterns = [
     url(r'^treemap_signal/(?P<day>[0-9])', treemap_signal),
     url(r'^treemap_assign/(?P<fbid>\w+)', treemap_assign),
 
+    url(r'^social/', include('social.apps.django_app.urls', namespace='social')),
+    url(r'^home/', home, name='home'),
 
 ]
