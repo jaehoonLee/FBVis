@@ -1,6 +1,5 @@
 from django.shortcuts import render_to_response
 from django.template.context import RequestContext
-from social_auth.models import *
 
 
 def home(request):
