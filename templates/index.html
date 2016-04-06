@@ -1,13 +1,13 @@
 {% load staticfiles %}
-<!DOCTYPE html>
-<meta charset="utf-8">
+<!DOCTYPE html><meta charset="utf-8">
+
 <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>FBVis</title>
 
     <script src="{% static 'jquery/jquery.min.js' %}"></script>
     <script src="{% static 'jquery/jquery-ui.js' %}"></script>
-
 
     <link rel="stylesheet" type="text/css" href="{% static 'jquery/jquery-ui.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'semantic.css' %}">
@@ -17,7 +17,6 @@
     <script type="text/javascript" src="{% static 'd3/d3.v3.min.js' %}"></script>
     <script src="{% static 'd3.layout.cloud.js' %}"></script>
     <script src="{% static 'fb_account.js' %}"></script>
-
 
     <style type="text/css">
         body {
@@ -351,15 +350,33 @@
                 onSelect:function(result, response){
                     wordcloud_treemap_call(result.title, '#000000');
                 }
-            });
-
-    $('.fbbutton').click(function(){
-        FB.login(function(response) {
-            // handle the response
-            console.log(response)
-
-        }, {scope: 'public_profile,email'});
     });
+
+
+    
+    $('.fbbutton').click(function(){
+    console.log(login);
+    
+    if(login){
+    FB.logout(function(response){
+    console.log(response);
+    statusChangeCallback(response);
+    });
+    
+
+    }
+    else{
+    FB.login(function(response) {
+		// handle the response
+    console.log(response)
+    statusChangeCallback(response);
+    }, {scope: 'public_profile,email'});
+    }
+
+    });
+
+
+
 </script>
 
 </body>

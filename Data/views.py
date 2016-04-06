@@ -1,3 +1,4 @@
+#-*- coding: utf-8 -*-
 from django.shortcuts import render, render_to_response
 from datetime import datetime, timedelta
 from Main.models import *
@@ -164,8 +165,8 @@ def word_cloud_data(request):
         if len(word_lst) >= 100:
             break
 
-    for word in word_lst:
-        print word["text"], word["size"]
+#    for word in word_lst:
+#        print word["text"], word["size"]
 
 
     return json.dumps(word_lst, indent=4, sort_keys=True)
