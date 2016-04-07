@@ -42151,3 +42151,31 @@ Traceback (most recent call last):
   File "/usr/lib/python2.7/importlib/__init__.py", line 37, in import_module
     __import__(name)
 ImportError: No module named social.apps.django_app
+/usr/lib/python2.7/dist-packages/six.py:617: RemovedInDjango110Warning: SubfieldBase has been deprecated. Use Field.from_db_value instead.
+  return meta("NewBase", bases, {})
+
+/usr/local/lib/python2.7/dist-packages/social/apps/django_app/default/fields.py:14: RemovedInDjango110Warning: SubfieldBase has been deprecated. Use Field.from_db_value instead.
+  class JSONField(six.with_metaclass(models.SubfieldBase, models.TextField)):
+
+/usr/lib/python2.7/dist-packages/six.py:617: RemovedInDjango110Warning: SubfieldBase has been deprecated. Use Field.from_db_value instead.
+  return meta("NewBase", bases, {})
+
+/usr/local/lib/python2.7/dist-packages/social/apps/django_app/default/fields.py:14: RemovedInDjango110Warning: SubfieldBase has been deprecated. Use Field.from_db_value instead.
+  class JSONField(six.with_metaclass(models.SubfieldBase, models.TextField)):
+
+System check identified some issues:
+
+WARNINGS:
+?: (1_8.W001) The standalone TEMPLATE_* settings were deprecated in Django 1.8 and the TEMPLATES dictionary takes precedence. You must put the values of the following settings into your default TEMPLATES dict: TEMPLATE_DIRS.
+
+System check identified 1 issue (0 silenced).
+Not Found: /admin
+[06/Apr/2016 17:51:08] "GET /admin HTTP/1.1" 301 0
+[06/Apr/2016 17:51:08] "GET /admin/ HTTP/1.1" 302 0
+[06/Apr/2016 17:51:08] "GET /admin/login/?next=/admin/ HTTP/1.1" 200 1841
+[06/Apr/2016 17:51:09] "GET /static/admin/css/login.css HTTP/1.1" 200 1203
+[06/Apr/2016 17:51:09] "GET /static/admin/css/base.css HTTP/1.1" 200 15897
+[06/Apr/2016 17:51:09] "GET /static/admin/css/fonts.css HTTP/1.1" 200 423
+[06/Apr/2016 17:51:09] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
+[06/Apr/2016 17:51:09] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
+[06/Apr/2016 17:51:09] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
