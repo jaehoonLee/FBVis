@@ -299,6 +299,7 @@ function call_treemap(text, width, height){
     });
 
 
+
     d3.selectAll("input").on("change", function change() {
         var popular_color = d3.scale.linear().range(['#D3D3D3','#000000']).domain([0, cur_max_likes]);
 
@@ -352,6 +353,15 @@ function call_treemap(text, width, height){
 
 
         //check
+        if(cur_treenode_type == 'author'){
+            person_execute = true;
+            executeQuery();
+        }
+        else{
+            person_execute = false;
+        }
+
+
         for(var i in nodes){
 
             nodes[i]
@@ -363,7 +373,8 @@ function call_treemap(text, width, height){
                         return null;
 
                     if('author' == cur_treenode_type) {
-                        return color(d.author);
+                       //return color(d.author);
+                        return "#D3D3D3";
                     }
                     else if('nothing' == cur_treenode_type){
                         return "#D3D3D3";

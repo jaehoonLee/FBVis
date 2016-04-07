@@ -367,6 +367,7 @@
     var pre_col3 = [];
     var pre_col4 = [];
     var col_color = d3.scale.category10().range();
+    var person_execute = false;
     function executeQuery(){
 
         $.ajax({
@@ -450,12 +451,14 @@
             }
         });
 
-        setTimeout(executeQuery, 200);
+        console.log("person_execute:" + person_execute);
+        if(person_execute)
+            setTimeout(executeQuery, 200);
     }
 
-    $(document).ready(function(){
-        executeQuery();
-    });
+
+    //executeQuery();
+
 
 
 </script>
