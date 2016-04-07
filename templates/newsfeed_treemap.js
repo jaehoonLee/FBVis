@@ -189,6 +189,15 @@ function call_treemap(text, width, height){
                 .data(treemap.nodes)
                 .enter().append("div")
                 .attr("class", function(d){
+
+                    if(d.type == 'type'){
+                        var author = d.author;
+                        var str_name = author.split(" ").join("");
+
+                        return "node " + str_name + "_node";
+                    }
+
+
                     return "node";
                 })//"node"
                 .call(position)
@@ -276,7 +285,7 @@ function call_treemap(text, width, height){
 
     }
 
-     /* For resize */
+    /* For resize */
     for(var i = 0 ; i < 7; i++){
         rest_treemap(i, text, width, height);
     }
