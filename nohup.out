@@ -42179,3 +42179,79 @@ Not Found: /admin
 [06/Apr/2016 17:51:09] "GET /static/admin/fonts/Roboto-Light-webfont.woff HTTP/1.1" 200 81348
 [06/Apr/2016 17:51:09] "GET /static/admin/fonts/Roboto-Regular-webfont.woff HTTP/1.1" 200 80304
 [06/Apr/2016 17:51:09] "GET /static/admin/fonts/Roboto-Bold-webfont.woff HTTP/1.1" 200 82564
+[06/Apr/2016 17:51:38] "POST /admin/login/?next=/admin/ HTTP/1.1" 200 2001
+[06/Apr/2016 17:51:44] "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+[06/Apr/2016 17:51:44] "GET /admin/ HTTP/1.1" 200 8067
+/usr/local/lib/python2.7/dist-packages/social/apps/django_app/default/admin.py:27: RemovedInDjango110Warning: 'get_all_field_names is an unofficial API that has been deprecated. You may be able to replace it with 'get_fields()'
+  all_names = _User._meta.get_all_field_names()
+
+[06/Apr/2016 17:51:47] "GET /admin/default/usersocialauth/ HTTP/1.1" 200 5708
+[06/Apr/2016 17:51:47] "GET /admin/jsi18n/ HTTP/1.1" 200 3217
+[06/Apr/2016 17:51:47] "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+[06/Apr/2016 23:12:10] "GET /treemap_assign/10152919860227597_10153794519637597/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:10] "GET /treemap_assign/698700010259690_798458126950544/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:10] "GET /treemap_assign/10152104312168034_10153236295651933/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:10] "GET /treemap_assign/967164259967422_967194943356057/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:10] "GET /treemap_assign/193441624024392_965674586801088/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:10] "GET /treemap_assign/1439054569730454_1523403691295541/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:10] "GET /treemap_assign/558828827565807_490098734509391/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:10] "GET /treemap_assign/1401820976774735_1569460210010810/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:10] "GET /treemap_assign/1401820976774735_1569481450008686/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/29092950651_10156492874080652/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/832182990149527_1104785239555966/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/255232486973_10153920137596974/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/10152783547824148_10154556111514148/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/1413475698959824_1512949662345760/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/159673400728102_1277648498930581/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/159673400728102_1279471845414913/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/159673400728102_1279605262068238/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/159673400728102_1278395432189221/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/10203766344661548_10208751899217296/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/10203766344661548_10208751895217196/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/10203766344661548_10208749511957616/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:11] "GET /treemap_assign/10203766344661548_10208751963058892/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:12] "GET /treemap_assign/10203766344661548_10208751969819061/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:12] "GET /treemap_assign/18807449704_10153881421029705/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:12] "GET /treemap_assign/8062627951_10153971000742952/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:12] "GET /treemap_assign/10152434190357125_10154009335067125/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:14] "GET /treemap_assign/20446254070_10153366651149071/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:14] "GET /treemap_assign/20446254070_10153366196419071/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:14] "GET /treemap_assign/20446254070_10153366162804071/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:14] "GET /treemap_assign/8062627951_10153979673712952/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:14] "GET /treemap_assign/364422757097773_454902304716484/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:14] "GET /treemap_assign/818596874852799_1676853332553449/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:14] "GET /treemap_assign/794422807249075_10209102138740401/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:14] "GET /treemap_assign/10154028481655177_10156456578790177/ HTTP/1.1" 200 0
+[06/Apr/2016 23:12:14] "GET /treemap_assign/676142135776370_10153186333067364/ HTTP/1.1" 200 0
+Not Found: /treemap_domain
+[06/Apr/2016 23:59:59] "GET /treemap_domain HTTP/1.1" 301 0
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-04 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-05 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-06 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-07 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-08 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-09 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-10 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+/usr/local/lib/python2.7/dist-packages/django/db/models/fields/__init__.py:1453: RuntimeWarning: DateTimeField NewsFeed.created_time received a naive datetime (2016-02-11 00:00:00) while time zone support is active.
+  RuntimeWarning)
+
+[07/Apr/2016 00:00:00] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[07/Apr/2016 00:00:04] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[07/Apr/2016 00:00:05] "GET /treemap_domain/ HTTP/1.1" 200 20022
+[07/Apr/2016 00:00:05] "GET /treemap_assign/683727165023892_1030437430352862/ HTTP/1.1" 200 0
+[07/Apr/2016 00:00:05] "GET /treemap_assign/23519525029_10153877298010030/ HTTP/1.1" 200 0
+[07/Apr/2016 00:00:05] "GET /treemap_domain/ HTTP/1.1" 200 20022
