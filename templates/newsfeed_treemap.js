@@ -189,6 +189,15 @@ function call_treemap(text, width, height){
                 .data(treemap.nodes)
                 .enter().append("div")
                 .attr("class", function(d){
+
+                    if(d.type == 'type'){
+                        var author = d.author;
+                        var str_name = author.split(" ").join("");
+
+                        return "node " + str_name + "_node";
+                    }
+
+
                     return "node";
                 })//"node"
                 .call(position)
@@ -276,7 +285,7 @@ function call_treemap(text, width, height){
 
     }
 
-     /* For resize */
+    /* For resize */
     for(var i = 0 ; i < 7; i++){
         rest_treemap(i, text, width, height);
     }
@@ -288,6 +297,7 @@ function call_treemap(text, width, height){
             .domain(domain)
             .range(range);
     });
+
 
 
     d3.selectAll("input").on("change", function change() {
@@ -343,6 +353,15 @@ function call_treemap(text, width, height){
 
 
         //check
+        if(cur_treenode_type == 'author'){
+            person_execute = true;
+            executeQuery();
+        }
+        else{
+            person_execute = false;
+        }
+
+
         for(var i in nodes){
 
             nodes[i]
@@ -354,7 +373,8 @@ function call_treemap(text, width, height){
                         return null;
 
                     if('author' == cur_treenode_type) {
-                        return color(d.author);
+                       //return color(d.author);
+                        return "#D3D3D3";
                     }
                     else if('nothing' == cur_treenode_type){
                         return "#D3D3D3";

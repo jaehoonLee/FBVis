@@ -111,17 +111,17 @@
     </div>
     <div class="right menu">
 
-            {% if user.is_authenticated %}
-                <button class="ui facebook button fbbutton" onclick="location.href='{% url 'auth:logout' %}?next={{ request.path }}'">
-                    <i class="facebook icon"></i>
-                    FBLogout
-                </button>
-            {% else %}
-                <button class="ui facebook button fbbutton" onclick="location.href='{% url 'social:begin' 'facebook' %}?next={{ request.path }}'">
-                    <i class="facebook icon"></i>
-                    FBLogin
-                </button>
-            {% endif %}
+        {% if user.is_authenticated %}
+            <button class="ui facebook button fbbutton" onclick="location.href='{% url 'auth:logout' %}?next={{ request.path }}'">
+                <i class="facebook icon"></i>
+                FBLogout
+            </button>
+        {% else %}
+            <button class="ui facebook button fbbutton" onclick="location.href='{% url 'social:begin' 'facebook' %}?next={{ request.path }}'">
+                <i class="facebook icon"></i>
+                FBLogin
+            </button>
+        {% endif %}
 
     </div>
 
@@ -359,31 +359,107 @@
                 onSelect:function(result, response){
                     wordcloud_treemap_call(result.title, '#000000');
                 }
-    });
+            });
 
 
-    /*
-    $('.fbbutton').click(function(){
-    console.log(login);
-    
-    if(login){
-    FB.logout(function(response){
-    console.log(response);
-    statusChangeCallback(response);
-    });
-    
+    var pre_col1 = [];
+    var pre_col2 = [];
+    var pre_col3 = [];
+    var pre_col4 = [];
+    var col_color = d3.scale.category10().range();
+    var person_execute = false;
+    function executeQuery(){
 
+        $.ajax({
+<!--            url: '/pallette_signal/',-->
+url: 'http://192.169.164.131:7000/pallette_signal/',
+            success: function(data){
+                console.log(data);
+                var obj = JSON.parse(data);
+                var col1 = obj["1"];
+                var col2 = obj["2"];
+                var col3 = obj["3"];
+                var col4 = obj["4"];
+
+                //reset
+                for(var i in pre_col1){
+                    var author = pre_col1[i]
+                    if(!(author in col1)){
+                        var str_name = author.split(" ").join("") + "_node";
+                        $("." + str_name).css("background-color", "#D3D3D3");
+                    }
+                }
+
+                for(var i in pre_col2){
+                    var author = pre_col2[i]
+                    if(!(author in col2)){
+                        var str_name = author.split(" ").join("") + "_node";
+                        $("." + str_name).css("background-color", "#D3D3D3");
+                    }
+                }
+
+                for(var i in pre_col3){
+                    var author = pre_col3[i]
+                    if(!(author in col3)){
+                        var str_name = author.split(" ").join("") + "_node";
+                        $("." + str_name).css("background-color", "#D3D3D3");
+                    }
+                }
+
+                for(var i in pre_col4){
+                    var author = pre_col4[i]
+                    if(!(author in col4)){
+                        var str_name = author.split(" ").join("") + "_node";
+                        $("." + str_name).css("background-color", "#D3D3D3");
+                    }
+                }
+
+
+                //set
+                for(var i in col1){
+                    var author = col1[i]
+                    var str_name = author.split(" ").join("") + "_node";
+
+                    $("." + str_name).css("background-color", col_color[0]);
+                }
+
+                for(var i in col2){
+                    var author = col2[i]
+                    var str_name = author.split(" ").join("") + "_node";
+
+                    $("." + str_name).css("background-color", col_color[1]);
+                }
+
+                for(var i in col3){
+                    var author = col3[i]
+                    var str_name = author.split(" ").join("") + "_node";
+
+                    $("." + str_name).css("background-color", col_color[2]);
+                }
+
+                for(var i in col4){
+                    var author = col4[i]
+                    var str_name = author.split(" ").join("") + "_node";
+
+                    $("." + str_name).css("background-color", col_color[3]);
+                }
+
+                pre_col1 = col1;
+                pre_col2 = col2;
+                pre_col3 = col3;
+                pre_col4 = col4;
+
+            }
+        });
+
+        console.log("person_execute:" + person_execute);
+        if(person_execute)
+            setTimeout(executeQuery, 200);
     }
-    else{
-    FB.login(function(response) {
-		// handle the response
-    console.log(response)
-    statusChangeCallback(response);
-    }, {scope: 'public_profile,email'});
-    }
 
-    });
-    */
+
+    //executeQuery();
+
 
 
 </script>

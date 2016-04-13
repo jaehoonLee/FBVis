@@ -39,6 +39,8 @@ urlpatterns = [
 
     url(r'^multi_treemap/(?P<day>[0-9])', treemap),
     url(r'^pallette/', pallette),
+    url(r'^pallette_signal/', pallette_signal),
+    url(r'^pallette_assign/', pallette_assign),
     url(r'^treemap_signal/(?P<day>[0-9])', treemap_signal),
     url(r'^treemap_assign/(?P<fbid>\w+)', treemap_assign),
 
