@@ -298,9 +298,50 @@ function call_treemap(text, width, height){
             .range(range);
     });
 
+    d3.selectAll("input[name=popularity_size]").on("change", function change() {
+
+        var likes_list = []
+        if('popularity_size' == cur_treenode_type){
+
+            treemap_parent_div.html('');
+
+            for(var i in treemap_datas) {
+                var root = treemap_datas[i];
+                var authors = root["children"][0]["children"];
+                for (var j in authors) {
+                    var posts = authors[j]["children"];
+                    for (var k in posts) {
+
+                        var poltype_value = d3.select("input[name=popularity_size]:checked").node().value;
+                        if(poltype_value == 'sqrt'){
+                            posts[k].size = Math.sqrt(posts[k].likes);
+                        }
+                        else{
+                            if(posts[k].likes == 0)
+                                posts[k].size = 0
+                            else
+                                posts[k].size = Math.log(posts[k].likes);
+                        }
+                        likes_list.push(posts[k].size);
+                    }
+                }
+            }
+
+            for(var i = 0 ; i < 7; i++){
+                rest_treemap(i, text, width, height);
+            }
+            console.log(likes_list);
+            return;
+        }
 
 
-    d3.selectAll("input").on("change", function change() {
+    });
+
+
+    d3.selectAll("input[name=example2]").on("change", function change() {
+
+
+
         var popular_color = d3.scale.linear().range(['#D3D3D3','#000000']).domain([0, cur_max_likes]);
 
         //if previous was popularity size
@@ -339,7 +380,15 @@ function call_treemap(text, width, height){
                 for (var j in authors) {
                     var posts = authors[j]["children"];
                     for (var k in posts) {
-                        posts[k].size = posts[k].likes * cur_size_parameter;
+
+                        var poltype_value = d3.select("input[name=popularity_size]:checked").node().value;
+                        if(poltype_value == 'sqrt'){
+                            posts[k].size = Math.sqrt(posts[k].likes);
+                        }
+                        else{
+                            posts[k].size = Math.log(posts[k].likes);
+                        }
+
                     }
                 }
             }
@@ -373,7 +422,7 @@ function call_treemap(text, width, height){
                         return null;
 
                     if('author' == cur_treenode_type) {
-                       //return color(d.author);
+                        //return color(d.author);
                         return "#D3D3D3";
                     }
                     else if('nothing' == cur_treenode_type){

@@ -72,16 +72,11 @@
                 .data(treemap.nodes)
                 .enter().append("div")
                 .attr("class", function(d){
-
                     return  "node " + d.fbid;
-
                 })
                 .call(position)
                 .style("background", function(d)
                 {
-
-
-                    //return d.children ? color(d.name) : null;
                     return "#D3D3D3";
 
                 }).on("mouseover", function(d){
@@ -89,10 +84,6 @@
                     var authors = root["children"][0];
                     var feeds = authors["children"].filter(function(item){return item.name == d.author})[0]
                     var feed = feeds["children"].filter(function(item){return item.fbid == d.fbid})[0]
-                    //console.log(feed);
-
-
-
                 });
         //.text(function(d) { return d.children ? null : d.name; });
 
