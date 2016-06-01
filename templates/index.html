@@ -163,7 +163,7 @@
                         <h3 class="ui header">Color</h3>
                         <div class="field">
                             <div class="ui radio checkbox">
-                                <input type="radio" name="example2" checked="checked" value="nothing">
+                                <input type="radio" id="treemapnode_type" name="example2" checked="checked" value="nothing">
                                 <label>Gray(Nothing)</label>
                             </div>
                         </div>
@@ -171,7 +171,7 @@
                             <div class="ui grid">
                                 <div class="four wide column">
                                     <div class="ui radio checkbox">
-                                        <input type="radio" name="example2" value="popularity">
+                                        <input type="radio" id="treemapnode_type" name="example2" value="popularity">
                                         <label>Popularity (Gradient)</label>
 
                                     </div>
@@ -191,12 +191,19 @@
                             <div class="ui grid">
                                 <div class="four wide column">
                                     <div class="ui radio checkbox">
-                                        <input type="radio" name="example2" value="popularity_size">
+                                        <input type="radio" id="treemapnode_type" name="example2" value="popularity_size">
                                         <label>Popularity (Size)</label>
 
                                     </div>
                                 </div>
+
                                 <div class="twelve wide column">
+                                    <input type="radio" name="popularity_size" value="sqrt" checked="checked">
+                                    <label>Sqrt Root</label>
+
+                                    <input type="radio" name="popularity_size" value="power">
+                                    <label>Power Function</label>
+                                    <!--
                                     <div class="row">
                                         <label id="amount_size" class="amount_size">Likes Parameter : </label>
                                     </div>
@@ -204,24 +211,26 @@
                                     <div class="row">
                                         <div id="slider_size"></div>
                                     </div>
+                                    -->
                                 </div>
+
                             </div>
                         </div>
                         <div class="field">
                             <div class="ui radio checkbox">
-                                <input type="radio" name="example2" value="author">
+                                <input type="radio" id="treemapnode_type" name="example2" value="author">
                                 <label >Person</label>
                             </div>
                         </div>
                         <div class="field">
                             <div class="ui radio checkbox">
-                                <input type="radio" name="example2" value="images">
+                                <input type="radio" id="treemapnode_type" name="example2" value="images">
                                 <label>Images</label>
                             </div>
                         </div>
                         <div class="field">
                             <div class="ui radio checkbox">
-                                <input type="radio" name="example2" value="close">
+                                <input type="radio" id="treemapnode_type" name="example2" value="close">
                                 <label>Close Friends</label>
                             </div>
                         </div>
