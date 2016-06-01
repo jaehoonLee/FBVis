@@ -9,14 +9,12 @@
     <script src="{% static 'jquery/jquery.min.js' %}"></script>
     <script src="{% static 'jquery/jquery-ui.js' %}"></script>
 
-
     <link rel="stylesheet" type="text/css" href="{% static 'jquery/jquery-ui.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'semantic.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'components/icon.min.css' %}">
 
     <script src="{% static 'semantic.js' %}"></script>
     <script type="text/javascript" src="{% static 'd3/d3.v3.min.js' %}"></script>
-    <script src="{% static 'd3/d3.tip.v0.6.3.js' %}"></script>
     <script src="{% static 'd3.layout.cloud.js' %}"></script>
     <!--    <script src="{% static 'fb_account.js' %}"></script>-->
 
@@ -64,6 +62,11 @@
             height:auto;
         }
 
+        .bar {
+            fill: steelblue;
+        }
+
+
         .axis {
             font: 15px sans-serif;
         }
@@ -81,21 +84,6 @@
 
         .ui .segment .famous_title{
             margin-bottom : 1.5em;
-        }
-
-        .famous_div{
-            width:100%;
-            overflow-y: scroll;
-            overflow-x: hidden;
-        }
-
-        .d3-tip {
-            line-height: 1;
-            padding: 7px;
-            background: rgba(0, 0, 0, 0.8);
-            color: #fff;
-            border-radius: 2px;
-            font-size: 10px;
         }
     </style>
 </head>
@@ -145,48 +133,129 @@
             <div class="ui active dimmer infovis_loader">
                 <div class="ui text loader">Loading</div>
             </div>
+
+            <!--
+            <form>
+                <label><input type="radio" name="mode" value="date" checked> Date</label>
+                <label><input type="radio" name="mode" value="author"> Person</label>
+                <label><input type="radio" name="mode" value="type"> Post</label>
+            </form>
+            -->
         </div>
     </div>
     <div class="four wide column">
         <div class="ui active dimmer detail_loader">
             <div class="ui text loader">Loading</div>
         </div>
-        <div class="row post_detail_row">
+        <div class="row">
             <div class="ui segment detail">
 
 
             </div>
         </div>
-        <div class="row treemap_option_row">
+        <div class="row">
 
             <div class="ui segment">
                 <div class="ui grid">
                     <div class="eight wide column">
                         <div class="ui form">
                             <div class="grouped fields">
+                                <h3 class="ui header">Color</h3>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" id="treemapnode_type" name="example2" checked="checked" value="nothing">
+                                        <label>Gray(Nothing)</label>
+                                    </div>
+                                </div>
+                                <!--
+                                <div class="field">
+                                    <div class="ui grid">
+                                        <div class="four wide column">
+                                            <div class="ui radio checkbox">
+                                                <input type="radio" id="treemapnode_type" name="example2" value="popularity">
+                                                <label>Popularity (Gradient)</label>
+
+                                            </div>
+                                        </div>
+                                        <div class="twelve wide column">
+                                            <div class="row">
+                                                <label id="amount" class="amount">Likes:</label>
+                                            </div>
+
+                                            <div class="row">
+                                                <div id="slider"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
+
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" id="treemapnode_type" name="example2" value="author">
+                                        <label >Person</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" id="treemapnode_type" name="example2" value="images">
+                                        <label>Images</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" id="treemapnode_type" name="example2" value="close">
+                                        <label>Close Friends</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eight wide column">
+                        <div class="ui form">
+                            <div class="grouped fields">
                                 <h3 class="ui header">Size</h3>
                                 <div class="field">
                                     <div class="ui radio checkbox">
-                                        <input type="radio" name="popularity_size" value="none" checked="checked">
-                                        <label>None</label>
+                                        <input type="radio" name="popularity_size" value="sqrt" checked="checked">
+                                        <label>Sqrt Root</label>
                                     </div>
+
+
+                                    <!--
+                                    <div class="ui grid">
+                                        <div class="four wide column">
+                                            <div class="ui radio checkbox">
+                                                <input type="radio" id="treemapnode_type" name="example2" value="popularity_size">
+                                                <label>Popularity (Size)</label>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="twelve wide column">
+                                            <input type="radio" name="popularity_size" value="sqrt" checked="checked">
+                                            <label>Sqrt Root</label>
+
+                                            <input type="radio" name="popularity_size" value="power">
+                                            <label>Power Function</label>
+                                            <!--
+                                            <div class="row">
+                                                <label id="amount_size" class="amount_size">Likes Parameter : </label>
+                                            </div>
+
+                                            <div class="row">
+                                                <div id="slider_size"></div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    -->
                                 </div>
                                 <div class="field">
                                     <div class="ui radio checkbox">
-                                        <input type="radio" name="popularity_size" value="likes">
-                                        <label>Likes</label>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <div class="ui radio checkbox">
-                                        <input type="radio" name="popularity_size" value="comments">
-                                        <label>Comments</label>
-                                    </div>
-                                </div>
-                                <div class="field">
-                                    <div class="ui radio checkbox">
-                                        <input type="radio" name="popularity_size" value="postlength">
-                                        <label>Post length</label>
+                                        <input type="radio" name="popularity_size" value="power">
+                                        <label>Power Function</label>
                                     </div>
                                 </div>
                             </div>
@@ -195,12 +264,16 @@
                 </div>
             </div>
         </div>
-        <div class="row famous_row">
-            <div class="ui segment famous_div">
+        <div class="row">
+            <div class="ui segment">
 
                 <h3 class="ui header famous_title">Famous People</h3>
                 <div class="ui grid famous">
-
+                    <!--
+                    <div class="two wide column">
+                        <img src="http://cfile3.uf.tistory.com/image/2631593A52C8192E1D6CCE"  style="width:50px; height:50px;">
+                    </div>
+                    -->
                 </div>
 
             </div>
@@ -216,7 +289,7 @@
             width = total_width - margin.left - margin.right,
             height = total_height - margin.top - margin.bottom;
 
-    var cloud_words = {{ word_lst | safe }};
+    var words = {{ word_lst | safe }};
 
 
     function position() {
@@ -282,14 +355,27 @@
     var bar_height = total_height/10 - margin.top - margin.bottom;
 
     call_treemap('', treemap_width, treemap_height);
-    call_world_cloud(treemap_width, treemap_height, cloud_words);
+    call_world_cloud(treemap_width, treemap_height, words);
     call_barchart('', bar_width, bar_height);
 
-    var famous_div_height = total_height * 9.3/10 - $('.post_detail_row').height() - $('.treemap_option_row').height();
-    $('.famous_div').css('height', famous_div_height + "px");
-
     $(window).resize(function(){
-        reset_infovis(cloud_words);
+        $('.infovis').html('');
+        $(".detail").html('');
+
+        total_width = $('.infovis').width();
+        total_height = $('body').height();
+
+        treemap_width = total_width - treemap_margin.left - treemap_margin.right;
+        treemap_height = total_height*4/10.2 -treemap_margin.top - treemap_margin.bottom;
+
+        bar_width = total_width - margin.left - margin.right;
+        bar_height = total_height/10 - margin.top - margin.bottom;
+
+        //parent_div.selectAll("*").remove();
+        call_treemap('', treemap_width, treemap_height);
+        call_world_cloud(treemap_width, treemap_height,words);
+        call_barchart('', bar_width, bar_height);
+
         //date_div_add(treemap_width/7);
 
     });
@@ -297,8 +383,8 @@
 
     //Search
     var content = [];
-    for(var i in cloud_words){
-        content.push({title: cloud_words[i].text});
+    for(var i in words){
+        content.push({title: words[i].text});
     }
 
     $('.ui.search')
@@ -319,8 +405,7 @@
     function executeQuery(){
 
         $.ajax({
-<!--            url: '/pallette_signal/',-->
-url: 'http://192.169.164.131:7000/pallette_signal/',
+            url: '/pallette_signal/',
             success: function(data){
                 console.log(data);
                 var obj = JSON.parse(data);
@@ -407,28 +492,7 @@ url: 'http://192.169.164.131:7000/pallette_signal/',
 
 
     //executeQuery();
-    function reset_infovis(){
-        $('.infovis').html('');
-        $(".detail").html('');
 
-        total_width = $('.infovis').width();
-        total_height = $('body').height();
-
-        treemap_width = total_width - treemap_margin.left - treemap_margin.right;
-        treemap_height = total_height*4/10.2 -treemap_margin.top - treemap_margin.bottom;
-
-        bar_width = total_width - margin.left - margin.right;
-        bar_height = total_height/10 - margin.top - margin.bottom;
-
-        //parent_div.selectAll("*").remove();
-        call_treemap('', treemap_width, treemap_height);
-        call_world_cloud(treemap_width, treemap_height, cloud_words);
-        call_barchart('', bar_width, bar_height);
-
-        var famous_div_height = total_height * 9.3/10 - $('.post_detail_row').height() - $('.treemap_option_row').height();
-        $('.famous_div').css('height', famous_div_height + "px");
-
-    }
 
 
 </script>
