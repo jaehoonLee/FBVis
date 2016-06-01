@@ -14,11 +14,11 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include(blog_urls))
 """
 from django.conf.urls import include, url
-from django.contrib import admin
 from Main.views import *
 from Data.views import *
 from Multi.views import *
 from FBAuth.views import *
+from Crawl.views import *
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -26,15 +26,17 @@ urlpatterns = [
     url(r'^test/$', test),
     url(r'^word_cloud/', word_cloud),
     url(r'^word_cloud_data/', word_cloud_data),
+    url(r'^filtered_word_cloud_data/', filtered_word_cloud_data),
 
     url(r'^treemap_data/', treemap_data),
     url(r'^treemap_domain/', treemap_domain),
-
     url(r'^barchart_data/', barchart_data),
+    url(r'^removed_barchart_data/', removed_barchart_data),
     url(r'^famous_data/', famous_data),
 
     url(r'^checkDatebase/', checkDatebase),
     url(r'^crawl/', crawl),
+    url(r'^crawl_new_api/', crawl_new_api),
     url(r'^update_image_url/', update_image_url),
 
     url(r'^multi_treemap/(?P<day>[0-9])', treemap),

@@ -2,35 +2,97 @@
  * Created by jaehoonlee88 on 16. 3. 3..
  */
 
-
+var full_data;
 d3.json("/famous_data/", function(error, data){
     if (error) throw error;
+    full_data = data;
+    draw_famous(data);
 
-    var x = d3.scale.linear()
-        .domain([0, d3.max(data, function(d){ return d.active })]);
+});
+
+
+var delete_authors = []
+function refresh(index){
+    delete_authors.push(full_data[index].name);
+    console.log(full_data[index]);
+    console.log(treemap_datas);
+    for(var i in treemap_datas){
+        var authors = treemap_datas[i].children[0].children;
+
+        for(var j in authors){
+            var author = authors[j];
+            if(full_data[index].name == author.name){
+
+                authors.splice(j, 1);
+                break;
+            }
+        }
+
+
+        //console.log(authors);
+    }
+
+    $.ajax({
+        type : "POST",
+        data : {'delete_authors':delete_authors},
+        url : "/filtered_word_cloud_data/",
+        success: function(cloud_words_data){
+            cloud_words = JSON.parse(cloud_words_data);
+
+            $.ajax({
+                type : "POST",
+                data : {'delete_authors':delete_authors},
+                url : "/removed_barchart_data/",
+                success: function(barchart_removed_data_raw){
+                    barchart_removed_data = JSON.parse(barchart_removed_data_raw);
+                    reset_infovis();
+                }
+
+            });
+        }
+    });
+
+
+    //
+
+
+
+
+    full_data.splice(index, 1);
+    d3.select(".famous").html('');
+    draw_famous(full_data);
+}
+
+var people_fixed = false;
+var pre_node_name = null;
+
+
+function draw_famous(data){
+    var x = d3.scale.linear().domain([0, d3.max(data, function(d){ return d.active })]);
+    data = data.slice(0, 50);
+
+    /*
+    var famous_svg = d3.select(".famous")
+    var famous_tip = d3.tip().attr('class', 'd3-tip').html("HELLO WORLD");
+    famous_svg.call(famous_tip);
+    */
 
     data.forEach(function(d, i){
-
-        //console.log(i);
         var famous_sub_div = d3.select(".famous").append("div")
             .attr("class", "ui grid")
             .style("width", "100%")
             .style("padding-top", "0px")
             .style("padding-bottom", "0px")
 
-            //.style("margin-bottom", "0.2em");
-
         var famous_image_div = famous_sub_div.append("div")
             .attr("class", "two wide column")
             .style("padding-top", "0px")
-            .style("padding-bottom", "0px")
+            .style("padding-bottom", "0px");
 
         var famous_sub_sub_div = famous_sub_div.append("div")
             .attr("class", "fourteen wide column famous_sub_sub")
             .style("padding-top", "0px")
             .style("padding-bottom", "0px")
-            //.style("margin-left", "20px")
-            //.style("margin-top", "5px");
 
         var width = $('.famous_sub_sub').width();
 
@@ -38,12 +100,49 @@ d3.json("/famous_data/", function(error, data){
             x.range([0, width]);
         }
 
-        var famous_img = famous_image_div.append("img")
+
+
+        famous_image_div.append("img")
+            .style("top", "0px")
             .attr("width", 50 + 'px')
             .attr("height", 50 + 'px')
             .attr("src", d.profile_url)
+            .on("mouseover", function(){
 
-        var famous_author = famous_sub_sub_div
+                reset_word_cloud();
+
+                if(!people_fixed){
+                    var nodename = d.author_id;
+                    pre_node_name = nodename;
+                    $("." + nodename + "_node").css("background", "black");
+                }
+
+
+            })
+            .on("mouseout", function(){
+                if(!people_fixed) {
+                    var nodename = d.author_id;
+                    $("." + nodename + "_node").css("background", "#D3D3D3");
+                }
+            })
+            .on("click", function(){
+                people_fixed = !people_fixed;
+
+            });
+
+        famous_image_div.append("div")
+            .style("position", "absolute")
+            .style("top", "-10px")
+            .append("input")
+            .attr("type", "checkbox")
+            .attr("name", "famous_remove")
+            .on("change", function(){
+
+                //CheckBox Remove Refresh
+                refresh(i);
+            })
+
+        famous_sub_sub_div
             .append("div")
             .attr("class", "row")
             .append("label")
@@ -64,10 +163,17 @@ d3.json("/famous_data/", function(error, data){
             .attr("width", x(d.active))
             .attr("height", "10");
 
-
     });
+}
+
+
+function reset_famous_people(){
+    if(people_fixed){
+        if(pre_node_name != null){
 
 
 
-});
-
+        }
+        people_fixed = false;
+    }
+}

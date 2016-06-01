@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'Main',
     'Data',
     'FBAuth',
+    'Crawl',
     'rest_framework',
     'social.apps.django_app.default',
 )
@@ -130,3 +131,31 @@ AUTHENTICATION_BACKENDS = (
 LOGIN_REDIRECT_URL = 'http://192.169.164.131:7000/'
 SOCIAL_AUTH_FACEBOOK_KEY = '1688633084755612'
 SOCIAL_AUTH_FACEBOOK_SECRET = 'bee34df5dd4c4defa8b41ba1e9cd3d63'
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': True,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s %(asctime)s %(module)s %(process)d %(thread)d %(message)s'
+        },
+    },
+    'handlers': {
+        'console': {
+            'level': 'NOTSET',
+            'class': 'logging.StreamHandler',
+            'formatter': 'verbose'
+        }
+    },
+    'loggers': {
+        '': {
+            'handlers': ['console'],
+            'level': 'NOTSET',
+        },
+        'django.request': {
+            'handlers': ['console'],
+            'propagate': False,
+            'level': 'ERROR'
+        }
+    }
+}

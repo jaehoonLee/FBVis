@@ -1,0 +1,501 @@
+{% load staticfiles %}
+<!DOCTYPE html><meta charset="utf-8">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>FBVis</title>
+
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'jquery/jquery-ui.js' %}"></script>
+
+    <link rel="stylesheet" type="text/css" href="{% static 'jquery/jquery-ui.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'semantic.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'components/icon.min.css' %}">
+
+    <script src="{% static 'semantic.js' %}"></script>
+    <script type="text/javascript" src="{% static 'd3/d3.v3.min.js' %}"></script>
+    <script src="{% static 'd3.layout.cloud.js' %}"></script>
+    <!--    <script src="{% static 'fb_account.js' %}"></script>-->
+
+    <style type="text/css">
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding-left:20px;
+            padding-right:20px;
+            font-size:17px;
+        }
+
+        .infovis{
+            padding-left : 50px;
+
+        }
+
+        .detail{
+            padding-left: 20px;
+            padding-right : 50px;
+        }
+
+        .node {
+            border: solid 1px white;
+            font: 12px sans-serif;
+
+            line-height: 12px;
+            overflow: hidden;
+            position: absolute;
+            text-indent: 2px;
+        }
+
+        .node_text{
+            margin-top:3px;
+
+        }
+
+        .detail_text{
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 15px;
+            white-space: pre-wrap;
+        }
+
+        .detail_message{
+            width:auto;
+            height:auto;
+        }
+
+        .bar {
+            fill: steelblue;
+        }
+
+
+        .axis {
+            font: 15px sans-serif;
+        }
+
+        .axis path,
+        .axis line {
+            fill: none;
+            stroke: #000;
+            shape-rendering: crispEdges;
+        }
+
+        .x.axis path {
+            display: none;
+        }
+
+        .ui .segment .famous_title{
+            margin-bottom : 1.5em;
+        }
+    </style>
+</head>
+<body>
+
+<!-- TopBar -->
+<div class="ui text menu">
+    <div class="header item">
+        <h1>NewsFeed Visualization</h1>
+
+    </div>
+    <div class="item">
+
+        <div class="ui search">
+            <div class="ui icon input">
+                <input class="prompt" type="text" placeholder="Search...">
+                <i class="search icon"></i>
+            </div>
+            <div class="results"></div>
+        </div>
+
+    </div>
+
+    <div class="right menu">
+
+        {% if user.is_authenticated %}
+            <button class="ui facebook button fbbutton" onclick="location.href='{% url 'auth:logout' %}?next={{ request.path }}'">
+                <i class="facebook icon"></i>
+                FBLogout
+            </button>
+        {% else %}
+            <button class="ui facebook button fbbutton" onclick="location.href='{% url 'social:begin' 'facebook' %}?next={{ request.path }}'">
+                <i class="facebook icon"></i>
+                FBLogin
+            </button>
+        {% endif %}
+
+    </div>
+
+</div>
+<!-- Visualization View -->
+<div class="ui grid">
+    <div class="twelve wide column">
+        <!-- Information Visualization View -->
+
+        <div class="ui segment infovis">
+            <div class="ui active dimmer infovis_loader">
+                <div class="ui text loader">Loading</div>
+            </div>
+
+            <!--
+            <form>
+                <label><input type="radio" name="mode" value="date" checked> Date</label>
+                <label><input type="radio" name="mode" value="author"> Person</label>
+                <label><input type="radio" name="mode" value="type"> Post</label>
+            </form>
+            -->
+        </div>
+    </div>
+    <div class="four wide column">
+        <div class="ui active dimmer detail_loader">
+            <div class="ui text loader">Loading</div>
+        </div>
+        <div class="row">
+            <div class="ui segment detail">
+
+
+            </div>
+        </div>
+        <div class="row">
+
+            <div class="ui segment">
+                <div class="ui grid">
+                    <div class="eight wide column">
+                        <div class="ui form">
+                            <div class="grouped fields">
+                                <h3 class="ui header">Color</h3>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" id="treemapnode_type" name="example2" checked="checked" value="nothing">
+                                        <label>Gray(Nothing)</label>
+                                    </div>
+                                </div>
+                                <!--
+                                <div class="field">
+                                    <div class="ui grid">
+                                        <div class="four wide column">
+                                            <div class="ui radio checkbox">
+                                                <input type="radio" id="treemapnode_type" name="example2" value="popularity">
+                                                <label>Popularity (Gradient)</label>
+
+                                            </div>
+                                        </div>
+                                        <div class="twelve wide column">
+                                            <div class="row">
+                                                <label id="amount" class="amount">Likes:</label>
+                                            </div>
+
+                                            <div class="row">
+                                                <div id="slider"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                -->
+
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" id="treemapnode_type" name="example2" value="author">
+                                        <label >Person</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" id="treemapnode_type" name="example2" value="images">
+                                        <label>Images</label>
+                                    </div>
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" id="treemapnode_type" name="example2" value="close">
+                                        <label>Close Friends</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="eight wide column">
+                        <div class="ui form">
+                            <div class="grouped fields">
+                                <h3 class="ui header">Size</h3>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="popularity_size" value="sqrt" checked="checked">
+                                        <label>Sqrt Root</label>
+                                    </div>
+
+
+                                    <!--
+                                    <div class="ui grid">
+                                        <div class="four wide column">
+                                            <div class="ui radio checkbox">
+                                                <input type="radio" id="treemapnode_type" name="example2" value="popularity_size">
+                                                <label>Popularity (Size)</label>
+
+                                            </div>
+                                        </div>
+
+                                        <div class="twelve wide column">
+                                            <input type="radio" name="popularity_size" value="sqrt" checked="checked">
+                                            <label>Sqrt Root</label>
+
+                                            <input type="radio" name="popularity_size" value="power">
+                                            <label>Power Function</label>
+                                            <!--
+                                            <div class="row">
+                                                <label id="amount_size" class="amount_size">Likes Parameter : </label>
+                                            </div>
+
+                                            <div class="row">
+                                                <div id="slider_size"></div>
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                    -->
+                                </div>
+                                <div class="field">
+                                    <div class="ui radio checkbox">
+                                        <input type="radio" name="popularity_size" value="power">
+                                        <label>Power Function</label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="ui segment">
+
+                <h3 class="ui header famous_title">Famous People</h3>
+                <div class="ui grid famous">
+                    <!--
+                    <div class="two wide column">
+                        <img src="http://cfile3.uf.tistory.com/image/2631593A52C8192E1D6CCE"  style="width:50px; height:50px;">
+                    </div>
+                    -->
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</div>
+<script type="text/javascript">
+    var total_width = $('.infovis').width();
+    var total_height = $('body').height();
+
+    var margin = {top: 10, right: 10, bottom: 10, left: 10},
+            width = total_width - margin.left - margin.right,
+            height = total_height - margin.top - margin.bottom;
+
+    var words = {{ word_lst | safe }};
+
+
+    function position() {
+        this.style("left", function(d) { return d.x + "px"; })
+                .style("top", function(d) { return d.y + "px"; })
+                .style("width", function(d) { return Math.max(0, d.dx - 1) + "px"; })
+                .style("height", function(d) { return Math.max(0, d.dy - 1) + "px"; });
+    }
+
+    var randomColor = (function(){
+        var golden_ratio_conjugate = 0.618033988749895;
+        var h = Math.random();
+
+        var hslToRgb = function (h, s, l){
+            var r, g, b;
+
+            if(s == 0){
+                r = g = b = l; // achromatic
+            }else{
+                function hue2rgb(p, q, t){
+                    if(t < 0) t += 1;
+                    if(t > 1) t -= 1;
+                    if(t < 1/6) return p + (q - p) * 6 * t;
+                    if(t < 1/2) return q;
+                    if(t < 2/3) return p + (q - p) * (2/3 - t) * 6;
+                    return p;
+                }
+
+                var q = l < 0.5 ? l * (1 + s) : l + s - l * s;
+                var p = 2 * l - q;
+                r = hue2rgb(p, q, h + 1/3);
+                g = hue2rgb(p, q, h);
+                b = hue2rgb(p, q, h - 1/3);
+            }
+
+            return '#'+Math.round(r * 255).toString(16)+Math.round(g * 255).toString(16)+Math.round(b * 255).toString(16);
+        };
+
+        return function(){
+            h += golden_ratio_conjugate;
+            h %= 1;
+            return hslToRgb(h, 0.5, 0.60);
+        };
+    })();
+
+
+</script>
+<!--<script src="{% static 'backup/newsfeed_wordcloud.js' %}"></script>-->
+<script src="{% static 'newsfeed_slider.js' %}"></script>
+<script src="{% static 'newsfeed_treemap.js' %}"></script>
+<script src="{% static 'newsfeed_wordcloud.js' %}"></script>
+<script src="{% static 'newsfeed_barchart.js' %}"></script>
+<script src="{% static 'newsfeed_famous.js' %}"></script>
+
+
+<script type="text/javascript">
+    var treemap_margin = {top: 20, right: 10, bottom: 10, left: 10};
+    var treemap_width = total_width - treemap_margin.left - treemap_margin.right;
+    var treemap_height = total_height*4/10.2 -treemap_margin.top - treemap_margin.bottom;
+
+    var bar_margin = {top: 20, right: 20, bottom: 30, left: 20};
+    var bar_width = total_width - margin.left - margin.right;
+    var bar_height = total_height/10 - margin.top - margin.bottom;
+
+    call_treemap('', treemap_width, treemap_height);
+    call_world_cloud(treemap_width, treemap_height, words);
+    call_barchart('', bar_width, bar_height);
+
+    $(window).resize(function(){
+        $('.infovis').html('');
+        $(".detail").html('');
+
+        total_width = $('.infovis').width();
+        total_height = $('body').height();
+
+        treemap_width = total_width - treemap_margin.left - treemap_margin.right;
+        treemap_height = total_height*4/10.2 -treemap_margin.top - treemap_margin.bottom;
+
+        bar_width = total_width - margin.left - margin.right;
+        bar_height = total_height/10 - margin.top - margin.bottom;
+
+        //parent_div.selectAll("*").remove();
+        call_treemap('', treemap_width, treemap_height);
+        call_world_cloud(treemap_width, treemap_height,words);
+        call_barchart('', bar_width, bar_height);
+
+        //date_div_add(treemap_width/7);
+
+    });
+
+
+    //Search
+    var content = [];
+    for(var i in words){
+        content.push({title: words[i].text});
+    }
+
+    $('.ui.search')
+            .search({
+                source: content,
+                onSelect:function(result, response){
+                    wordcloud_treemap_call(result.title, '#000000');
+                }
+            });
+
+
+    var pre_col1 = [];
+    var pre_col2 = [];
+    var pre_col3 = [];
+    var pre_col4 = [];
+    var col_color = d3.scale.category10().range();
+    var person_execute = false;
+    function executeQuery(){
+
+        $.ajax({
+            url: '/pallette_signal/',
+            success: function(data){
+                console.log(data);
+                var obj = JSON.parse(data);
+                var col1 = obj["1"];
+                var col2 = obj["2"];
+                var col3 = obj["3"];
+                var col4 = obj["4"];
+
+                //reset
+                for(var i in pre_col1){
+                    var author = pre_col1[i]
+                    if(!(author in col1)){
+                        var str_name = author.split(" ").join("") + "_node";
+                        $("." + str_name).css("background-color", "#D3D3D3");
+                    }
+                }
+
+                for(var i in pre_col2){
+                    var author = pre_col2[i]
+                    if(!(author in col2)){
+                        var str_name = author.split(" ").join("") + "_node";
+                        $("." + str_name).css("background-color", "#D3D3D3");
+                    }
+                }
+
+                for(var i in pre_col3){
+                    var author = pre_col3[i]
+                    if(!(author in col3)){
+                        var str_name = author.split(" ").join("") + "_node";
+                        $("." + str_name).css("background-color", "#D3D3D3");
+                    }
+                }
+
+                for(var i in pre_col4){
+                    var author = pre_col4[i]
+                    if(!(author in col4)){
+                        var str_name = author.split(" ").join("") + "_node";
+                        $("." + str_name).css("background-color", "#D3D3D3");
+                    }
+                }
+
+
+                //set
+                for(var i in col1){
+                    var author = col1[i]
+                    var str_name = author.split(" ").join("") + "_node";
+
+                    $("." + str_name).css("background-color", col_color[0]);
+                }
+
+                for(var i in col2){
+                    var author = col2[i]
+                    var str_name = author.split(" ").join("") + "_node";
+
+                    $("." + str_name).css("background-color", col_color[1]);
+                }
+
+                for(var i in col3){
+                    var author = col3[i]
+                    var str_name = author.split(" ").join("") + "_node";
+
+                    $("." + str_name).css("background-color", col_color[2]);
+                }
+
+                for(var i in col4){
+                    var author = col4[i]
+                    var str_name = author.split(" ").join("") + "_node";
+
+                    $("." + str_name).css("background-color", col_color[3]);
+                }
+
+                pre_col1 = col1;
+                pre_col2 = col2;
+                pre_col3 = col3;
+                pre_col4 = col4;
+
+            }
+        });
+
+        console.log("person_execute:" + person_execute);
+        if(person_execute)
+            setTimeout(executeQuery, 200);
+    }
+
+
+    //executeQuery();
+
+
+
+</script>
+
+</body>
+</html>

@@ -8,7 +8,10 @@ var weekday = new Array('Sun', 'Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat')
 var barchart_x_list;
 var firstrun_barchart = true;
 var barchart_data;
+var barchart_removed_data = [];
 var svg = null;
+
+
 function call_barchart(key_word, bar_width, bar_height){
     d3.select(".barchart_svg").remove();
 
@@ -55,17 +58,20 @@ function call_barchart(key_word, bar_width, bar_height){
         .append("g")
         .attr("transform", "translate(" + bar_margin.left + "," + bar_margin.top + ")");
 
-    var draw_barchart_callback = function(error, data) {
 
-        console.log(bar_width + "," + bar_height);
+    var barchart_index = {}
+    var draw_barchart_callback = function(error, data) {
         barchart_data = data;
 
-
         if (error) throw error;
-        //barchart_data = data;
 
         barchart_x_list = data.map(function(d) {
             return d.date; });
+
+
+        for(var index in barchart_x_list){
+            barchart_index[barchart_x_list[index]] = index;
+        }
 
         x.domain(barchart_x_list);
         y.domain([0, d3.max(data, function(d) { return +d.count; })]);
@@ -74,12 +80,6 @@ function call_barchart(key_word, bar_width, bar_height){
             .attr("class", "x axis")
             .attr("transform", "translate(0," + bar_height + ")")
             .call(xAxis);
-        /*
-         svg.selectAll(".x text")  // select all the text elements for the xaxis
-         .attr("transform", function(d) {
-         return "translate(" + this.getBBox().height*-0.5 + "," + this.getBBox().height/2 + ")rotate(-55)";
-         });
-         */
 
         svg.append("g")
             .attr("class", "y axis")
@@ -89,8 +89,7 @@ function call_barchart(key_word, bar_width, bar_height){
             .attr("transform", "rotate(-90)")
             .attr("y", 6)
             .attr("dy", ".71em")
-            .style("text-anchor", "end")
-//            .text("Count");
+            .style("text-anchor", "end");
 
         var weekday_y_line = new Array('Thurs', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed');
         for(var i = 0; i <= 6; i++){
@@ -103,12 +102,12 @@ function call_barchart(key_word, bar_width, bar_height){
                 .attr("y", 6)
                 .attr("dy", ".71em")
                 .attr("x", 5)
-
                 .text(weekday_y_line[i]);
 
         }
 
-        svg.selectAll(".bar")
+        var bar_fixed = false;
+        var total_bar = svg.selectAll(".bar")
             .data(data)
             .enter().append("rect")
             .attr("class", function(d) {
@@ -118,13 +117,59 @@ function call_barchart(key_word, bar_width, bar_height){
                 return x(d.date); })
             .attr("width", x.rangeBand())
             .attr("y", function(d) { return y(d.count); })
-            .attr("height", function(d) { return bar_height - y(d.count); });
+            .attr("height", function(d) { return bar_height - y(d.count); })
+            .style("fill", "black")
+            .on("click", function(d){
+                bar_fixed = !bar_fixed;
+            });
 
+
+        if(barchart_removed_data.length == 0){
+            total_bar.style("fill", "steelblue")
+                .on("mouseover", function(d){
+                    d3.select(this).style("fill", "brown");
+                    var node_name = "." + barchart_index[d.date] + "_date_node";
+                    $(node_name).css("background-color", "brown");
+                })
+                .on("mouseout", function(d){
+                    d3.select(this).style("fill", "steelblue");
+                    var node_name = "." + barchart_index[d.date] + "_date_node";
+                    $(node_name).css("background-color", "#D3D3D3");
+
+                });
+        }
+        else{
+            svg.selectAll(".delete_people_bar")
+                .data(barchart_removed_data)
+                .enter().append("rect")
+                .attr("class", function(d) {
+                    return "delete_people_bar"; })
+                .attr("x", function(d) {
+                    return x(d.date); })
+
+                .attr("width", x.rangeBand())
+                .attr("y", function(d) { return y(d.count); })
+                .attr("height", function(d) { return (bar_height - y(d.count)); })
+                .style("fill", "steelblue")
+                .style("background-color", "yellow")
+                .on("mouseover", function(d) {
+                    d3.select(this).style("fill", "brown");
+                    var node_name = "." + barchart_index[d.date] + "_date_node";
+                    $(node_name).css("background-color", "brown");
+                })
+                .on("mouseout", function(d) {
+                    d3.select(this).style("fill", "steelblue");
+                    var node_name = "." + barchart_index[d.date] + "_date_node";
+                    $(node_name).css("background-color", "#D3D3D3");
+                });
+        }
     }
 
     if(firstrun_barchart){
         d3.json("/barchart_data?key_word=" + key_word, draw_barchart_callback);
+
         firstrun_barchart = false;
+
     }
     else{
         draw_barchart_callback(false, barchart_data);
