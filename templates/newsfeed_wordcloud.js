@@ -116,6 +116,7 @@ function call_world_cloud(width, height, eng_words, not_eng_words) {
 
                     if($.inArray(d.text, selected_word) == -1) {
                         d3.select(this).style("fill", next_color);
+                        console.log(selected_word, selected_color);
                         reset_wordcloud_treemap(d.text, selected_word, selected_color);
                         //wordcloud_treemap_call(d.text, "#D3D3D3");
 
@@ -132,7 +133,7 @@ function call_world_cloud(width, height, eng_words, not_eng_words) {
 
                 //UnClick
                 if($.inArray(d.text, selected_word) > -1){
-                    selected_word.push(d.text);
+                    //selected_word.push(d.text);
                     reset_color($.inArray(d.text, selected_word));
                     selected_color.splice($.inArray(d.text, selected_word), 1);
                     selected_word.splice($.inArray(d.text, selected_word), 1);
