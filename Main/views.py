@@ -28,7 +28,19 @@ def main(request):
                                                                      'request':request, 'user': request.user}))
 
 def manual(request):
-    return render_to_response('manual.html', RequestContext(request, {'user':request.user}))
+
+    newsfeeds = {}
+    if request.user.is_authenticated():
+        for newsfeed in request.user.newsfeed_set.all():
+            key = newsfeed.created_time.strftime("%Y-%m-%d")
+            if not key in newsfeeds:
+                newsfeeds[key] = 0
+            else :
+                newsfeeds[key] = newsfeeds[key] + 1
+
+    print newsfeeds
+
+    return render_to_response('manual.html', RequestContext(request, {'user':request.user, 'newsfeeds':sorted(newsfeeds.items())}))
 
 
 def word_cloud(request):

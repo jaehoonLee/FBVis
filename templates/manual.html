@@ -45,9 +45,8 @@
                 FBLogin
             </button>
         </li>
-
     {% endif %}
-
+    </br>
     <li> Get access token from <a href="https://developers.facebook.com/tools/explorer/">facebook graph developer</a>.
         </br>
         Change api version to v2.2.</br>
@@ -59,6 +58,7 @@
         <img style="height:500px;" src="/static/graphapi.png">
         <img style="height:500px;" src="/static/graphapi2.png">
     </li>
+    </br>
     <li>
         <form class="ui form">
             <div class="field">
@@ -67,6 +67,27 @@
             </div>
             <button class="ui button" type="submit">Crawl</button>
         </form>
+    </li>
+    </br>
+    <li>
+        Crawled Data</br>
+
+        <table class="ui single line table" style="width:1000px">
+            <thead>
+            <tr>
+                <th>Date</th>
+                <th>Number of crawled post</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for key, value in newsfeeds %}
+                <tr>
+                    <td> {{ key }} </td>
+                    <td> {{ value }} </td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
     </li>
 </ol>
 </body>
