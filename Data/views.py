@@ -43,7 +43,6 @@ def treemap_data(request):
         val = {'name':startdate.strftime('%Y-%m-%d'), 'children':[], 'type':'date'}
 
         author_ids = newsfeeds.values("author_id").distinct()
-        print author_ids
         author_ids = [author_dic['author_id'] for author_dic in author_ids]
 
         for author_idx, author_id in enumerate(author_ids):
@@ -93,14 +92,12 @@ def treemap_domain(request):
         enddate = startdate + timedelta(days=1)
         newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate])
 
-        authors = newsfeeds.values("author").distinct()
-        authors = [author_dic['author'] for author_dic in authors]
+        authors = newsfeeds.values("author_id").distinct()
+        authors = [author_dic['author_id'] for author_dic in authors]
 
         all_authors = all_authors.union(authors)
 
         startdate = startdate + timedelta(days=1)
-
-    print len(all_authors)
 
     return HttpResponse(json.dumps(list(all_authors), indent=4, sort_keys=True))
 
