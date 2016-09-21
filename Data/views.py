@@ -49,7 +49,6 @@ def treemap_data(request):
         for author_idx, author_id in enumerate(author_ids):
             author_newsfeeds = newsfeeds.filter(author_id=author_id)
             friend = FacebookFriend.objects.get(fbid=author_id)
-            print friend.name
 
             subval = {'name':friend.name, 'children':[], 'type':'author'} #Author
             for feed_idx, author_newsfeed in enumerate(author_newsfeeds):
