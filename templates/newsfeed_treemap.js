@@ -41,7 +41,7 @@ function call_treemap(text, width, height){
         .style("width", treemap_width  + "px")
         .style("height", (treemap_height + margin.top + margin.bottom) + "px")
 
-    var treemap_weekday = new Array('Thurs', 'Fri', 'Sat', 'Sun', 'Mon', 'Tue', 'Wed');
+    var treemap_weekday = new Array('Mon', 'Tue', 'Wed', 'Thurs', 'Fri', 'Sat', 'Sun');
 
 //Setting Date Div
     function date_div_add(date_width){

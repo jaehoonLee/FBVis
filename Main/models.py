@@ -15,9 +15,7 @@ class NewsFeed(models.Model):
     created_time = models.DateTimeField()
     updated_time = models.DateTimeField()
 
-    author = models.CharField(max_length=255)
     author_id = models.CharField(max_length=255)
-    author_img_url = models.CharField(max_length=255)
 
     story = models.CharField(max_length=255)
 
@@ -42,7 +40,7 @@ class NewsFeed(models.Model):
 
 
 class NewsFeedAdmin(admin.ModelAdmin):
-    list_display = ('id', 'fbid', 'message', 'story', 'created_time', 'updated_time', 'author', 'author_id', 'author_img_url', 'picture_url', 'link_url', 'link_name', 'link_description', 'link_caption', 'type', 'status_type', 'shares', 'likes', 'comments')
+    list_display = ('id', 'fbid', 'message', 'story', 'created_time', 'updated_time', 'author_id', 'picture_url', 'link_url', 'link_name', 'link_description', 'link_caption', 'type', 'status_type', 'shares', 'likes', 'comments')
     '''
     def get_customer(self, obj):
         return obj.customer.nickname

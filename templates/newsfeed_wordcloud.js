@@ -32,35 +32,53 @@ function reset_color(color_code){
     }
 }
 
-function call_world_cloud(width, height, words) {
-
-
-    var layout = d3.layout.cloud()
+function call_world_cloud(width, height, eng_words, not_eng_words) {
+    var expand_coefficient = 1.7
+    var eng_layout = d3.layout.cloud()
         .size([width, 500])
-        .words(words)
+        .words(eng_words)
         .padding(5)
         .rotate(function () {
             return ~~(Math.random() * 2) * 90;
         })
         .font("Impact")
         .fontSize(function (d) {
-            return d.size;
+            return d.size*expand_coefficient;
         })
-        .on("end", draw);
+        .on("end", draw_eng);
 
-    layout.start();
+    var non_eng_layout = d3.layout.cloud()
+        .size([width, 500])
+        .words(not_eng_words)
+        .padding(5)
+        .rotate(function () {
+            return ~~(Math.random() * 2) * 90;
+        })
+        .font("Impact")
+        .fontSize(function (d) {
+            return d.size*expand_coefficient;
+        })
+        .on("end", non_draw_eng);
+
+    eng_layout.start();
+    non_eng_layout.start();
+
+    function draw_eng(words) {
+        draw(words)
+    }
+
+    function non_draw_eng(words) {
+        draw(words)
+    }
 
     function draw(words) {
 
-        var word_cloud_tip = d3.tip().attr('class', 'd3-tip').html("Color Option" + "</br>" + "--------------" + "</br>" + "Default" + "</br>" + "Auto Color Selection");
         var word_cloud_svg = d3.select(".infovis").append("svg")
             .attr("class", "wordcloud_svg")
             .attr("width", width)
             .attr("height", height);
 
-        word_cloud_svg.call(word_cloud_tip);
-
-        var word = word_cloud_svg.append("g")
+        word_cloud_svg.append("g")
             .attr("transform", "translate(" + width / 2 + "," + height / 2 + ")")
             .selectAll("text")
             .data(words)
@@ -91,8 +109,6 @@ function call_world_cloud(width, height, words) {
 
                     //word_cloud_tip.show(d, word[0][d.index]);
                 }
-
-
             })
             .on("mouseout", function (d) {
                 if (cur_treenode_type == 'popularity_size' || cur_treenode_type == 'nothing') {
@@ -134,13 +150,11 @@ function call_world_cloud(width, height, words) {
             .text(function (d) {
                 return d.text;
             });
-
-
-
-
-
     }
 }
+
+
+
 
 
 function reset_word_cloud(){

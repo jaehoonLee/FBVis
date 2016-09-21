@@ -1,17 +1,18 @@
-from time import timezone
-import datetime
+from datetime import datetime
 from django.http import HttpResponse
 from django.shortcuts import render, render_to_response
 from Main.models import *
+from Data.models import *
+from django.utils import timezone
 
 # Create your views here.
 # TODO : have to update some newsfeed with different likes and comments.(count will be reupdated)
 import facebook
 import pytz
 
-token = 'CAACEdEose0cBAGy1illJ0tkirb9ZCIL2oY1HZBnT6PfXVWjgXpkIn6MY2qQkWicQZCwvIbXMvdloemR61pKmvWBU68aeiGmCSeq4kk2du4evfDN46LlXMGRmmIlNgfy4D6l8nr4r9oOgowtIJxw2oG7ESKh8TPpVf1d3Q1V9CtZConk0tiMsPhZBBk3yUZA9niZBGxcZBG5WqQZDZD'
-crawl_start = '2016-02-12'
-crawl_end = '2016-02-13'
+token = 'EAACEdEose0cBAMbH3831WPwDiGTZCZAl4q5GQgJjHaPXhdP2GfUCnCLjoBChgiE35U5JdBssIlPmGnBEpLI9tvFGZC6hXmADuPZB47QuQr6BrJeAYq0WepgMV0r3vRgmQuVfMOmTuNofZAvQamz0niXw1qsZABgwo5G4NWSUqu5gZDZD'
+crawl_start = '2016-09-11'
+crawl_end = '2016-09-12'
 
 
 def crawl_new_api(request):
@@ -36,8 +37,10 @@ def crawl_new_api(request):
 
 def crawl(request):
     timezone.now()
-    graph = facebook.GraphAPI()
-    graph_id = 'v2.2/me/home?access_token=' + token + '&since='+ crawl_start + '&until=' + crawl_end + '&limit=100' #
+    graph = facebook.GraphAPI(access_token=token, version='2.2')
+    #graph_id = 'me/home?access_token=' + token + '&since='+ crawl_start + '&until=' + crawl_end + '&limit=100' #
+    graph_id='me/home?since='+ crawl_start + '&until=' + crawl_end +"&limit=50"
+    print graph_id
     post = graph.get_object(id=graph_id)
 
     '''
@@ -81,7 +84,7 @@ def crawl(request):
             if 'message' in newsfeed:
                 message = newsfeed['message']
             fbid = newsfeed['id']
-            author = newsfeed['from']["name"]
+            #author = newsfeed['from']["name"]
             author_id = newsfeed['from']["id"]
             created_time = newsfeed['created_time']
             updated_time = newsfeed['updated_time']
@@ -135,7 +138,7 @@ def crawl(request):
 
             author_img_url = ''
             try :
-                author_img_url = graph.get_object('v2.2/' + author_id + '/picture?width=70&height=70&access_token=' + token)
+                author_img_url = graph.get_object(author_id + '/picture?width=70&height=70&access_token=' + token)
                 author_img_url = author_img_url['url']
             except :
                 print "author found error:" + author_id
@@ -145,7 +148,7 @@ def crawl(request):
             #print newsfeed['id'], feed_id
             likes_count = 0
             try:
-                likes = graph.get_object('v2.2/' + feed_id + '/likes?summary=true&access_token=' + token)
+                likes = graph.get_object(feed_id + '/likes?summary=true&access_token=' + token)
                 if 'summary' in likes:
                     likes_count = likes["summary"]["total_count"]
             except:
@@ -155,7 +158,7 @@ def crawl(request):
             '''count comments'''
             comments_count = 0
             try:
-                comments = graph.get_object('v2.2/' + feed_id + '/comments?summary=true&access_token=' + token)
+                comments = graph.get_object(feed_id + '/comments?summary=true&access_token=' + token)
                 if 'summary' in comments:
                     comments_count = comments["summary"]["total_count"]
 
@@ -184,6 +187,10 @@ def crawl(request):
         if zero_count == 10:
             break
 
+        graph_id = graph_id.split("/", 1)[1].split("&")
+        graph_id = graph_id[0] + '&' + graph_id[1] + '&limit=75'
+        print graph_id
+
         post = graph.get_object(id=graph_id)
 
 
@@ -204,16 +211,58 @@ def checkDatebase(request):
 
 
 def update_image_url(request):
-    graph = facebook.GraphAPI()
+    graph = facebook.GraphAPI(access_token=token, version='2.2')
     newsfeeds = NewsFeed.objects.all()
     for newsfeed in newsfeeds:
-        graph_id = 'v2.2/' + newsfeed.author_id + '/picture?width=70&height=70&access_token=' + token + '' #
+        graph_id = newsfeed.author_id + '/picture?width=70&height=70' #
         post = graph.get_object(id=graph_id)
         newsfeed.author_img_url = post['url']
         newsfeed.save()
 
     return HttpResponse("Success")
 
+
+def update_like_comment(request):
+    graph = facebook.GraphAPI(access_token=token, version='2.2')
+    newsfeeds = NewsFeed.objects.all()
+    for newsfeed in newsfeeds:
+        feed_id = newsfeed.fbid.split('_')[1]
+        print feed_id
+        likes_count = 0
+        try:
+            likes = graph.get_object(feed_id + '/likes?summary=true&access_token=' + token)
+            if 'summary' in likes:
+                likes_count = likes["summary"]["total_count"]
+        except:
+            print "like found error:" + newsfeed.fbid
+
+        '''count comments'''
+        comments_count = 0
+        try:
+            comments = graph.get_object(feed_id + '/comments?summary=true&access_token=' + token)
+            if 'summary' in comments:
+                comments_count = comments["summary"]["total_count"]
+
+        except:
+            print "comment found error:" + newsfeed.fbid
+
+        newsfeed.likes = likes_count
+        newsfeed.comments = comments_count
+        newsfeed.save()
+
+    return HttpResponse("Success")
+
+
+def update_friend_info(request):
+    newsfeeds = NewsFeed.objects.all()
+    for newsfeed in newsfeeds:
+        try:
+            friend = FacebookFriend.objects.get(fbid=newsfeed.author_id)
+        except:
+            print newsfeed.author
+            FacebookFriend.objects.create_facebookfriend(name=newsfeed.author, fbid=newsfeed.author_id, img_url=newsfeed.author_img_url, close=False)
+
+    return HttpResponse("Success")
 
 
 

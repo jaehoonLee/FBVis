@@ -24,6 +24,7 @@ urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^$', main),
     url(r'^test/$', test),
+    url(r'^manual/', manual),
     url(r'^word_cloud/', word_cloud),
     url(r'^word_cloud_data/', word_cloud_data),
     url(r'^filtered_word_cloud_data/', filtered_word_cloud_data),
@@ -38,6 +39,8 @@ urlpatterns = [
     url(r'^crawl/', crawl),
     url(r'^crawl_new_api/', crawl_new_api),
     url(r'^update_image_url/', update_image_url),
+    url(r'^update_like_comment/', update_like_comment),
+    url(r'^update_friend_info/', update_friend_info),
 
     url(r'^multi_treemap/(?P<day>[0-9])', treemap),
     url(r'^pallette/', pallette),

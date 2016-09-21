@@ -1,0 +1,73 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Manual</title>
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'jquery/jquery-ui.js' %}"></script>
+
+
+    <link rel="stylesheet" type="text/css" href="{% static 'jquery/jquery-ui.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'semantic.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'components/icon.min.css' %}">
+
+    <script src="{% static 'semantic.js' %}"></script>
+    <script src="{% static 'fb_account.js' %}"></script>
+
+    <style type="text/css">
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            padding-left:20px;
+            padding-right:20px;
+            font-size:17px;
+        }
+
+        li{
+            font-size:25px;
+        }
+    </style>
+</head>
+<body>
+<h1>Crawl Manual</h1>
+<ol>
+    {% if user.is_authenticated %}
+        <li>Hello {{ user.username }}! You can now crawl your facebook data.</li>
+        <button class="ui facebook button fbbutton" onclick="location.href='{% url 'auth:logout' %}?next={{ request.path }}'">
+            <i class="facebook icon"></i>
+            FBLogout
+        </button>
+    {% else %}
+        <li>
+            Login
+            <button class="ui facebook button fbbutton" onclick="location.href='{% url 'social:begin' 'facebook' %}?next={{ request.path }}'">
+                <i class="facebook icon"></i>
+                FBLogin
+            </button>
+        </li>
+
+    {% endif %}
+
+    <li> Get access token from <a href="https://developers.facebook.com/tools/explorer/">facebook graph developer</a>.
+        </br>
+        Change api version to v2.2.</br>
+        Click "Get Token" button and pop up opens.
+        Then click "Get Access Token" button. (You don't need any permission.)
+
+
+        </br>
+        <img style="height:500px;" src="/static/graphapi.png">
+        <img style="height:500px;" src="/static/graphapi2.png">
+    </li>
+    <li>
+        <form class="ui form">
+            <div class="field">
+                <label>Access Token</label>
+                <input type="text" name="access-token" placeholder="Access Token">
+            </div>
+            <button class="ui button" type="submit">Crawl</button>
+        </form>
+    </li>
+</ol>
+</body>
+</html>
