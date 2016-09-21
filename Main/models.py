@@ -1,5 +1,7 @@
 from django.db import models
 from django.contrib import admin
+from django.contrib.auth.models import User
+
 
 # Create your models here.
 class NewsFeedManager(models.Manager):
@@ -11,6 +13,7 @@ class NewsFeedManager(models.Manager):
         return newsfeed
 
 class NewsFeed(models.Model):
+    owner = models.ForeignKey(User, null=True)
     fbid = models.CharField(max_length=255, unique=True)
     created_time = models.DateTimeField()
     updated_time = models.DateTimeField()
@@ -40,7 +43,7 @@ class NewsFeed(models.Model):
 
 
 class NewsFeedAdmin(admin.ModelAdmin):
-    list_display = ('id', 'fbid', 'message', 'story', 'created_time', 'updated_time', 'author_id', 'picture_url', 'link_url', 'link_name', 'link_description', 'link_caption', 'type', 'status_type', 'shares', 'likes', 'comments')
+    list_display = ('id', 'owner', 'fbid', 'message', 'story', 'created_time', 'updated_time', 'author_id', 'picture_url', 'link_url', 'link_name', 'link_description', 'link_caption', 'type', 'status_type', 'shares', 'likes', 'comments')
     '''
     def get_customer(self, obj):
         return obj.customer.nickname

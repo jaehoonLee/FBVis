@@ -265,4 +265,10 @@ def update_friend_info(request):
     return HttpResponse("Success")
 
 
+def update_owner_info(request):
+    newsfeeds = NewsFeed.objects.all()
+    for newsfeed in newsfeeds:
+        newsfeed.owner = request.user
+        newsfeed.save()
 
+    return HttpResponse("Success")

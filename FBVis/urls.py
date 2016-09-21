@@ -41,6 +41,7 @@ urlpatterns = [
     url(r'^update_image_url/', update_image_url),
     url(r'^update_like_comment/', update_like_comment),
     url(r'^update_friend_info/', update_friend_info),
+    url(r'^update_owner_info/', update_owner_info),
 
     url(r'^multi_treemap/(?P<day>[0-9])', treemap),
     url(r'^pallette/', pallette),
