@@ -392,7 +392,6 @@ function wordcloud_treemap_call(word, cur_color){
                     var word_lst = d.message.toLowerCase().split(" ");
                     var word_exist = (word_lst.indexOf(word.toLowerCase()) > -1);
 
-
                     if(word_exist){
                         return cur_color;
                         //return '#000000';
@@ -416,35 +415,27 @@ function reset_wordcloud_treemap(word, selected_word, selected_color){
             .style("background-color", function(d) {
 
                 if(d.type == 'type'){
-
                     if(typeof d.message == 'undefined')
                         return "#D3D3D3";
 
-
                     var word_lst = d.message.toLowerCase().split(" ");
 
-                    for(var sel_i in selected_word){
-                        var sel_word = selected_word[sel_i];
+                    for(var i = selected_word.length-1; i >= 0; i--){
+                        var sel_word = selected_word[i];
                         if(word_lst.indexOf(sel_word.toLowerCase()) > -1){
-                            return selected_color[sel_i];
+                            return selected_color[i];
                         }
                     }
 
                     //Finding words.
-
                     var word_exist = (word_lst.indexOf(word.toLowerCase()) > -1);
-
-
                     if(word_exist){
                         return '#D3D3D3';
                     }
                     else {
-                        //console.log(d3.select(this).style("background-color"));
                         return d3.select(this).style("background-color");
                     }
-
                 }
-
                 else
                     return null;
             });
