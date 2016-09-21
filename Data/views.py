@@ -170,7 +170,6 @@ def removed_barchart_data(request):
     return HttpResponse(json.dumps(result, indent=4, sort_keys=True))
 
 def word_cloud_data(is_eng):
-    english_vocab = set(w.lower() for w in nltk.corpus.words.words())
     word_dic = {}
     word_lst = []
 
