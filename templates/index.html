@@ -216,8 +216,8 @@
             width = total_width - margin.left - margin.right,
             height = total_height - margin.top - margin.bottom;
 
-    var cloud_words = {{ word_lst | safe }};
-
+    var eng_cloud_words = {{ eng_word_lst | safe }};
+    var not_eng_cloud_words = {{ not_eng_word_lst | safe }};
 
     function position() {
         this.style("left", function(d) { return d.x + "px"; })
@@ -282,14 +282,14 @@
     var bar_height = total_height/10 - margin.top - margin.bottom;
 
     call_treemap('', treemap_width, treemap_height);
-    call_world_cloud(treemap_width, treemap_height, cloud_words);
+    call_world_cloud(treemap_width/2, treemap_height, eng_cloud_words, not_eng_cloud_words);
     call_barchart('', bar_width, bar_height);
 
     var famous_div_height = total_height * 9.3/10 - $('.post_detail_row').height() - $('.treemap_option_row').height();
     $('.famous_div').css('height', famous_div_height + "px");
 
     $(window).resize(function(){
-        reset_infovis(cloud_words);
+        reset_infovis();
         //date_div_add(treemap_width/7);
 
     });
@@ -297,8 +297,8 @@
 
     //Search
     var content = [];
-    for(var i in cloud_words){
-        content.push({title: cloud_words[i].text});
+    for(var i in eng_cloud_words){
+        content.push({title: eng_cloud_words[i].text});
     }
 
     $('.ui.search')
@@ -400,7 +400,6 @@ url: 'http://192.169.164.131:7000/pallette_signal/',
             }
         });
 
-        console.log("person_execute:" + person_execute);
         if(person_execute)
             setTimeout(executeQuery, 200);
     }
@@ -422,7 +421,7 @@ url: 'http://192.169.164.131:7000/pallette_signal/',
 
         //parent_div.selectAll("*").remove();
         call_treemap('', treemap_width, treemap_height);
-        call_world_cloud(treemap_width, treemap_height, cloud_words);
+        call_world_cloud(treemap_width/2, treemap_height, eng_cloud_words, not_eng_cloud_words);
         call_barchart('', bar_width, bar_height);
 
         var famous_div_height = total_height * 9.3/10 - $('.post_detail_row').height() - $('.treemap_option_row').height();

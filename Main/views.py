@@ -22,8 +22,14 @@ def test(request):
     return render_to_response('tiptest.html', RequestContext(request))
 
 def main(request):
-    word_lst = word_cloud_data(request)
-    return render_to_response('index.html', RequestContext(request, {'word_lst': word_lst, 'request':request, 'user': request.user}))
+    eng_word_lst = word_cloud_data(True)
+    not_eng_word_lst = word_cloud_data(False)
+    return render_to_response('index.html', RequestContext(request, {'eng_word_lst': eng_word_lst, 'not_eng_word_lst':not_eng_word_lst,
+                                                                     'request':request, 'user': request.user}))
+
+def manual(request):
+    return render_to_response('manual.html', RequestContext(request, {'user':request.user}))
+
 
 def word_cloud(request):
     return render_to_response('word_cloud2.html')
