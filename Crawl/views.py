@@ -11,8 +11,8 @@ import facebook
 import pytz
 
 token = 'EAACEdEose0cBAMbH3831WPwDiGTZCZAl4q5GQgJjHaPXhdP2GfUCnCLjoBChgiE35U5JdBssIlPmGnBEpLI9tvFGZC6hXmADuPZB47QuQr6BrJeAYq0WepgMV0r3vRgmQuVfMOmTuNofZAvQamz0niXw1qsZABgwo5G4NWSUqu5gZDZD'
-crawl_start = '2016-09-11'
-crawl_end = '2016-09-12'
+crawl_start = '2016-10-25'
+crawl_end = '2016-10-26'
 
 
 def crawl_new_api(request):
@@ -36,6 +36,9 @@ def crawl_new_api(request):
 
 
 def crawl(request):
+
+    token = request.POST["access-token"]
+
     timezone.now()
     graph = facebook.GraphAPI(access_token=token, version='2.2')
     #graph_id = 'me/home?access_token=' + token + '&since='+ crawl_start + '&until=' + crawl_end + '&limit=100' #
@@ -134,15 +137,6 @@ def crawl(request):
                 story = newsfeed['story']
 
 
-            '''profile img url'''
-
-            author_img_url = ''
-            try :
-                author_img_url = graph.get_object(author_id + '/picture?width=70&height=70&access_token=' + token)
-                author_img_url = author_img_url['url']
-            except :
-                print "author found error:" + author_id
-
             '''count likes'''
             feed_id = newsfeed['id'].split('_')[1]
             #print newsfeed['id'], feed_id
@@ -171,7 +165,10 @@ def crawl(request):
             try:
                 NewsFeed.objects.get(fbid=fbid)
             except:
-                NewsFeed.objects.create_newsfeed(fbid, message, created_time, updated_time, author, author_id, picture_url, link_url, link_name, link_description, link_caption, type, status_type, shares, likes_count, comments_count, author_img_url, story)
+                feed = NewsFeed.objects.create_newsfeed(fbid, message, created_time, updated_time, author_id, picture_url, link_url, link_name, link_description, link_caption, type, status_type, shares, likes_count, comments_count, story)
+                feed.owner = request.user
+                feed.save()
+
                 count = count + 1
 
 

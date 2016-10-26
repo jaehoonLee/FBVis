@@ -5,10 +5,10 @@ from django.contrib.auth.models import User
 
 # Create your models here.
 class NewsFeedManager(models.Manager):
-    def create_newsfeed(self, fbid, message, created_time, updated_time, author, author_id, picture_url, link_url, link_name, link_description, link_caption, type, status_type, shares, likes, comments, author_img_url, story):
-        newsfeed = self.model(fbid=fbid, message=message, created_time=created_time, updated_time= updated_time, author=author, author_id=author_id,
+    def create_newsfeed(self, fbid, message, created_time, updated_time, author_id, picture_url, link_url, link_name, link_description, link_caption, type, status_type, shares, likes, comments, story):
+        newsfeed = self.model(fbid=fbid, message=message, created_time=created_time, updated_time= updated_time, author_id=author_id,
                                 picture_url=picture_url, link_url=link_url, link_name=link_name, link_description=link_description, link_caption=link_caption, type=type, status_type=status_type,
-                                shares=shares, likes=likes, comments=comments, author_img_url=author_img_url, story=story)
+                                shares=shares, likes=likes, comments=comments, story=story)
         newsfeed.save()
         return newsfeed
 
