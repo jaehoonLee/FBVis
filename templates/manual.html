@@ -60,7 +60,7 @@
     </li>
     </br>
     <li>
-        <form class="ui form">
+        <form class="ui form" method="post" action="/crawl/">{% csrf_token %}
             <div class="field">
                 <label>Access Token</label>
                 <input type="text" name="access-token" placeholder="Access Token">
