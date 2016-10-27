@@ -11,8 +11,8 @@ import facebook
 import pytz
 
 token = 'EAACEdEose0cBAMbH3831WPwDiGTZCZAl4q5GQgJjHaPXhdP2GfUCnCLjoBChgiE35U5JdBssIlPmGnBEpLI9tvFGZC6hXmADuPZB47QuQr6BrJeAYq0WepgMV0r3vRgmQuVfMOmTuNofZAvQamz0niXw1qsZABgwo5G4NWSUqu5gZDZD'
-crawl_start = '2016-10-25'
-crawl_end = '2016-10-26'
+crawl_start = '2016-10-26'
+crawl_end = '2016-10-27'
 
 
 def crawl_new_api(request):
