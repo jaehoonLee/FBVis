@@ -188,8 +188,10 @@ def crawl(request):
         graph_id = graph_id[0] + '&' + graph_id[1] + '&limit=75'
         print graph_id
 
-        post = graph.get_object(id=graph_id)
-
+        try:
+            post = graph.get_object(id=graph_id)
+        except:
+            print "ERROR Maintype was not text, image, or querystring"
 
     return render_to_response('index.html')
 
