@@ -11,8 +11,8 @@ import facebook
 import pytz
 
 token = 'EAACEdEose0cBAMbH3831WPwDiGTZCZAl4q5GQgJjHaPXhdP2GfUCnCLjoBChgiE35U5JdBssIlPmGnBEpLI9tvFGZC6hXmADuPZB47QuQr6BrJeAYq0WepgMV0r3vRgmQuVfMOmTuNofZAvQamz0niXw1qsZABgwo5G4NWSUqu5gZDZD'
-crawl_start = '2016-10-26'
-crawl_end = '2016-10-27'
+crawl_start = '2016-10-31'
+crawl_end = '2016-11-01'
 
 
 def crawl_new_api(request):
@@ -188,8 +188,10 @@ def crawl(request):
         graph_id = graph_id[0] + '&' + graph_id[1] + '&limit=75'
         print graph_id
 
-        post = graph.get_object(id=graph_id)
-
+        try:
+            post = graph.get_object(id=graph_id)
+        except:
+            print "ERROR Maintype was not text, image, or querystring"
 
     return render_to_response('index.html')
 
