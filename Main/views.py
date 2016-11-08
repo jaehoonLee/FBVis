@@ -22,8 +22,8 @@ def test(request):
     return render_to_response('tiptest.html', RequestContext(request))
 
 def main(request):
-    eng_word_lst = word_cloud_data(True)
-    not_eng_word_lst = word_cloud_data(False)
+    eng_word_lst = word_cloud_data(True, request.user)
+    not_eng_word_lst = word_cloud_data(False, request.user)
     return render_to_response('index.html', RequestContext(request, {'eng_word_lst': eng_word_lst, 'not_eng_word_lst':not_eng_word_lst,
                                                                      'request':request, 'user': request.user}))
 

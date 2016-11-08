@@ -319,7 +319,8 @@
     function executeQuery(){
 
         $.ajax({
-            url: '/pallette_signal/',
+<!--            url: '/pallette_signal/',-->
+url: 'http://192.169.164.131:7000/pallette_signal/',
             success: function(data){
                 console.log(data);
                 var obj = JSON.parse(data);
@@ -419,9 +420,11 @@
         bar_height = total_height/10 - margin.top - margin.bottom;
 
         //parent_div.selectAll("*").remove();
+        console.log(eng_cloud_words);
         call_treemap('', treemap_width, treemap_height);
         call_world_cloud(treemap_width/2, treemap_height, eng_cloud_words, not_eng_cloud_words);
         call_barchart('', bar_width, bar_height);
+
 
         var famous_div_height = total_height * 9.3/10 - $('.post_detail_row').height() - $('.treemap_option_row').height();
         $('.famous_div').css('height', famous_div_height + "px");

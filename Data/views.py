@@ -15,6 +15,7 @@ import json
 import operator
 import nltk
 import re
+start_date_str = "2016-10-26"
 
 
 # Create your views here.
@@ -25,7 +26,7 @@ def treemap_data(request):
         key_word = request.GET['key_word']
 
     result = {'name':'date', 'children':[]} #Date
-    startdate = datetime.strptime("2016-09-05", '%Y-%m-%d')
+    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
 
     days = int(request.GET['days'])
     startdate = startdate + timedelta(days=days)
@@ -36,7 +37,7 @@ def treemap_data(request):
         enddate = startdate + timedelta(days=1)
 
         if key_word == '':
-            newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate])
+            newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], owner=request.user)
         else:
             newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], message__contains=key_word) # message__search=key_word
 
@@ -78,7 +79,7 @@ def treemap_data(request):
 
 def treemap_domain(request):
     timezone.now()
-    startdate = datetime.strptime("2016-09-05", '%Y-%m-%d')
+    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
 
     all_authors = set()
 
@@ -90,7 +91,7 @@ def treemap_domain(request):
 
     for i in range(0, 7):
         enddate = startdate + timedelta(days=1)
-        newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate])
+        newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], owner=request.user)
 
         authors = newsfeeds.values("author_id").distinct()
         authors = [author_dic['author_id'] for author_dic in authors]
@@ -111,14 +112,14 @@ def barchart_data(request):
     result = []
 
     eastern = pytz.timezone('US/Eastern')
-    startdate = datetime.strptime("2016-09-05", '%Y-%m-%d')
+    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
     startdate = eastern.localize(startdate)
 
     timediff = 1;
     for i in range(0, 7 * 24/timediff):
         enddate = startdate + timedelta(hours=timediff)
         if key_word == '':
-            newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate])
+            newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], owner=request.user)
         else:
             newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], message__contains=key_word) # message__search=key_word
 
@@ -146,14 +147,14 @@ def removed_barchart_data(request):
     result = []
 
     eastern = pytz.timezone('US/Eastern')
-    startdate = datetime.strptime("2016-09-05", '%Y-%m-%d')
+    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
     startdate = eastern.localize(startdate)
 
     timediff = 1;
     for i in range(0, 7 * 24/timediff):
         enddate = startdate + timedelta(hours=timediff)
         #newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], author__in=name_list)
-        newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate]).exclude(author__in=name_list)
+        newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], owner=request.user).exclude(author_id__in=name_list)
 
         val = {};
         val['date'] = startdate.strftime("%Y-%m-%d %H:%M:%S")
@@ -165,14 +166,14 @@ def removed_barchart_data(request):
 
     return HttpResponse(json.dumps(result, indent=4, sort_keys=True))
 
-def word_cloud_data(is_eng):
+def word_cloud_data(is_eng, user):
     word_dic = {}
     word_lst = []
 
-    startdate = datetime.strptime("2016-09-05", '%Y-%m-%d')
+    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
     enddate = startdate + timedelta(days=7)
 
-    newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate])
+    newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], owner=user)
     stop_words = get_stop_words('en')
 
     for newsfeed in newsfeeds:
@@ -219,25 +220,31 @@ def word_cloud_data(is_eng):
 
 
 @csrf_exempt
-def filtered_word_cloud_data(request):
+def filtered_word_cloud_data(request, is_eng):
     word_dic = {}
     word_lst = []
 
     delete_authors = request.POST.getlist('delete_authors[]')
 
-    startdate = datetime.strptime("2016-09-05", '%Y-%m-%d')
+    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
     enddate = startdate + timedelta(days=7)
 
-    newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate])
+    newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], owner=request.user)
     stop_words = get_stop_words('en')
 
     skip = 0
     for newsfeed in newsfeeds:
-        if newsfeed.author in delete_authors:
+        if newsfeed.author_id in delete_authors:
             #skip = skip + 1
             continue
 
         for word in newsfeed.message.split(" "):
+
+            if is_eng == '1' and not re.search('[a-zA-Z]', word):
+                continue
+            if is_eng == '0' and re.search('[a-zA-Z]', word):
+                continue
+
             word = word.lower() #Not Case Sensitive
             if word == '':
                 continue
@@ -265,7 +272,7 @@ def filtered_word_cloud_data(request):
 
 
 def famous_data(request):
-    newsfeeds = NewsFeed.objects.all()
+    newsfeeds = NewsFeed.objects.filter(owner=request.user)
     authors = {}
     author_img = {}
     author_name = {}

@@ -10,9 +10,9 @@ from django.utils import timezone
 import facebook
 import pytz
 
-token = 'EAACEdEose0cBAMbH3831WPwDiGTZCZAl4q5GQgJjHaPXhdP2GfUCnCLjoBChgiE35U5JdBssIlPmGnBEpLI9tvFGZC6hXmADuPZB47QuQr6BrJeAYq0WepgMV0r3vRgmQuVfMOmTuNofZAvQamz0niXw1qsZABgwo5G4NWSUqu5gZDZD'
-crawl_start = '2016-10-26'
-crawl_end = '2016-10-27'
+token = 'EAACEdEose0cBAMOpNkYgD7O3FsU5DjTgel0wqbo0jv1zCYlHTZBYKbCdJCXfFeZBZBNRmjoBaYazbYVu5OuipJZBjbvWi2PONMfhOSp0Arpc1344087RRykhkvyQ94qvcZBhA3Buy6aEGfPjwukCOFzQlioBM7D4Fa9rUsjozjwZDZD'
+crawl_start = '2016-10-31'
+crawl_end = '2016-11-01'
 
 
 def crawl_new_api(request):
@@ -253,13 +253,22 @@ def update_like_comment(request):
 
 
 def update_friend_info(request):
+    graph = facebook.GraphAPI(access_token=token, version='2.2')
+
+
     newsfeeds = NewsFeed.objects.all()
     for newsfeed in newsfeeds:
         try:
             friend = FacebookFriend.objects.get(fbid=newsfeed.author_id)
         except:
-            print newsfeed.author
-            FacebookFriend.objects.create_facebookfriend(name=newsfeed.author, fbid=newsfeed.author_id, img_url=newsfeed.author_img_url, close=False)
+            try:
+                post1 = graph.get_object(id=newsfeed.author_id)
+                post2 = graph.get_object(id=str(newsfeed.author_id) + "/picture")
+                FacebookFriend.objects.create_facebookfriend(name=post1["name"], fbid=newsfeed.author_id, img_url=post2["url"], close=False)
+            except:
+                print newsfeed.author_id
+                FacebookFriend.objects.create_facebookfriend(name='', fbid=newsfeed.author_id,
+                                                             img_url='', close=False)
 
     return HttpResponse("Success")
 

@@ -27,7 +27,7 @@ urlpatterns = [
     url(r'^manual/', manual),
     url(r'^word_cloud/', word_cloud),
     url(r'^word_cloud_data/', word_cloud_data),
-    url(r'^filtered_word_cloud_data/', filtered_word_cloud_data),
+    url(r'^filtered_word_cloud_data/(?P<is_eng>[0-9])', filtered_word_cloud_data),
 
     url(r'^treemap_data/', treemap_data),
     url(r'^treemap_domain/', treemap_domain),

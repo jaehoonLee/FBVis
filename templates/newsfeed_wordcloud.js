@@ -33,7 +33,7 @@ function reset_color(color_code){
 }
 
 function call_world_cloud(width, height, eng_words, not_eng_words) {
-    var expand_coefficient = 1.7
+    var expand_coefficient = 3.0;
     var eng_layout = d3.layout.cloud()
         .size([width, 500])
         .words(eng_words)

@@ -13,9 +13,11 @@ d3.json("/famous_data/", function(error, data){
 
 var delete_authors = []
 function refresh(index){
-    delete_authors.push(full_data[index].name);
     console.log(full_data[index]);
-    console.log(treemap_datas);
+
+    delete_authors.push(full_data[index].author_id);
+    console.log(full_data[index].author_id);
+
     for(var i in treemap_datas){
         var authors = treemap_datas[i].children[0].children;
 
@@ -35,19 +37,28 @@ function refresh(index){
     $.ajax({
         type : "POST",
         data : {'delete_authors':delete_authors},
-        url : "/filtered_word_cloud_data/",
+        url : "/filtered_word_cloud_data/1/",
         success: function(cloud_words_data){
-            cloud_words = JSON.parse(cloud_words_data);
+            eng_cloud_words = JSON.parse(cloud_words_data);
 
             $.ajax({
                 type : "POST",
                 data : {'delete_authors':delete_authors},
-                url : "/removed_barchart_data/",
-                success: function(barchart_removed_data_raw){
-                    barchart_removed_data = JSON.parse(barchart_removed_data_raw);
-                    reset_infovis();
-                }
+                url : "/filtered_word_cloud_data/0/",
+                success: function(cloud_words_data){
+                    not_eng_cloud_words = JSON.parse(cloud_words_data);
 
+                    $.ajax({
+                        type : "POST",
+                        data : {'delete_authors':delete_authors},
+                        url : "/removed_barchart_data/",
+                        success: function(barchart_removed_data_raw){
+                            barchart_removed_data = JSON.parse(barchart_removed_data_raw);
+                            reset_infovis();
+                        }
+
+                    });
+                }
             });
         }
     });
@@ -72,10 +83,10 @@ function draw_famous(data){
     data = data.slice(0, 50);
 
     /*
-    var famous_svg = d3.select(".famous")
-    var famous_tip = d3.tip().attr('class', 'd3-tip').html("HELLO WORLD");
-    famous_svg.call(famous_tip);
-    */
+     var famous_svg = d3.select(".famous")
+     var famous_tip = d3.tip().attr('class', 'd3-tip').html("HELLO WORLD");
+     famous_svg.call(famous_tip);
+     */
 
     data.forEach(function(d, i){
         var famous_sub_div = d3.select(".famous").append("div")
