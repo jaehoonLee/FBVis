@@ -20,18 +20,20 @@ start_date_str = "2016-10-26"
 
 # Create your views here.
 def treemap_data(request):
+    recent_news = NewsFeed.objects.filter(owner=request.user).order_by('-id')[0]
+    eastern = pytz.timezone('US/Eastern')
 
     key_word = ''
     if 'key_word' in request.GET:
         key_word = request.GET['key_word']
 
     result = {'name':'date', 'children':[]} #Date
-    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
+    #startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
+    startdate = recent_news.created_time - timedelta(days=6)
 
     days = int(request.GET['days'])
     startdate = startdate + timedelta(days=days)
 
-    eastern = pytz.timezone('US/Eastern')
 
     for i in range(0, 1):
         enddate = startdate + timedelta(days=1)
@@ -79,7 +81,9 @@ def treemap_data(request):
 
 def treemap_domain(request):
     timezone.now()
-    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
+    #startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
+    recent_news = NewsFeed.objects.filter(owner=request.user).order_by('-id')[0]
+    startdate = recent_news.created_time - timedelta(days=6)
 
     all_authors = set()
 
@@ -112,8 +116,10 @@ def barchart_data(request):
     result = []
 
     eastern = pytz.timezone('US/Eastern')
-    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
-    startdate = eastern.localize(startdate)
+    #startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
+    #startdate = eastern.localize(startdate)
+    recent_news = NewsFeed.objects.filter(owner=request.user).order_by('-id')[0]
+    startdate = recent_news.created_time - timedelta(days=6)
 
     timediff = 1;
     for i in range(0, 7 * 24/timediff):
@@ -147,8 +153,10 @@ def removed_barchart_data(request):
     result = []
 
     eastern = pytz.timezone('US/Eastern')
-    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
-    startdate = eastern.localize(startdate)
+    #startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
+    #startdate = eastern.localize(startdate)
+    recent_news = NewsFeed.objects.filter(owner=request.user).order_by('-id')[0]
+    startdate = recent_news.created_time - timedelta(days=6)
 
     timediff = 1;
     for i in range(0, 7 * 24/timediff):
@@ -170,7 +178,10 @@ def word_cloud_data(is_eng, user):
     word_dic = {}
     word_lst = []
 
-    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
+    #startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
+    #enddate = startdate + timedelta(days=7)
+    recent_news = NewsFeed.objects.filter(owner=user).order_by('-id')[0]
+    startdate = recent_news.created_time - timedelta(days=6)
     enddate = startdate + timedelta(days=7)
 
     newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], owner=user)
@@ -226,7 +237,10 @@ def filtered_word_cloud_data(request, is_eng):
 
     delete_authors = request.POST.getlist('delete_authors[]')
 
-    startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
+    #startdate = datetime.strptime(start_date_str, '%Y-%m-%d')
+    recent_news = NewsFeed.objects.filter(owner=request.user).order_by('-id')[0]
+    startdate = recent_news.created_time - timedelta(days=6)
+
     enddate = startdate + timedelta(days=7)
 
     newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], owner=request.user)
@@ -272,7 +286,11 @@ def filtered_word_cloud_data(request, is_eng):
 
 
 def famous_data(request):
-    newsfeeds = NewsFeed.objects.filter(owner=request.user)
+    recent_news = NewsFeed.objects.filter(owner=request.user).order_by('-id')[0]
+    startdate = recent_news.created_time - timedelta(days=6)
+    enddate = startdate + timedelta(days=7)
+
+    newsfeeds = NewsFeed.objects.filter(created_time__range=[startdate, enddate], owner=request.user)
     authors = {}
     author_img = {}
     author_name = {}

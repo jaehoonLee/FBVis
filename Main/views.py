@@ -22,10 +22,17 @@ def test(request):
     return render_to_response('tiptest.html', RequestContext(request))
 
 def main(request):
-    eng_word_lst = word_cloud_data(True, request.user)
-    not_eng_word_lst = word_cloud_data(False, request.user)
-    return render_to_response('index.html', RequestContext(request, {'eng_word_lst': eng_word_lst, 'not_eng_word_lst':not_eng_word_lst,
+
+    if request.user.is_authenticated():
+        if len(request.user.newsfeed_set.all()) == 0:
+            return render_to_response('nopost.html', RequestContext(request, {}))
+
+        eng_word_lst = word_cloud_data(True, request.user)
+        not_eng_word_lst = word_cloud_data(False, request.user)
+        return render_to_response('index.html', RequestContext(request, {'eng_word_lst': eng_word_lst, 'not_eng_word_lst':not_eng_word_lst,
                                                                      'request':request, 'user': request.user}))
+    else :
+        return render_to_response('auth.html', RequestContext(request, {}))
 
 def manual(request):
 

@@ -1,0 +1,64 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SmartLine - Home</title>
+
+    <script src="{% static 'jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'semantic.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'semantic.css' %}">
+
+
+</head>
+<body style="padding:20px">
+
+<h1>FBVis Login</h1>
+<form class="ui form" action="/web_login/" method="POST"> {% csrf_token %}
+    <div class="three fields">
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Username">
+        </div>
+
+    </div>
+    </br>
+    <div class="three fields">
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+    </div>
+    </br>
+    <button class="ui button" type="submit">Login</button>
+</form>
+
+<h1>FBVis Registration</h1>
+<form class="ui form" action="/web_register/" method="POST">{% csrf_token %}
+    <div class="three fields">
+        <div class="field">
+            <label>Username</label>
+            <input type="text" name="username" placeholder="Username">
+        </div>
+    </div>
+    </br>
+    <div class="three fields">
+        <div class="field">
+            <label>Password</label>
+            <input type="password" name="password" placeholder="Password">
+        </div>
+    </div>
+    </br>
+    <div class="three fields">
+        <div class="field">
+            <label>Email</label>
+            <input type="text" name="email" placeholder="Email">
+        </div>
+    </div>
+    </br>
+    <button class="ui button" type="submit">Register</button>
+
+</form>
+
+</body>
+</html>

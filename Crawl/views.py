@@ -1,4 +1,4 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from django.http import HttpResponse
 from django.shortcuts import render, render_to_response
 from Main.models import *
@@ -10,10 +10,10 @@ from django.utils import timezone
 import facebook
 import pytz
 
-token = 'EAACEdEose0cBAMOpNkYgD7O3FsU5DjTgel0wqbo0jv1zCYlHTZBYKbCdJCXfFeZBZBNRmjoBaYazbYVu5OuipJZBjbvWi2PONMfhOSp0Arpc1344087RRykhkvyQ94qvcZBhA3Buy6aEGfPjwukCOFzQlioBM7D4Fa9rUsjozjwZDZD'
-crawl_start = '2016-10-31'
-crawl_end = '2016-11-01'
+token = 'EAACEdEose0cBAMXibrYElCuOIWaETdCVZBOdwba0vXRGo1YRf04ZCGrSnZBubTMYuNLjljDlXw4iORayehyXkcOkiZAcIQn65tZCzauqZAxKZBRi4GC7ZB5kPjZBDgZAnsMdWBvFnT49adjOHSZBZB3uNtZC4ZCKA6zk0UN71YtokOrJcZC4wZDZD'
 
+crawl_end = (datetime.now() + timedelta(days=1)).strftime("%Y-%m-%d")
+crawl_start = datetime.now().strftime("%Y-%m-%d")
 
 def crawl_new_api(request):
     graph = facebook.GraphAPI()
@@ -87,7 +87,7 @@ def crawl(request):
             if 'message' in newsfeed:
                 message = newsfeed['message']
             fbid = newsfeed['id']
-            #author = newsfeed['from']["name"]
+            author = newsfeed['from']["name"]
             author_id = newsfeed['from']["id"]
             created_time = newsfeed['created_time']
             updated_time = newsfeed['updated_time']
@@ -163,13 +163,26 @@ def crawl(request):
             #print likes_count, comments_count
 
             try:
-                NewsFeed.objects.get(fbid=fbid)
+                feed = NewsFeed.objects.get(fbid=fbid)
             except:
                 feed = NewsFeed.objects.create_newsfeed(fbid, message, created_time, updated_time, author_id, picture_url, link_url, link_name, link_description, link_caption, type, status_type, shares, likes_count, comments_count, story)
                 feed.owner = request.user
                 feed.save()
 
                 count = count + 1
+
+            try:
+                friend = FacebookFriend.objects.get(fbid=author_id)
+            except:
+                try:
+                    print "worked", author_id, author
+                    post2 = graph.get_object(id=str(author_id) + "/picture")
+                    FacebookFriend.objects.create_facebookfriend(name=author, fbid=author_id,
+                                                                 img_url=post2["url"], close=False)
+                except:
+                    print author_id, author
+                    FacebookFriend.objects.create_facebookfriend(name='', fbid=author_id,
+                                                                 img_url='', close=False)
 
 
         #print json.dumps(post, indent=4, sort_keys=True)
@@ -193,7 +206,7 @@ def crawl(request):
         except:
             print "ERROR Maintype was not text, image, or querystring"
 
-    return render_to_response('index.html')
+    return HttpResponse("Success")
 
 
 def checkDatebase(request):
@@ -254,7 +267,6 @@ def update_like_comment(request):
 
 def update_friend_info(request):
     graph = facebook.GraphAPI(access_token=token, version='2.2')
-
 
     newsfeeds = NewsFeed.objects.all()
     for newsfeed in newsfeeds:

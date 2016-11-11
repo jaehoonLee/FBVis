@@ -19,6 +19,7 @@ from Data.views import *
 from Multi.views import *
 from FBAuth.views import *
 from Crawl.views import *
+from Auth.views import *
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
@@ -53,5 +54,9 @@ urlpatterns = [
     url('', include('django.contrib.auth.urls', namespace='auth')),
     url(r'^social/', include('social.apps.django_app.urls', namespace='social')),
     url(r'^home/', home, name='home'),
+
+    url(r'^web_login/', web_login),
+    url(r'^web_logout/', web_logout),
+    url(r'^web_register/', web_register),
 
 ]

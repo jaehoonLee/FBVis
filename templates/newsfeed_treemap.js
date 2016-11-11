@@ -180,21 +180,24 @@ function call_treemap(text, width, height){
             //make domain for date
             date_domain = root['children'].map(function(d){ return d['name']});
 
+            console.log(root);
             //make domain for every attribute(because of color)
             root['children'].forEach(function(d){
                 domain[d['name']] = true;
-                d['children'].forEach(function(d){
-                    domain[d['name']] = true;
+                if (typeof d['children'] != 'undefined'){
                     d['children'].forEach(function(d){
                         domain[d['name']] = true;
+                        d['children'].forEach(function(d){
+                            domain[d['name']] = true;
 
-                        if(max_comments < d['comments'])
-                            max_comments = d['comments'];
+                            if(max_comments < d['comments'])
+                                max_comments = d['comments'];
 
-                        if(max_comments < d['likes'])
-                            max_comments = d['likes'];
+                            if(max_comments < d['likes'])
+                                max_comments = d['likes'];
+                        });
                     });
-                });
+                }
             });
 
 
@@ -295,88 +298,88 @@ function call_treemap(text, width, height){
         }
 
         /*
-        for(var i in nodes){
-            nodes[i]
-                .transition()
-                .duration(500)
-                .style("background-color", function(d) {
+         for(var i in nodes){
+         nodes[i]
+         .transition()
+         .duration(500)
+         .style("background-color", function(d) {
 
-                    if(d.type != 'type')
-                        return null;
+         if(d.type != 'type')
+         return null;
 
-                    if('author' == cur_treenode_type) {
-                        return "#D3D3D3";
-                    }
-                    else if('nothing' == cur_treenode_type){
-                        return "#D3D3D3";
-                    }
-                    else if('images' == cur_treenode_type){
+         if('author' == cur_treenode_type) {
+         return "#D3D3D3";
+         }
+         else if('nothing' == cur_treenode_type){
+         return "#D3D3D3";
+         }
+         else if('images' == cur_treenode_type){
 
-                        if(d.picture_exist == '')
-                            return "#D3D3D3"
+         if(d.picture_exist == '')
+         return "#D3D3D3"
 
-                        return "#2432F0";
-                    }
-                    else if('close' == cur_treenode_type){
-                        return "#D3D3D3";
-                    }
-                    else
-                        return null;
-                });
-        }
-        */
+         return "#2432F0";
+         }
+         else if('close' == cur_treenode_type){
+         return "#D3D3D3";
+         }
+         else
+         return null;
+         });
+         }
+         */
     });
 
 
     /*
-    d3.selectAll("input[name=example2]").on("change", function change() {
-        var popular_color = d3.scale.linear().range(['#D3D3D3','#000000']).domain([0, cur_max_likes]);
+     d3.selectAll("input[name=example2]").on("change", function change() {
+     var popular_color = d3.scale.linear().range(['#D3D3D3','#000000']).domain([0, cur_max_likes]);
 
-        cur_treenode_type = this.value;
+     cur_treenode_type = this.value;
 
-        //Author Update
-        if(cur_treenode_type == 'author'){
-            person_execute = true;
-            executeQuery();
-        }
-        else{
-            person_execute = false;
-        }
-
-
-        for(var i in nodes){
-            nodes[i]
-                .transition()
-                .duration(500)
-                .style("background-color", function(d) {
-
-                    if(d.type != 'type')
-                        return null;
-
-                    if('author' == cur_treenode_type) {
-                        return "#D3D3D3";
-                    }
-                    else if('nothing' == cur_treenode_type){
-                        return "#D3D3D3";
-                    }
-                    else if('images' == cur_treenode_type){
-
-                        if(d.picture_exist == '')
-                            return "#D3D3D3"
+     //Author Update
+     if(cur_treenode_type == 'author'){
+     person_execute = true;
+     executeQuery();
+     }
+     else{
+     person_execute = false;
+     }
 
 
-                        return "#2432F0";
-                    }
-                    else if('close' == cur_treenode_type){
-                        return "#D3D3D3";
-                    }
-                    else
-                        return null;
-                });
-        }
+     for(var i in nodes){
+     nodes[i]
+     .transition()
+     .duration(500)
+     .style("background-color", function(d) {
 
-    });
-    */
+     if(d.type != 'type')
+     return null;
+
+     if('author' == cur_treenode_type) {
+     return "#D3D3D3";
+     }
+     else if('nothing' == cur_treenode_type){
+     return "#D3D3D3";
+     }
+     else if('images' == cur_treenode_type){
+
+     if(d.picture_exist == '')
+     return "#D3D3D3"
+
+
+     return "#2432F0";
+     }
+     else if('close' == cur_treenode_type){
+     return "#D3D3D3";
+     }
+     else
+     return null;
+     });
+     }
+
+     });
+     */
 }
 
 function wordcloud_treemap_call(word, cur_color){
